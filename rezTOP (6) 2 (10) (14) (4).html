@@ -1,0 +1,4006 @@
+<html>
+<header>
+	<title>rezolver</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.7/lib/theme-chalk/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui@2.15.7/lib/index.js"></script>
+
+
+	<style>
+	
+    summary {
+	background: linear-gradient(90deg, #666666, #666666);
+      border-radius: 5px;
+      outline: 200;
+    }
+
+	
+	#clock{
+ color: red; /* Цвет символа */
+	 
+  margin-left: 260px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+.fnc3 {
+  position: absolute;
+top: 24%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.NoRecoil {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 234.5%;
+left: 5%;
+}
+
+.fnc {
+  position: absolute;
+top: 54%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc50 {
+  position: absolute;
+top: 5%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc51 {
+  position: absolute;
+top: 8.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc52 {
+  position: absolute;
+top: 11.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc53 {
+  position: absolute;
+top: 14.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc54 {
+  position: absolute;
+top: 17.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc55 {
+  position: absolute;
+top: 20.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+
+.AntiFlash {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 294.5%;
+left: 5%;
+
+}
+
+.jjcontent {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 700px;
+    overflow-y: scroll;
+}
+
+
+
+.fnc2 {
+  position: absolute;
+top: 249%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.FireRate {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 249.5%;
+left: 5%;
+}
+
+.fnc4 {
+  position: absolute;
+top: 39%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.InfinityAmmo {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 264.5%;
+left: 5%;
+}
+
+.time {
+  position: absolute;
+  top: 14%;
+  left: 30%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: rgb(42, 255, 0);
+}
+
+.next {
+  position: absolute;
+  top: 83%;
+  left: 77%;
+}
+
+.fnc5 {
+  position: absolute;
+top: 69%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.TeamRadar {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 24.5%;
+left: 5%;
+}
+
+.ShootTh {
+    background-color: none;
+  border: 0.1px solid #ffffff;
+  border-radius: 1%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 39.5%;
+left: 5%;
+}
+
+.fnc88 {
+  position: absolute;
+top: 279%;
+  left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.tm {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 80.4%;
+  left: 50%;
+}
+
+.fnc6 {
+  position: absolute;
+top: 84%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.AntiHE {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 99.5%;
+left: 5%;
+}
+
+.fnc7 {
+  position: absolute;
+top: 10%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.MoneyHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 279.5%;
+left: 5%;
+
+}
+
+.fnc8 {
+  position: absolute;
+top: 279%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.AlwaysRespawn {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 84.5%;
+left: 5%;
+}
+
+.fnc9 {
+  position: absolute;
+top: 234%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.BombExpl {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 159.5%;
+left: 5%;
+}
+
+.fnc10 {
+  position: absolute;
+top: 264%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.FastPlant {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 174.5%;
+left: 5%;
+
+}
+
+.fnc11 {
+  position: absolute;
+top: 84%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.WallShot {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 84.5%;
+left: 5%;
+
+}
+
+.MedalHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 323.5%;
+left: 5%;
+
+}
+
+.Float {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 308.5%;
+left: 5%;
+
+}
+
+.ArmRaceWin {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 159.5%;
+left: 5%;
+}
+	
+.fnc12 {
+
+  position: absolute;
+top: 323%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.MoveBefore {
+    background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 129.5%;
+left: 5%;
+
+}	
+
+.fnc13 {
+  position: absolute;
+top: 308%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+
+.fnc14 {
+  position: absolute;
+top: 159%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.PlantAnywhere {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 189.5%;
+left: 5%;
+}
+
+.BombImmunity {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 204.5%;
+left: 5%;
+
+}
+
+
+.fnc15 {
+  position: absolute;
+top: 129%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.FastGrenade {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 144.5%;
+left: 5%;
+
+
+}
+
+.version {
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.FastGame {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 54.5%;
+left: 5%;
+
+}
+
+.Rounds {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 4.7%;
+  left: 89%;
+}
+
+.Kills {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 7.9%;
+  left: 60%;
+}
+
+.Death {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 11.0%;
+  left: 60%;
+}
+
+.Exp {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 13.9%;
+  left: 60%;
+}
+
+.Ping {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 17.0%;
+  left: 60%;
+}
+
+.fnc16 {
+  position: absolute;
+top: 294%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+}
+
+.friendlyfire {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 219.5%;
+left: 5%;
+}
+
+
+
+.FPSHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 19.5%;
+  left: 39%;
+}
+
+.fnc17 {
+  position: absolute;
+top: 99%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.BuyAnywhere {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 10.5%;
+left: 5%;
+
+}
+
+.fnc18 {
+  position: absolute;
+top: 114%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.JumpHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 69.5%;
+left: 5%;
+}
+
+.fnc19 {
+  position: absolute;
+top: 144%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc20 {
+  position: absolute;
+top: 159%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc21 {
+  position: absolute;
+top: 174%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.fnc22 {
+  position: absolute;
+top: 189%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc23 {
+  position: absolute;
+top: 204%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc24 {
+
+  position: absolute;
+top: 219%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.fnc25 {
+  position: absolute;
+top: 99%;
+left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc26 {
+  position: absolute;
+top: 103%;
+left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.NoGrenade {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 114.5%;
+left: 5%;
+
+}
+	
+
+
+
+
+
+
+
+}
+
+
+
+
+
+.loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+    animation: animate 40s linear infinite;
+    background-size: 100%;
+	border-radius: 34px;
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+    animation: animate 40s linear infinite;
+    background-size: 500%;
+    filter: blur(10px);
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    0%{
+        background-position: 500% 0;
+    }
+}
+
+	.speexx {
+	top: 0px;
+  position: absolute;
+  margin-left: -40px;
+  margin-bottom: 41px;
+  max-width: 400px;
+}
+.watermark {
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: rainbow 5s ease infinite;
+  animation: rainbow 5s ease infinite;
+  font-size: 25px;
+  line-height: 25px;
+  top: 25%;
+    position: absolute;
+}
+ 
+@-webkit-keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+ 
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+      }
+	  
+	  
+	  
+
+ 
+@-webkit-keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+ 
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+      }
+
+ .card {
+
+        color: #fff;
+        background: transparent;
+        overflow: hidden;
+        border-top: 1px solid rgba(255, 49, 49, 0.5);
+        border-right: 1px solid rgba(0, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+        border-left: 1px solid rgba(255, 255, 113, 0.5);
+
+      }
+
+      p {
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      span {
+     
+
+
+	
+float: left;
+  text-decoration: none;
+
+   color: #fff;
+  padding: 4px 5 5px;
+
+  border-radius: 10px;
+	padding: 0 15px;
+	margin: 0 15px 15px 0;
+
+adding-left: 28px;
+
+
+
+	
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+
+// Mixin below used to center the button. If using in production, remove the mixin and add position relative or absolute to button.
+
+@mixin center($extend: true) {
+    @if $extend {
+        @extend %center;
+    } @else {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+%center {
+    @include center($extend: false);
+}
+
+
+
+el-button  {
+  @include center;
+  background: #000;
+  color: #000;
+  width: 200px;
+  height: 60px;
+  border: 0;
+  font-size: 18px;
+  border-radius: 4px;
+  font-family: 'Raleway', sans-serif;
+  transition: .6s;
+  overflow: hidden;
+  &:focus{
+    outline: 0;
+  }
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    filter: blur(30px);
+    transform: translateX(-100px)  skewX(-15deg);
+  }
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+  }
+  &:hover{
+    background: #338033;
+    cursor: pointer;
+    &:before{
+      transform: translateX(300px)  skewX(-15deg);  
+      opacity: 0.6;
+      transition: .7s;
+    }
+    &:after{
+      transform: translateX(300px) skewX(-15deg);  
+      opacity: 1;
+      transition: .7s;
+    }
+  }
+}
+    
+
+
+	
+	
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.ayimgui {
+		overflow: scroll; /* Добавляем полосы прокрутки */
+			position: fixed;
+
+			top: calc(50% - 180px);
+			left: calc(50% - 180px);
+			z-index: 999;
+			      
+			/* border-radius: 8px; */
+			overflow: hidden;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-selectnone none;
+			user-select: unset;
+			border-radius: 2px;
+		}
+
+
+
+
+
+
+
+			
+			.box {
+  width: 150px;
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+   
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+img{
+
+    margin: 0;
+
+    position: absolute;
+    top: 50.0%;
+    left: 50.0%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+		.ayimgui .aybody {
+top: -70.0%;
+      overflow: scroll; /* Добавляем полосы прокрутки */
+    width: 345; /* Ширина блока */
+    height: 200px; /* Высота блока */
+    padding: 5px; /* Поля вокруг текста */
+    border-radius: 5px;
+  left: -10.0%;
+
+   position:relative;
+
+        background-color: rgba(0.0,0.0,0.0,0.4); /* Черный с непрозрачностью / прозрачностью */
+
+  font-weight: bold;
+
+        color:white;
+        overflow:auto;
+
+
+    
+}
+
+
+ .zxcс {
+    margin-right: -0%;
+left: 72.0%;
+ height: 180px;
+width: 80px;
+background-color: rgba(0.0,0.0,0.0,0.4); 
+   padding: 10px; /* Поля вокруг текста */
+  top:  -0%;
+    border-radius: 5px;
+   position:relative;
+
+
+
+}
+
+
+ .top_layout {
+    position: absolute;
+
+  
+    height: 10px;
+background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+  background-color: rgba(0,0,0, 0.4); /* Черный с непрозрачностью / прозрачностью */
+  color: white;
+  font-weight: bold;
+
+  
+
+	
+    color: #fff; /* Цвет текста */
+
+    position: relative; /* Относительное позиционирование */  
+
+
+
+    
+   }
+ 
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+
+
+
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+
+}
+ 
+@-webkit-keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+ 
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+      }
+    }
+    .painhck_text {
+        position: absolute;
+        top: -10px;
+        left: 11px;
+        text-align: absolute;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFF;
+        text-transform: uppercase;
+        animation: neon-1 .1s ease-in-out infinite alternate;
+        text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+        mix-blend-mode: normal;
+
+       }
+	   
+	   		.aytab {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	}
+		.aytext {
+
+			
+		}
+
+
+		.el-checkbox {
+			margin: 0px;
+		}
+
+		.el-checkbox__label {
+			color: #000;
+		}
+
+		.el-checkbox__input.is-checked + .el-checkbox__label {
+			color:rgb( 0,0,0,0.5);
+		}
+
+		.el-checkbox__inner {
+			background: rgb( 0,0,0,0.5);
+			border: none;
+		}
+
+
+		.el-radio {
+			margin: 8px 0;
+			background: rgb( 0,0,0,0.5);
+		}
+
+		.el-radio__label {
+			color:linear-gradient(#8A2BE2 0.0%, #FF0000 20.0%, #008000 40.0%, #8B008B 80.0%, #000080 100.0%);
+		}
+
+		.el-radio__input.is-checked + .el-radio__label {
+			color:linear-gradient(#8A2BE2 0.0%, #FF0000 20.0%, #008000 40.0%, #8B008B 80.0%, #000080 100.0%);
+		}
+
+		.el-radio__inner {
+			background-color: rgb(254, 254, 254);
+			border: dashed red;
+		}
+
+		.el-radio__input.is-checked .el-radio__inner {
+			background-color: rgb( 0,0,0,0.5);
+		}
+
+		.el-radio__inner::after {
+			width: 10px;
+			height: 10px;
+			background-color: rgb( 0,0,0,0.5);
+		}
+
+		.onlySelect {
+			background-color: rgb( 0,0,0,0.5);
+			border: 4mm ridge rgba(211, 220, 50, .6);
+		}
+
+			.onlySelect .el-select-dropdown__item {
+				color: rgb( 0,0,0,0.5);;
+			}
+
+				.onlySelect .el-select-dropdown__item.hover,
+				.el-select-dropdown__item:hover:hover {
+					background-color: transparent;
+				}
+
+			.onlySelect .popper__arrow {
+				border-bottom-color: rgb(294, 154, 234) !important;
+			}
+
+			.onlySelect.el-popper[x-placement^=bottom] .popper__arrow::after {
+				border-bottom-color: rgb(224, 214, 000) !important;
+			}
+
+		.el-select {
+			width: 100%;
+		}
+
+			.el-select .el-input {
+				background: linear-gradient(to right, #8A2BE2 15.0%, #FF0000 29.0%, #008000 63.0%, #8B008B 80.0%, #000080 100.0%);
+			}
+
+			.el-select .el-input__suffix {
+				background-color: rgb(160, 196, 243);
+
+				right: 0;
+			}
+
+			.el-select .el-select__caret {
+				color: #000000;
+			}
+
+			.el-select .el-input__inner {
+				background-color: transparent;
+				border: 4mm ridge rgba(211, 220, 50, .6);
+				color: #000000;
+			}
+
+			.el-select .el-input .el-select__caret {
+				color: #000000;
+				border: 4mm ridge rgba(211, 220, 50, .6);
+			}
+
+		/* и§Је†іiosдё‹ж‹‰йњЂи¦Ѓз‚№дё¤ж¬Ў */
+		.el-scrollbar .el-scrollbar__bar {
+			opacity: 1 !important;
+		}
+
+		.aytab {
+			width: 100%;
+			height: 20px;
+			display: flex;
+			border-bottom: 2px solid rgb(200, 217, 233);
+		}
+
+
+
+
+
+	</style>
+
+</header>
+
+
+
+<body>
+	 <script>
+
+
+
+
+    </script>
+	<script></script>  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+  
+
+	var app = new Vue({
+	
+	});
+      function refreshLocalSrcipts()
+    {
+        $("table#localjslist tr").remove();
+        
+        var jsfiles = h5gg.getLocalScripts();
+    
+        setTimeout(function(){
+            
+            if(jsfiles.length==0) {
+                $("table#localjslist tbody").append("<tr><td colspan=2>Searching App's Documents Directory...<br/>Searching .app Bundle Directory...<br/>No (*.js) or (*.html) files found!</td></td>");
+            }
+            
+            $("table#localjslist tbody").append('<tr><td style="border-right-style:none; color:blue">Browser on File App</td><td style="border-left-style:none;width:45px"><button onclick="h5gg.pickScriptFile(onClickLoadScript)">Load</button></td></tr>');
+            
+            for(var i=0; i<jsfiles.length; i++) {
+                var row = '<tr><td style="border-right-style:none;font-weight:bold;color:green">'+jsfiles[i].name+'</td><td style="border-left-style:none;width:45px"><button onclick="onClickLoadScript(\''+jsfiles[i].path+'\')">Load</button></td></tr>';
+                $("table#localjslist tbody").append(row);
+            }
+        }, 300);
+    }
+    
+    function onShowLoadScript(show)
+    {
+        if(show) {
+            $("#maskview").show();
+            $("#popup_loadscripts").show();
+            
+            if(typeof h5gg!='undefined') refreshLocalSrcipts();
+        } else {
+            $("#maskview").hide();
+            $("#popup_loadscripts").hide();
+        }
+    }
+    
+     function onClickLoadScript(url, type)
+    {
+        if(!url) return;
+        
+        if(/^\w+\:/.test(url)==false) url = "file://"+url;
+        
+        try{
+            url = new URL(url);
+            url.searchParams.append("_", Math.random());
+        }catch(e){
+            alert("invliad URL!");
+            return;
+        }
+        
+        $("#popup_progress").show();
+        $("#maskview_script").show();
+        
+        if(type=='h5' || (!type&&!/\.js$/.test(url.pathname))) {
+            window.location = url.href;
+            return;
+        }
+        
+        var script = document.createElement("script");
+    
+        script.type = "text/javascript";
+        
+        script.onload = function () {
+          alert("Твой Конфиг Загружен!");
+            $("#popup_progress").hide();
+            $("#maskview_script").hide();
+        };
+        
+        script.onerror = function () {
+            alert("Твой конфиг не загружен!/Посмотри, не допустил ли ты ошибку");
+            $("#popup_progress").hide();
+            $("#maskview_script").hide();
+        };
+    
+        script.src = url.href;
+        document.body.appendChild(script);
+    }
+    
+    
+      function custom(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        var newskinid = prompt("Enter newskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll(newskinid,'I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+    function Warning(){
+      alert("Внимание!\n\nС недавним обновлением игры Скинченджер может работать Неисправно!")
+    }
+      
+      function karambitgold(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitclaw(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitdragongalss(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitscratch(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72006','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karmbituniverse(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72007','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitcoldflame(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97200','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitfrozen(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97201','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitsnowcamo(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97203','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambityearoftiger(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157200','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function m1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71001','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157100','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97100','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71005','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+       function j1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('73002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('73003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('73004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('73006','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97300','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157300','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+       function b1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('47503','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('47502','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('57501','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('47504','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('47505','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97500','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157500','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function f1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67701','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        
+        function f2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67702','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function f3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67703','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function f4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67704','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function f5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67705','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        
+        function f6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97700','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function f7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157700','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+       function k1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77813','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77814','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77815','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77816','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77817','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97800','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97801','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k8(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157800','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+       function s1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('87919','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('87920','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('87921','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('87922','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97900','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157900','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function t1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138001','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('128005','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('148000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t8(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('158000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function d1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('170021','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function d2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('170022','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function d3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('170023','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function d4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('170024','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function d5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function d6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180028','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function kk1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180022','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function kk2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180023','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function kk3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180024','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function kk4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180025','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function kk5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180026','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function kk6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180027','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3006','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3007','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3008','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3009','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3001','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g8(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g9(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g10(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3005','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g11(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3011','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g12(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3012','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g13(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3013','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g14(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3014','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g15(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3015','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g16(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3016','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+      
+    
+      
+    
+
+   
+    function wait(){
+            
+            vant.Toast("Wait");
+
+        }
+        
+
+let status = 'off';
+let status2 = 'off';
+let status3 = 'off';
+let status4 = 'off';
+let status5 = 'off';
+let status6 = 'off';
+let status7 = 'off';
+let status8 = 'off';
+let status9 = 'off';
+let status10 = 'off';
+let status11 = 'off';
+let status12 = 'off';
+let status13 = 'off';
+let status14 = 'off';
+let status15 = 'off';
+let status16 = 'off';
+let status17 = 'off';
+let status18 = 'off';
+let status19 = 'off';
+let status20 = 'off';
+let status21 = 'off';
+let status22 = 'off';
+let status23 = 'off';
+let status24 = 'off';
+let status25 = 'off';
+let status88 = 'off';
+
+function AntiF() {
+
+
+  if (status == 'on') {
+
+    var el = document.querySelector(".AntiFlash");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C21FCC, "C0035FD6");
+
+  }
+
+  else if (status == 'off') {
+
+    var el = document.querySelector(".AntiFlash");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C21FCC, "C0035FD6");
+
+
+  }
+
+
+}
+
+function netu() {
+
+
+  if (status == 'on') {
+
+    var el = document.querySelector(".AntiFlash");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c1200c, "000080D2C0035FD6");
+
+  }
+
+  else if (status == 'off') {
+
+    var el = document.querySelector(".AntiFlash");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c1200c, "000080D2C0035FD6");
+
+
+  }
+
+
+}
+
+function FastGrenade() {
+
+
+  if (status14 == 'on') {
+
+    var el = document.querySelector(".FastGrenade");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status14 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c225c0, "200080D2C0035FD6");
+
+  }
+
+  else if (status14 == 'off') {
+
+    var el = document.querySelector(".FastGrenade");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status14 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c225c0, "200080D2C0035FD6");
+
+
+  }
+
+
+}
+
+
+function friendlyfire() {
+
+
+  if (status18 == 'on') {
+
+    var el = document.querySelector(".friendlyfire");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status18 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1dd9e18, "20008052C0035FD6");
+    
+
+  }
+
+  else if (status18 == 'off') {
+
+    var el = document.querySelector(".friendlyfire");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status18 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1dd9e18, "20008052C0035FD6");
+    
+
+
+  }
+
+
+}
+
+
+function BuyAnywhere() {
+
+
+  if (status17 == 'on') {
+
+    var el = document.querySelector(".BuyAnywhere");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status17 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d016ec, "20008052C0035FD6");
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d039d8, "20008052C0035FD6");
+
+  }
+
+  else if (status17 == 'off') {
+
+    var el = document.querySelector(".BuyAnywhere");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status17 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d016ec, "20008052C0035FD6");
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d039d8, "20008052C0035FD6");
+
+
+  }
+
+
+}
+
+
+function JumpHack() {
+
+
+  if (status16 == 'on') {
+
+    var el = document.querySelector(".JumpHack");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status16 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x33365f0, "200080D2C0035FD6");
+
+  }
+
+  else if (status16 == 'off') {
+
+    var el = document.querySelector(".JumpHack");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status16 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x33365f0, "200080D2C0035FD6");
+
+
+  }
+
+
+}
+
+
+function NoGrenade() {
+
+
+  if (status15 == 'on') {
+
+    var el = document.querySelector(".NoGrenade");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status15 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c2abc0, "C0035FD6");
+
+  }
+
+  else if (status15 == 'off') {
+
+    var el = document.querySelector(".NoGrenade");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status15 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c2abc0, "C0035FD6");
+
+
+  }
+
+
+}
+
+
+function PlantAnywhere() {
+
+
+  if (status14 == 'on') {
+
+    var el = document.querySelector(".PlantAnywhere");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status14 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3fa6c, "200080D2C0035FD6");//Plant Anywhere
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3fa24, "200080D2C0035FD6");//Plant Anywhere
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3f9f4, "200080D2C0035FD6");//Plant Anywhere
+
+  }
+
+  else if (status14 == 'off') {
+
+    var el = document.querySelector(".PlantAnywhere");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status14 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3fa6c, "200080D2C0035FD6");//Plant Anywhere
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3fa24, "200080D2C0035FD6");//Plant Anywhere
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3f9f4, "200080D2C0035FD6");//Plant Anywhere
+
+
+  }
+
+
+}
+
+
+function FastGame() {
+
+
+  if (status13 == 'on') {
+
+    var el = document.querySelector(".FastGame");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status13 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d6d230, "E003271EC0035FD6");
+
+  }
+
+  else if (status13 == 'off') {
+
+    var el = document.querySelector(".FastGame");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status13 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d6d230, "E003271EC0035FD6");
+
+
+  }
+
+
+}
+
+function FireR() {
+
+
+  if (status2 == 'on') {
+
+    var el = document.querySelector(".FireRate");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status2 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C16D84, "C0035FD6");
+
+  }
+
+  else if (status2 == 'off') {
+
+    var el = document.querySelector(".FireRate");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status2 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C16D84, "C0035FD6");
+
+
+  }
+
+
+}
+
+function NoR() {
+
+
+  if (status3 == 'on') {
+
+    var el = document.querySelector(".NoRecoil");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status3 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C1AF50, "C0035FD6");
+
+  }
+
+  else if (status3 == 'off') {
+
+    var el = document.querySelector(".NoRecoil");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status3 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C1AF50, "C0035FD6");
+
+
+  }
+
+
+}
+
+function InfinityA() {
+
+
+  if (status4 == 'on') {
+
+    var el = document.querySelector(".InfinityAmmo");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status4 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D6D47C, "C0035FD6");
+
+  }
+
+  else if (status4 == 'off') {
+
+    var el = document.querySelector(".InfinityAmmo");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status4 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D6D47C, "C0035FD6");
+
+
+  }
+
+
+}
+
+function RadarTM() {
+
+
+    if (status5 == 'on') {
+    
+        var el = document.querySelector(".TeamRadar");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status5 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DC46A0, "C0035FD6");
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2ABC0, "C0035FD6");
+        
+    
+    }
+    
+    else if (status5 == 'off') {
+        
+        var el = document.querySelector(".TeamRadar");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status5 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DC46A0, "C0035FD6");
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2ABC0, "C0035FD6");
+        
+    }
+
+
+}
+
+function AntiHE() {
+
+
+    if (status6 == 'on') {
+    
+        var el = document.querySelector(".AntiHE");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status6 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c2b498, "C0035FD6");
+    
+    }
+    
+    else if (status6 == 'off') {
+        
+        var el = document.querySelector(".AntiHE");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status6 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c2b498, "C0035FD6");
+
+
+        
+    }
+
+
+}
+
+function MoveBefore() {
+
+
+    if (status12 == 'on') {
+    
+        var el = document.querySelector(".MoveBefore");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status12 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c53734, "00008052C0035FD6");
+    
+    }
+    
+    else if (status12 == 'off') {
+        
+        var el = document.querySelector(".MoveBefore");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status12 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c53734, "00008052C0035FD6"); //MoveBeforeTimer
+
+
+    }
+
+
+}
+
+
+function MoneyHack() {
+
+
+    if (status7 == 'on') {
+    
+        var el = document.querySelector(".MoneyHack");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status7 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c55fdc, "00008052C0035FD6");
+    
+    }
+    
+    else if (status7 == 'off') {
+        
+        var el = document.querySelector(".MoneyHack");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status7 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C55FDC, "00008052C0035FD6"); //money hack
+
+
+        
+    }
+
+
+}
+
+function WallShot() {
+
+
+    if (status11 == 'on') {
+    
+        var el = document.querySelector(".WallShot");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status11 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFE1C, "00F0271EC0035FD6");
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFDF4, "00F0271EC0035FD6");
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFDD4, "00F0271EC0035FD6");
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFDB4, "00F0271EC0035FD6");
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFD94, "00F0271EC0035FD6");
+    
+    }
+    
+    else if (status11 == 'off') {
+        
+        var el = document.querySelector(".WallShot");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status11 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+        
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFE1C, "00F0271EC0035FD6");
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFDF4, "00F0271EC0035FD6");
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFDD4, "00F0271EC0035FD6");
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFDB4, "00F0271EC0035FD6");
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1BFFD94, "00F0271EC0035FD6");
+
+
+
+        
+    }
+
+
+}
+
+function FastPlant() {
+
+
+    if (status10 == 'on') {
+    
+        var el = document.querySelector(".FastPlant");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status10 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C40358, "E003271EC0035FD6");
+    
+    }
+    
+    else if (status10 == 'off') {
+        
+        var el = document.querySelector(".FastPlant");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status10 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C40358, "E003271EC0035FD6"); //Fast Plant
+
+
+        
+    }
+
+
+}
+
+function BombExpl() {
+
+
+    if (status9 == 'on') {
+    
+        var el = document.querySelector(".BombExpl");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status9 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3B51C, "20008052C0035FD6"); 
+    
+    }
+    
+    else if (status9 == 'off') {
+        
+        var el = document.querySelector(".BombExpl");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status9 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+ ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3B51C, "20008052C0035FD6"); //Fast Explode 
+
+
+
+        
+    }
+
+
+}
+
+function AlwaysRespawn() {
+
+
+    if (status8 == 'on') {
+    
+        var el = document.querySelector(".AlwaysRespawn");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status8 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D294C, "200080D2C0035FD6");
+    
+    }
+    
+    else if (status8 == 'off') {
+        
+        var el = document.querySelector(".AlwaysRespawn");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status8 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D294C, "200080D2C0035FD6"); //respawn  puz
+        
+    }
+
+
+}
+
+function tm() {
+
+
+    if (status88 == 'on') {
+    
+        var el = document.querySelector(".tm");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status88 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+      DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DC46A0, "C0035FD6");
+DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2ABC0, "C0035FD6"); //team radar
+
+    }
+    
+    else if (status88 == 'off') {
+        
+        var el = document.querySelector(".tm");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status88 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DC46A0, "C0035FD6");
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2ABC0, "C0035FD6");        
+    }
+
+
+}
+
+function MedalHack() {
+
+
+    if (status12 == 'on') {
+    
+        var el = document.querySelector(".MedalHack");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status12 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1EC4E3C, "E07C80D2C0035FD6");
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1EC5740, "E07C80D2C0035FD6");
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1EC4FEC, "E07C80D2C0035FD6");
+    
+    }
+    
+    else if (status12 == 'off') {
+        
+        var el = document.querySelector(".MedalHack");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status12 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1EC4E3C, "E07C80D2C0035FD6");
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1EC5740, "E07C80D2C0035FD6");
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1EC4FEC, "E07C80D2C0035FD6");
+
+
+    }
+
+
+}
+
+function Float() {
+
+
+    if (status12 == 'on') {
+    
+        var el = document.querySelector(".Float");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status12 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DC9B40, "C0035FD6");
+    
+    }
+    
+    else if (status12 == 'off') {
+        
+        var el = document.querySelector(".Float");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status12 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DC9B40, "C0035FD6"); //MoveBeforeTimer
+
+
+    }
+
+
+}
+
+function ArmRaceWin() {
+
+
+    if (status12 == 'on') {
+    
+        var el = document.querySelector(".ArmRaceWin");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status12 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d0f5e8, "200280D2C0035FD6");
+        
+    
+    }
+    
+    else if (status12 == 'off') {
+        
+        var el = document.querySelector(".ArmRaceWin");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status12 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d0f5e8, "200280D2C0035FD6");
+        
+
+
+    }
+
+
+}
+
+function bombimmunity() {
+
+
+    if (status12 == 'on') {
+    
+        var el = document.querySelector(".BombImmunity");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status12 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3C9E0, "C0035FD6"); //Bomb 
+    
+    }
+    
+    else if (status12 == 'off') {
+        
+        var el = document.querySelector(".BombImmunity");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status12 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3C9E0, "C0035FD6"); //Bomb Immunity 0.21.0
+
+
+    }
+
+
+}
+
+function FpsHack() {
+
+
+    if (status12 == 'on') {
+    
+        var el = document.querySelector(".FpsHack");
+        el.style.backgroundColor = 'rgb(227, 140, 140)';
+        status12 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D68A5C, "200080D2C0035FD6");
+    
+    }
+    
+    else if (status12 == 'off') {
+        
+        var el = document.querySelector(".FpsHack");
+        el.style.backgroundColor = 'rgb(156, 198, 158)';
+        status12 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D68A5C, "200080D2C0035FD6"); //MoveBeforeTimer
+
+
+    }
+
+
+}
+
+
+</script>
+
+
+<script>
+   loopy()
+
+function loopy() {
+
+var sWord ="key"
+
+
+while (sWord != "12")
+{ 
+
+sWord = prompt("Security")
+
+}
+
+alert("Cheat by Destroy \n Welcome")
+
+}
+   
+  </script>
+	<head>
+
+</div>
+
+
+	
+		
+		  </div>
+		        <span class="top"></span>
+
+ <div id="clock" ></div>
+      
+      <span class="right"></span>
+      <span class="bottom"></span>
+      <span class="left"></span>
+
+     
+     
+ 
+
+    
+    </div>
+	 </div>
+	<body>
+
+			<div v-show="tabValue==='Knife'">
+			
+</div>
+
+			<div id="app">	
+			 <div id="netjs" class="menuview">   
+			<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+				<div class="zxcс">
+				
+					<span @click="changeTab('Knife')" :style="{background:tabValue==='Knife'?'':''}">Knife</span>
+					<span @click="changeTab('Id_Skins')":style="{background:tabValue==='Id_Skins'?'':''}">soon</span>
+					<span @click="changeTab('Skins')":style="{background:tabValue==='Skins'?'':''}">Misc</span>
+					
+   <p class="version" style="color: white">
+        0.22.0
+      </p>
+				
+				
+</div>
+			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+				<i :class="ifshow?'':'el-icon-caret-top'" @click="ifshow = !ifshow"></i>
+
+				
+				<span class="title-age" style="margin-left:5px;">
+						     <p class="watermark" face="Arial">
+							
+REZOLVER
+  </p><p class="watermark" face="Arial">
+
+
+
+				
+			</div>
+			
+			<div class="aybody">
+			
+
+				
+				
+
+
+					
+					
+					
+					
+		
+<div class="Knife">				
+<div class="two">
+<div class="Skins">
+
+
+
+
+</head>
+  </form>
+ 
+<div v-show="tabValue==='Skins'">
+
+
+                    <van-cell-group inset>
+				<h1 class="fnc21">Fast Plant</h1><div onclick="FastPlant()" class="FastPlant"></div> <h1 class="fnc22">PlantAny</h1><div onclick="PlantAnywhere()" class="PlantAnywhere"></div> <h1 class="fnc23">Bomb Immunity</h1><div onclick="bombimmunity()" class="BombImmunity"></div>
+					<div class="van-cell-group van-cell-group--inset van-hairline--top-bottom"><h1 class="fnc16">Anti Flash</h1><div onclick="AntiF()" class="AntiFlash"></div> <h1 class="fnc17">Anti HE</h1><div onclick="AntiHE()" class="AntiHE"></div> <h1 class="fnc18">NoGrenade</h1><div onclick="NoGrenade()" class="NoGrenade"></div> <h1 class="fnc19">Fast Grenade</h1><div onclick="FastGrenade()" class="FastGrenade"></div> <br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+					<h1 class="fnc9">No Recoil</h1><div onclick="NoR()" class="NoRecoil"></div> <h1 class="fnc2">Fire Rate</h1><div onclick="FireR()" class="FireRate"></div> <h1 class="fnc4">Shoot Through Walls</h1><div onclick="netu()" class="ShootTh"></div> <h1 class="fnc7">Buy Anywhere</h1><div onclick="BuyAnywhere()" class="BuyAnywhere"></div> <h1 class="fnc10">Inf Ammo</h1><div onclick="InfinityA()" class="InfinityAmmo"></div> 
+<div class="van-cell-group van-cell-group--inset van-hairline--top-bottom"><h1 class="fnc">Fast Round</h1><div onclick="FastGame()" class="FastGame"></div> <h1 class="fnc3">Team Radar</h1><div onclick="RadarTM()" class="TeamRadar"></div> <h1 class="fnc5">Infinity Jump</h1><div onclick="JumpHack()" class="JumpHack"></div> <h1 class="fnc6">Always Respawn</h1><div onclick="AlwaysRespawn()" class="AlwaysRespawn"></div> <h1 class="fnc8">Money Hack</h1><div onclick="MoneyHack()" class="MoneyHack"></div> <h1 class="fnc12">Medal Fix</h1><div onclick="MedalHack()" class="MedalHack"></div> <h1 class="fnc13">Float</h1><div onclick="Float()" class="Float"></div> <h1 class="fnc14">Arm Race Win</h1><div onclick="ArmRaceWin()" class="ArmRaceWin"></div> <h1 class="fnc15">MoveBefTime</h1><div onclick="MoveBefore()" class="MoveBefore"></div> <h1 class="fnc24">Friend Fire</h1><div onclick="friendlyfire()" class="friendlyfire"></div> 
+
+
+	  </summary>	
+	  </details>
+				<br></van-cell-group></div>	
+				<br></van-cell-group></div>	
+		
+
+		
+</div>
+
+</script>
+
+
+
+
+					
+					<div v-show="tabValue==='Knife'">
+					<div class="aycollapse" @click="showOption = !showOption" style="cursor:pointer">
+					
+					
+
+      
+      <p>Custom skin</p>
+    <button onclick="custom()">Custom Skin</button>
+    <button onclick="h5gg.pickScriptFile(onClickLoadScript)">Load CFG</button>
+      <p>Gloves</p>
+    <button onclick="g1()">Gloves Burning Fists</button>
+    <button onclick="g2()">Gloves Punk</button>
+    <p>
+    <button onclick="g3()">Gloves Champion</button>
+    <button onclick="g4()">Gloves Steam Rider</button>
+    <p>
+    <button onclick="g5()">Gloves Phoenix Risen</button>
+    <button onclick="g6()">Gloves Autumn</button>
+    <p>
+    <button onclick="g7()">Gloves Geometric</button>
+    <button onclick="g8()">Gloves Retro Wave</button>
+    <p>
+    <button onclick="g9()">Gloves Living Flame</button>
+    <button onclick="g10()">Gloves Neuro</button>
+    <p>
+    <button onclick="g11()">Gloves Acid</button>
+    <button onclick="g12()">Gloves Camo</button>
+    <p>
+    <button onclick="g13()">Gloves Fossil</button>
+    <button onclick="g14()">Gloves HandCraft</button>
+    <p>
+    <button onclick="g15()">Gloves Raider</button>
+    <button onclick="g16()">Gloves Thug</button>
+<p>Karambit</p>
+    <button onclick="karambitgold()">Karambit gold</button>
+    <button onclick="karambitclaw()">Karambit Claw</button>
+    <p>
+    <button onclick="karambitdragongalss()">Karambit DragonGlass</button>
+    <button onclick="karambitscratch()">Karambit Scratch</button>
+    <p>
+    <button onclick="karmbituniverse()">Karambit Universe</button>
+    <button onclick="karambitcoldflame()">Karambit Cold Flame</button>
+    <p>
+    <button onclick="karambitfrozen()">Karambit Frozen</button>
+    <button onclick="karambitsnowcamo()">Karambit Snow Camo</button>
+      <p>
+    <button onclick="karambityearoftiger()">Karambit Year of Tiger</button>
+    <p>Bayonet</p>
+    <button onclick="m1()">M9 BlueBlood</button>
+    <button onclick="m2()">M9 Kumo</button>
+    <button onclick="m3()">M9 Universe</button>
+    <p>
+    <button onclick="m4()">M9 Frozen</button>
+    <button onclick="m5()">M9 DragonGlass</button>
+    <p>
+    <button onclick="m6()">M9 Scratch</button>
+    <button onclick="m7()">M9 Acient</button>
+    <p>jKommando</p>
+    <button onclick="j1()">jKommando Ancient</button>
+    <button onclick="j2()">jKommando Reaper</button>
+    <p>
+    <button onclick="j3()">jKommando Floral</button>
+    <button onclick="j4()">jKommando Luxury</button>
+    <p>
+    <button onclick="j5()">jKommando Frozen</button>
+    <button onclick="j6()">jKommando Augustite</button>
+    <p>Butterfly</p>
+    <button onclick="b1()">Butterfly DragonGlass</button>
+    <button onclick="b2()">Butterfly Legacy</button>
+    <button onclick="b3()">Butterfly FireStorm</button>
+    <p>
+    <button onclick="b4()">Butterfly BlackWidow</button>
+    <button onclick="b5()">Butterfly Starfall</button>
+    <p>
+    <button onclick="b6()">Butterfly ColdFlame</button>
+    <button onclick="b7()">Butterfly Kumo</button>
+    <p>Flip Knife</p>
+    <button onclick="f1()">Flip DragonGlass</button>
+    <button onclick="f2()">Flip Arctic</button>
+    <button onclick="f3()">Flip StoneCold</button>
+    <p>
+    <button onclick="f4()">Flip Vortex</button>
+    <button onclick="f5()">Flip Frozen</button>
+    <p>
+    <button onclick="f6()">Flip SnowCamo</button>
+    <button onclick="f7()">Flip HolidayFrost</button>
+    <p>Kunai</p>
+    <button onclick="k1()">Kunai Bone</button>
+    <button onclick="k2()">Kunai Luxury</button>
+    <p>
+    <button onclick="k3()">Kunai Poison</button>
+    <button onclick="k4()">Kunai Radiation</button>
+    <p>
+    <button onclick="k5()">Kunai Reaper</button>
+    <button onclick="k6()">Kunai ColdFlame</button>
+    <p>
+    <button onclick="k7()">Kunai SnowCamo</button>
+    <button onclick="k8()">Kunai Augustite</button>
+    <p>Scorpion</p>
+    <button onclick="s1()">Scorpion Veil</button>
+    <button onclick="s2()">Scorpion Sea Eye</button>
+    <p>
+    <button onclick="s3()">Scorpion Scratch</button>
+    <button onclick="s4()">Scorpion Starfall</button>
+    <p>
+    <button onclick="s5()">Scorpion ColdFlame</button>
+    <button onclick="s6()">Scorpion HolidayFrost</button>
+    <p>Tanto</p>
+    <button onclick="t1()">Tanto Dojo</button>
+    <button onclick="t2()">Tanto Yakuza</button>
+    <p>
+    <button onclick="t3()">Tanto Malachite</button>
+    <button onclick="t4()">Tanto Pearl Abyss</button>
+    <p>
+    <button onclick="t5()">Tanto Transistor</button>
+    <button onclick="t6()">Tanto Flow</button>
+    <p>
+    <button onclick="t7()">Tanto Restless</button>
+    <button onclick="t8()">Tanto Year Of Tiger</button>
+      <p>Dual Daggers</p>
+    <button onclick="d1()">Daggers Acid</button>
+    <button onclick="d2()">Daggers Demonic Steel</button>
+    <p>
+    <button onclick="d3()">Daggers Grunge</button>
+    <button onclick="d4()">Daggers Molten</button>
+    <p>
+    <button onclick="d5()">Daggers Harmony</button>
+    <button onclick="d6()">Daggers Jaws</button>
+    <p>Kukri</p>
+    <button onclick="kk1()">Kukri Ares</button>
+    <button onclick="kk2()">Kukri Prophet</button>
+    <p>
+    <button onclick="kk3()">Kukri Gold Trim</button>
+    <button onclick="kk4()">Kukri Antique Silver</button>
+    <p>
+    <button onclick="kk5()">Kukri Constellations</button>
+    <button onclick="kk6()">Kukri Divine Power</button>
+
+	<br></van-cell-group></div>	
+
+</div>
+						
+						
+					
+
+						
+						
+			
+
+
+							
+								<html>
+								
+						
+    </style>
+  </head>
+  <body>
+   
+  </body>
+								
+</body>
+
+<script>
+
+setWindowDrag(0, 0, 0, 0);
+
+	var app = new Vue({
+		el: "#app",
+		data() {
+			return {
+				ifshow: true,
+				checked: false,
+				radio: '1',
+				activeSelect: '',
+				selectOption: [{
+					value: 'йЂ‰йЎ№1',//е®ћй™…е†…е®№
+					label: 'й»„й‡‘зі•'//жѕз¤єж–‡жЎ€
+				}, {
+					value: 'йЂ‰йЎ№2',
+					label: 'еЏЊзљ®еҐ¶'
+				}],
+				input: "",
+				showOption: false,
+				tabValue: "Skinchanger",
+			}
+		},
+		mounted() {
+			this.setRect(500, 300);
+
+			//з«–е±Џ
+			var sWidth = window.screen.width; //е±Џе№•е®Ѕ
+			var sHeight = window.screen.height; //е±Џе№•й«
+
+			//е…Ёе±Џжѕз¤є
+			if (window.screen.availWidth > window.screen.availHeight) {
+				//жЁЄе±ЏпјЊе®Ѕй«зЅ®жЌў
+				sWidth = window.screen.height; //е±Џе№•е®Ѕ
+				sHeight = window.screen.width; //е±Џе№•й«
+			}
+			setWindowRect(0, 0, sWidth, sHeight);
+
+			setButtonAction(function () {
+				var menu = document.querySelector("#app");
+				if (menu.style.display == 'none') {
+					menu.style.display = 'block';
+					//жѕз¤єиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§дёЌеЏЇз©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(true);
+				} else {
+					menu.style.display = 'none';
+					//йљђи—ЏиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§з©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(false);
+				}
+			});
+		},
+		
+		methods: {
+			setRect(w, h, x = -1, y = -1) {
+				var boxW = w;
+				var boxH = h;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.width = `${boxW}px`;
+				ayMenu.style.height = `${boxH}px`;
+				if (x == -1) ayMenu.style.left = `calc(50% - ${boxW / 2}px)`;
+				if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
+			},
+			titleTouchStart(event) {
+				this.touchStartX = parseInt(event.touches[0].clientX);
+				this.touchStartY = parseInt(event.touches[0].clientY);
+
+				var ayMenu = this.$refs.menuMain;
+				this.menuLastX = ayMenu.offsetLeft;
+				this.menuLastY = ayMenu.offsetTop;
+			},
+			titleTouchMove(event) {
+				event.preventDefault();
+				var distanceX = event.touches[0].clientX - this.touchStartX;
+				var distanceY = event.touches[0].clientY - this.touchStartY;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.left = this.menuLastX + distanceX + "px";
+				ayMenu.style.top = this.menuLastY + distanceY + "px";
+			},
+			//е€‡жЌўеЇји€Єж Џ
+			changeTab(v) {
+				this.tabValue = v;
+			},
+			closeimgui() {
+				var menu = document.querySelector("#app");
+				menu.style.display = 'none';
+				setWindowTouch(false);
+			}
+		}
+	});
+
+
+</script>

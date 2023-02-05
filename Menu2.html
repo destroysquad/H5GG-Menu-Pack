@@ -1,0 +1,3004 @@
+    <title>destroysquad</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  <link rel="stylesheet" href="https://unpkg.com/vant@2.12/lib/index.css"/>
+    <!-- 引入 Vue 和 Vant 的 JS 文件 -->
+    <script src="https://unpkg.com/vue@2.6/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vant@2.12/lib/vant.min.js"></script>
+ <style>
+ 
+ html {
+    zoom:0.8;
+}
+ 
+ .rez{
+top: 100;
+   height:10px;
+   width:385px;
+  background: #03fcec;
+    border-radius: 10px 10px 0px 0px;
+ }
+ fieldset{
+  border-radius: 0px 0px 10px 10px;
+ }
+
+  .rezz{
+top: 100;
+   height:10px;
+   width:170px;
+  background: #03fcec;
+    border-radius: 10px 10px 0px 0px;
+ }
+ fieldset{
+  border-radius: 0px 0px 10px 10px;
+ }
+ 
+ fieldset{
+  border-radius: 0px 0px 10px 10px;
+ }
+ 
+ 	.split {
+  z-index: 1;
+  top: -0;
+      overflow: scroll; /* Добавляем полосы прокрутки */
+left: -10;
+    padding: 5px; /* Поля вокруг текста */
+
+   display:block;
+   position:relative;
+   width:220px;
+   height:230px;
+
+        color:white;
+        overflow:auto;
+background: rgb(0, 0, 25, 25);
+
+
+} 
+.left {
+
+   display:block;
+   position:relative;
+   height:240px;
+	top: 0;
+   display:block;
+   position:relative;
+  left: 0;
+   width:170px;
+ border-radius: 0px 0px 10px 10px;
+        color:white;
+        overflow:auto;
+
+}
+
+	.splitt {
+  z-index: 1;
+  top: 0;
+      overflow: scroll; /* Добавляем полосы прокрутки */
+    width: 300px; /* Ширина блока */
+    height: 150px; /* Высота блока */
+    padding: 5px; /* Поля вокруг текста */
+
+
+   display:block;
+   position:relative;
+   width:300px;
+   height:100px;
+   
+        
+        overflow:auto;
+
+
+  left: 5;
+
+} 
+
+.leftt {
+ border-radius: 0px 0px 10px 10px;
+
+   display:block;
+   position:relative;
+ width:170px;
+height:240px;
+	top: -250;
+   display:block;
+   position:relative;
+  left: 215;
+
+}
+ 
+.loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+    animation: animate 40s linear infinite;
+    background-size: 500%;
+}
+
+        body {width: 100%; height: 100%;}
+.colorPicker {width: 100px; height: 52px; background-color: blue; margin: 10px;
+text-align: center}
+.colorPicker input {width: 80%; height: 80%; transform: translateY(8%);}
+.loader::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+    animation: animate 40s linear infinite;
+    background-size: 500%;
+    filter: blur(10px);
+}
+
+checkboxposition{
+visibility: none
+
+
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    0%{
+        background-position: 500% 0;
+    }
+}
+    input[type=radio]  {
+        width:20px;
+        height:20px;
+        margin-right:10px;
+      
+		width: 14px; height: 14px;
+     border: 1px solid #EEEEEE;
+     border-radius: 3px;
+     background-color: rgba(0,0,0,0);
+    
+    
+    
+     
+        -webkit-appearance:none;
+        vertical-align:middle;
+        border:1px solid #DDDDDDF0;
+        
+    }
+	
+	   .lan3 {
+        font-size: 12.5px;
+     
+        color: #aeaeae;
+    
+      }
+
+    input[type=radio]:checked {
+        border:0px solid #2F7DCDF0;
+
+        background:#FFFFFF;
+    }
+input[type=checkbox]{
+ visibility: hidden;
+ vertical-align:middle; margin-bottom:2px;
+ cursor: pointer;
+ position: relative;
+ width: 24px;
+ height: 24px;
+}
+input[type=checkbox]::after{
+ position: absolute;
+ top: 0;
+ margin-top:2px;
+ width: 14px; height: 14px;
+ border: 1px solid #EEEEEE;
+ border-radius: 3px;
+ background-color: rgba(0,0,0,0);
+ display: inline-block;
+ visibility: visible;
+ text-align: center;
+ content: ' ';
+}
+input[type=checkbox]:checked::after{
+ content: "✓";
+ border-color: #4498F7;
+ background-color: #4498F7;
+ font-size: 12px;
+ font-weight: bold;
+}
+    input[type=checkbox]{
+     visibility: hidden;
+     vertical-align:middle; margin-bottom:2px;
+     cursor: pointer;
+     position: relative;
+     width: 24px;
+     height: 24px;
+    }
+    input[type=checkbox]::after{
+     position: absolute;
+     top: 0;
+     margin-top:2px;
+     width: 14px; height: 14px;
+     border: 1px solid #EEEEEE;
+     border-radius: 3px;
+     background-color: rgba(0,0,0,0);
+     display: inline-block;
+     visibility: visible;
+     text-align: center;
+     content: ' ';
+	 background: #000;
+    }
+
+   body {
+
+    color: #fc0; /* Цвет текста */
+   }
+
+	
+	#topp {
+
+    position: absolute;	/* Абсолютное позиционирование */
+    width: 402px; /* Ширина слоя в пикселах */
+    height: 30px; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -211px; /* Отступ слева, включает padding и border */
+    margin-top: -230px;	/* Отступ сверху */
+    background: #34343c; /* Цвет фона */
+ border-radius: 0px 0px 25px 25px;
+    padding: 10px; /* Поля вокруг текста */
+    overflow: hidden; /* Добавление полосы прокрутки */ 
+	
+	}
+	
+	    button:active {
+         transform: translateY(2px);
+		 background: #000;
+    }
+
+        .el-button {
+			font-size: 14px;
+			padding: 5px 5px;
+			line-height: 14px;
+			color: #000;
+			background-color: #b8d1f2;
+		}
+
+		.el-button:hover {
+			opacity: .7;
+			color: #000;
+			background-color: #B8D1F2;
+		}
+
+		.el-button:focus,
+		.el-button:hover {
+			color: #000;
+			background-color: #B8D1F2;
+		}
+		
+	    van-button{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 10px 10px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+
+  transition: .4s;
+}
+.gradient-button:hover {
+  background-position: right center;
+}
+
+
+
+label.current {
+    background-color: #1E90FF;
+}
+	
+	        .fun-block__title {
+            margin: 0;
+            padding: 32px 16px 16px;
+            color: rgba(69, 90, 100, 0.6);
+            font-weight: normal;
+            font-size: 500px;
+            line-height: 16px;
+        }
+		#topi {
+        border: 1px solid #0f9bff;
+        box-shadow:0 0 50px #0f9bff;
+    position: absolute;	/* Абсолютное позиционирование */
+    width: 400px; /* Ширина слоя в пикселах */
+    height: 1px; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -211px; /* Отступ слева, включает padding и border */
+    margin-top: -250px;	/* Отступ сверху */
+    background: #0f9bff; /* Цвет фона */
+	border-radius: 0px ;
+    padding: 10px; /* Поля вокруг текста */
+    overflow: auto; /* Добавление полосы прокрутки */ 
+	
+	}
+	
+	
+	 .fun-block__title {
+
+        border: 1px solid #0f9bff;
+        box-shadow:0 0 50px #0f9bff;
+    position: absolute;	/* Абсолютное позиционирование */
+    width: 0px; /* Ширина слоя в пикселах */
+    height: 1px; /* Высота слоя в пикселах */
+    left: 0%; /* Положение слоя от левого края */
+    top: 0%; /* Положение слоя от верхнего края */
+    margin-left: 0px; /* Отступ слева, включает padding и border */
+    margin-top: 0px;	/* Отступ сверху */
+    background: #34343c; /* Цвет фона */
+	border-radius: 0px ;
+    padding: 10px; /* Поля вокруг текста */
+    overflow: auto; /* Добавление полосы прокрутки */ 
+    
+	}
+	
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+}
+        
+        
+		.content {
+        width: 75%; /* Ширина слоя */
+        text-align: center;
+      }
+	  
+	      hidemenu {
+        height: 30px;
+            position: absolute;
+            top: 150%;
+            left: 40%;
+          background: green;
+  box-shadow: 0 -150px 70px -120px teal inset,
+              0 -220px 70px -120px yellowgreen inset,
+              0 -280px 70px -120px gold inset;
+  border-radius: 30px;
+  border: 10px solid white;
+  animation: background 4s infinite alternate;
+  border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+    }
+   kf
+    @keyframes background {
+  50% {
+    background: darkviolet;
+    box-shadow: 0 -140px 70px -120px mediumorchid inset,
+                0 -210px 70px -120px teal inset,
+                0 -280px 70px -120px plum inset;
+				
+  }
+}
+   
+	      button {
+        height: 30px;
+            position: absolute;
+            top: 150%;
+          background: crimson;
+  box-shadow: 0 -150px 70px -120px teal inset,
+              0 -220px 70px -120px yellowgreen inset,
+              0 -280px 70px -120px gold inset;
+  border-radius: 30px;
+  border: 10px solid white;
+  animation: background 4s infinite alternate;
+  border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+    }
+    @keyframes background {
+  50% {
+    background: darkviolet;
+    box-shadow: 0 -140px 70px -120px mediumorchid inset,
+                0 -210px 70px -120px teal inset,
+                0 -280px 70px -120px plum inset;
+				
+  }
+}
+
+        
+        .aymenu {
+      position: absolute;	/* Абсолютное позиционирование */
+    width: 400px; /* Ширина слоя в пикселах */
+    height: 260px; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -211px; /* Отступ слева, включает padding и border */
+    margin-top: -150px;	/* Отступ сверху */
+    background: #34343c; /* Цвет фона */
+
+ 
+  border-radius: 25px;
+    padding: 10px; /* Поля вокруг текста */
+
+	
+        }
+#d {
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  .l {
+    position: absolute;
+    width: 46%;
+    height: 100%;
+    border-top: solid 1px;
+    border-top-left-radius: 30px;
+    z-index: -3;
+  }
+  .r {
+    z-index: -3;
+    border-top-right-radius: 30px;
+    position: absolute;
+    width: 46.3%;
+    height: 100%;
+    margin-left: 54%;
+    border-top: solid 1px;
+  }
+  .b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-radius: 30px;
+  }
+}
+
+section { 
+  display: none;  
+  padding: 15px; 
+  background: dark; 
+  position: absolute; 
+  top: 0; 
+  left: 0px; 
+  color: white;
+} 
+
+input { 
+  display: none; 
+} 
+label { 
+position: relative;
+top: -30px;
+left: 200px;
+  width: 50px; 
+  padding: 2px; 
+ size: 10px;
+color: #000;
+  float: left;
+
+
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 3px;
+    
+ 
+} 
+
+    @keyframes background {
+  50% {
+    background: darkviolet;
+    box-shadow: 0 -140px 70px -120px mediumorchid inset,
+                0 -210px 70px -120px teal inset,
+                0 -280px 70px -120px plum inset;
+				
+  }
+}
+    label:active {
+         transform: translateY(2px);
+		 background: #ffffff;
+    }
+input:checked + label { 
+  color: #555; 
+  background: white; 
+} 
+#tab1:checked ~ #content12, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 { 
+  display: block; 
+} 
+section { 
+  animation: scale 0.7s ease-in-out; 
+} 
+@keyframes scale { 
+  0% { 
+  transform: scale(0.9); 
+  opacity: 0; 
+  } 
+  50% { 
+  transform: scale(1.005); 
+  opacity: 0.5; 
+  } 
+  100% { 
+  transform: scale(1); 
+  opacity: 1; 
+  } 
+}
+.verticalLine {
+  border-left: thick solid white;
+  position: absolute ;
+  top: 42px ;
+  left: 190px ;
+  width: 1px ;
+  height: 318px;
+ 
+  
+  
+}
+
+		.contents {
+        width: 75%; /* Ширина слоя */
+        text-align: center;
+      }
+	  
+
+
+.zxcf{
+ background: dark; 
+}
+	 				.mainf {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  font-size: 18pt;
+  font-family: "Arial Rounded MT Bold";
+  color: white;
+}
+
+.fnc3 {
+  position: absolute;
+top: 24%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.NoRecoil {
+  background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 53.5%;
+left: 5%;
+}
+
+.fnc {
+  position: absolute;
+top: 24%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc50 {
+  position: absolute;
+top: 5%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc51 {
+  position: absolute;
+top: 8.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc52 {
+  position: absolute;
+top: 11.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc53 {
+  position: absolute;
+top: 14.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc54 {
+  position: absolute;
+top: 17.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc55 {
+  position: absolute;
+top: 20.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+
+.AntiFlash {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 114.5%;
+left: 5%;
+
+}
+
+.jjcontent {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 700px;
+    overflow-y: scroll;
+}
+
+
+
+.fnc2 {
+  position: absolute;
+top: 10%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.FireRate {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 10.5%;
+left: 5%;
+}
+
+.fnc4 {
+  position: absolute;
+top: 39%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.InfinityAmmo {
+ background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 69.5%;
+left: 5%;
+}
+
+.time {
+  position: absolute;
+  top: 14%;
+  left: 30%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: rgb(42, 255, 0);
+}
+
+.next {
+  position: absolute;
+  top: 83%;
+  left: 77%;
+}
+
+.fnc5 {
+  position: absolute;
+top: 69%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.TeamRadar {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 24.5%;
+left: 5%;
+}
+
+.ShootTh {
+    background-color: none;
+  border: 0.1px solid #ffffff;
+  border-radius: 1%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 39.5%;
+left: 5%;
+}
+
+.fnc88 {
+  position: absolute;
+top: 81%;
+  left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.tm {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 80.4%;
+  left: 50%;
+}
+
+.fnc6 {
+  position: absolute;
+top: 84%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.AntiHE {
+  background-color: #df8a8a;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 129.5%;
+left: 5%;
+}
+
+.fnc7 {
+  position: absolute;
+top: 54%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.MoneyHack {
+    background-color: #df8a8a;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 38.5%;
+left: 5%;
+
+}
+
+.fnc8 {
+  position: absolute;
+top: 39%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.AlwaysRespawn {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 84.5%;
+left: 5%;
+}
+
+.fnc9 {
+  position: absolute;
+top: 54%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.BombExpl {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 159.5%;
+left: 5%;
+}
+
+.fnc10 {
+  position: absolute;
+top: 69%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.FastPlant {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 174.5%;
+left: 5%;
+
+}
+
+.fnc11 {
+  position: absolute;
+top: 84%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.WallShot {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 84.5%;
+left: 5%;
+
+}
+
+.MedalHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 99.5%;
+left: 5%;
+
+}
+
+.Float {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 99.5%;
+left: 5%;
+
+}
+
+.ArmRaceWin {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 114.5%;
+left: 5%;
+}
+	
+.fnc12 {
+
+  position: absolute;
+top: 99%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.MoveBefore {
+    background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 129.5%;
+left: 5%;
+
+}	
+
+.fnc13 {
+  position: absolute;
+top: 99%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+
+.fnc14 {
+  position: absolute;
+top: 114%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.PlantAnywhere {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 189.5%;
+left: 5%;
+}
+
+.BombImmunity {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 204.5%;
+left: 5%;
+
+}
+
+
+.fnc15 {
+  position: absolute;
+top: 129%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.FastGrenade {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 144.5%;
+left: 5%;
+
+
+}
+
+.FastGame {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 24.5%;
+left: 5%;
+
+}
+
+.Rounds {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 4.7%;
+  left: 89%;
+}
+
+.Kills {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 7.9%;
+  left: 60%;
+}
+
+.Death {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 11.0%;
+  left: 60%;
+}
+
+.Exp {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 13.9%;
+  left: 60%;
+}
+
+.Ping {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 17.0%;
+  left: 60%;
+}
+
+.fnc16 {
+  position: absolute;
+top: 114%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+}
+
+.friendlyfire {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 219.5%;
+left: 5%;
+}
+
+.FPSHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 19.5%;
+  left: 39%;
+}
+
+.fnc17 {
+  position: absolute;
+top: 129%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.BuyAnywhere {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 54.5%;
+left: 5%;
+
+}
+   
+   .bgt {
+     position: absolute;
+     top: 256%;
+     left: 17%;
+     font-size: 350%;
+color: darkgray;
+     opacity: 50%;
+}
+   
+   .statustext {
+     font-size: 130%;
+     position: absolute;
+     left: 5.5289%;
+     top: 70%;
+}
+  
+   .status {
+     font-size: 130%;
+     position: absolute;
+     left: 35%;
+     top: 70%;
+color: lime;
+}
+
+.fnc18 {
+  position: absolute;
+top: 144%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.JumpHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 69.5%;
+left: 5%;
+}
+
+.fnc19 {
+  position: absolute;
+top: 144%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc20 {
+  position: absolute;
+top: 159%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc21 {
+  position: absolute;
+top: 174%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.fnc22 {
+  position: absolute;
+top: 189%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc23 {
+  position: absolute;
+top: 204%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc24 {
+
+  position: absolute;
+top: 219%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.fnc25 {
+  position: absolute;
+top: 99%;
+left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc26 {
+  position: absolute;
+top: 103%;
+left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.NoGrenade {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 144.5%;
+left: 5%;
+
+}
+         
+ </style>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+
+	   
+	  // переменная, в которой хранится выбранное математическое действие
+	  var op; 
+
+	  // функция расчёта
+	  function func() {
+	  	// переменная для результата
+	    var result;
+	    // получаем первое и второе число
+	    var num1 = Number(document.getElementById("num1").value);
+	    var num2 = Number(document.getElementById("num2").value);
+	    // смотрим, что было в переменной с действием, и действуем исходя из этого
+	    switch (op) {
+	      case '+':
+	        result = num1 + num2;
+	        break;
+	      case '-':
+	        result = num1 - num2;
+	        break;
+	      case '*':
+	        result = num1 * num2;
+	        break;
+	      case '/':
+	        result = num1 / num2;
+	        break;
+	    }
+
+	    // отправляем результат на страницу
+	    document.getElementById("result").innerHTML = result;
+	  }
+
+  function refreshLocalSrcipts()
+{
+    $("table#localjslist tr").remove();
+    
+    var jsfiles = h5gg.getLocalScripts();
+
+    setTimeout(function(){
+        
+        if(jsfiles.length==0) {
+            $("table#localjslist tbody").append("<tr><td colspan=2>Searching App's Documents Directory...<br/>Searching .app Bundle Directory...<br/>No (*.js) or (*.html) files found!</td></td>");
+        }
+        
+        $("table#localjslist tbody").append('<tr><td style="border-right-style:none; color:blue">Browser on File App</td><td style="border-left-style:none;width:45px"><button onclick="h5gg.pickScriptFile(onClickLoadScript)">Load</button></td></tr>');
+        
+        for(var i=0; i<jsfiles.length; i++) {
+            var row = '<tr><td style="border-right-style:none;font-weight:bold;color:green">'+jsfiles[i].name+'</td><td style="border-left-style:none;width:45px"><button onclick="onClickLoadScript(\''+jsfiles[i].path+'\')">Load</button></td></tr>';
+            $("table#localjslist tbody").append(row);
+        }
+    }, 300);
+}
+
+function onShowLoadScript(show)
+{
+    if(show) {
+        $("#maskview").show();
+        $("#popup_loadscripts").show();
+        
+        if(typeof h5gg!='undefined') refreshLocalSrcipts();
+    } else {
+        $("#maskview").hide();
+        $("#popup_loadscripts").hide();
+    }
+}
+
+ function onClickLoadScript(url, type)
+{
+    if(!url) return;
+    
+    if(/^\w+\:/.test(url)==false) url = "file://"+url;
+    
+    try{
+        url = new URL(url);
+        url.searchParams.append("_", Math.random());
+    }catch(e){
+        alert("invliad URL!");
+        return;
+    }
+    
+    $("#popup_progress").show();
+    $("#maskview_script").show();
+    
+    if(type=='h5' || (!type&&!/\.js$/.test(url.pathname))) {
+        window.location = url.href;
+        return;
+    }
+    
+    var script = document.createElement("script");
+
+    script.type = "text/javascript";
+    
+    script.onload = function () {
+      alert("Твой Конфиг Загружен!");
+        $("#popup_progress").hide();
+        $("#maskview_script").hide();
+    };
+    
+    script.onerror = function () {
+        alert("Твой конфиг не загружен!/Посмотри, не допустил ли ты ошибку");
+        $("#popup_progress").hide();
+        $("#maskview_script").hide();
+    };
+
+    script.src = url.href;
+    document.body.appendChild(script);
+}
+
+    function hz(){
+
+h5gg.require(7.8); //设定最低需求的H5GG版本号
+
+//将插件dylib放到.app目录中调用//copy plugin dylib to .app folder
+var MyAlert = h5gg.loadPlugin("MyAlert", "customAlert.dylib");
+
+if(!MyAlert) throw "插件加载失败! Plugin Load Failed!";
+
+//延迟一秒等H5GG的脚本执行完毕弹出之后再执行调用, 避免后面的弹框被阻塞弹不出来
+setTimeout(function(){
+    
+    MyAlert.choice(["弹框Style1","弹框Style2","弹框Style3"], function(item)
+    {
+        if(item=='弹框Style1') MyAlert.alert0(); //调用无参数函数
+
+        if(item=='弹框Style2')MyAlert.alert1("提示文本AlertText"); //调用一个参数函数
+        
+        if(item=='弹框Style3') MyAlert.alert2("标题文本AlertTitle", "内容文本AlertText"); //调用两个参数函数
+    });
+    
+}, 1000);
+	var app = new Vue({
+	
+	});
+      function refreshLocalSrcipts()
+    {
+        $("table#localjslist tr").remove();
+        
+        var jsfiles = h5gg.getLocalScripts();
+    
+        setTimeout(function(){
+            
+            if(jsfiles.length==0) {
+                $("table#localjslist tbody").append("<tr><td colspan=2>Searching App's Documents Directory...<br/>Searching .app Bundle Directory...<br/>No (*.js) or (*.html) files found!</td></td>");
+            }
+            
+            $("table#localjslist tbody").append('<tr><td style="border-right-style:none; color:blue">Browser on File App</td><td style="border-left-style:none;width:45px"><button onclick="h5gg.pickScriptFile(onClickLoadScript)">Load</button></td></tr>');
+            
+            for(var i=0; i<jsfiles.length; i++) {
+                var row = '<tr><td style="border-right-style:none;font-weight:bold;color:green">'+jsfiles[i].name+'</td><td style="border-left-style:none;width:45px"><button onclick="onClickLoadScript(\''+jsfiles[i].path+'\')">Load</button></td></tr>';
+                $("table#localjslist tbody").append(row);
+            }
+        }, 300);
+    }
+    
+    function onShowLoadScript(show)
+    {
+        if(show) {
+            $("#maskview").show();
+            $("#popup_loadscripts").show();
+            
+            if(typeof h5gg!='undefined') refreshLocalSrcipts();
+        } else {
+            $("#maskview").hide();
+            $("#popup_loadscripts").hide();
+        }
+    }
+    
+     function onClickLoadScript(url, type)
+    {
+        if(!url) return;
+        
+        if(/^\w+\:/.test(url)==false) url = "file://"+url;
+        
+        try{
+            url = new URL(url);
+            url.searchParams.append("_", Math.random());
+        }catch(e){
+            alert("invliad URL!");
+            return;
+        }
+        
+        $("#popup_progress").show();
+        $("#maskview_script").show();
+        
+        if(type=='h5' || (!type&&!/\.js$/.test(url.pathname))) {
+            window.location = url.href;
+            return;
+        }
+        
+        var script = document.createElement("script");
+    
+        script.type = "text/javascript";
+        
+        script.onload = function () {
+          alert("Твой Конфиг Загружен!");
+            $("#popup_progress").hide();
+            $("#maskview_script").hide();
+        };
+        
+        script.onerror = function () {
+            alert("Твой конфиг не загружен!/Посмотри, не допустил ли ты ошибку");
+            $("#popup_progress").hide();
+            $("#maskview_script").hide();
+        };
+    
+
+        
+    if(typeof $ == 'undefined') alert("网络连接失败, 请重新启动!");
+    
+    $(document).ready(function(){
+        //alert();
+        //绑定菜单点击切换子页面
+        $("div.menubox").click(function(){
+            $("div.menubox").removeClass("current");
+            $("div.menuview").removeClass("current");
+            $(this).addClass("current");
+            
+            var menuid = $(this).attr("menu");
+            $("div#"+menuid).addClass("current");
+        });
+        
+        /*禁止文本Option和拖动*/
+        document.body.onselectstart = document.body.ondrag =function(){
+            return false;
+        }
+        
+        $("input").blur(function(){
+            window.scroll(0,0); //文本框等输入完毕后页面自动滚动到顶部
+        });
+        
+        //激活webkit的button:active
+        document.body.addEventListener('touchstart', function () {});
+    
+       
+    });
+        
+		        var app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    BSOK: false,
+                    bscard: "",
+                    BSError: "",
+                    BSSuccess: "",
+
+                    m416: false,
+                  m4161:false,
+                  m4162:false,
+                  m4163:false,
+                    scarl: false,
+                  scar2:false,
+                  scar3:false,
+                  scar4:false,
+                  checked:false,
+                  checked1:false,
+                  checked2:false,
+                  value:-20
+                }
+            },
+            mounted() {
+              
+                
+            },
+            methods: {}
+        })
+                
+                    
+                
+
+            
+    </script>
+	
+            <script>
+		   if(typeof $ == 'undefined') alert("зЅ‘з»њиїћжЋҐе¤±иґҐ, иЇ·й‡Ќж–°еђЇеЉЁ!");
+    
+    $(document).ready(function(){
+        //alert();
+        //з»‘е®љиЏњеЌ•з‚№е‡»е€‡жЌўе­ђйЎµйќў
+        $("div.menubox").click(function(){
+            $("div.menubox").removeClass("current");
+            $("div.menuview").removeClass("current");
+            $(this).addClass("current");
+            
+            var menuid = $(this).attr("menu");
+            $("div#"+menuid).addClass("current");
+        });
+        
+        /*з¦Ѓж­ўж–‡жњ¬Optionе’Њж‹–еЉЁ*/
+        document.body.onselectstart = document.body.ondrag =function(){
+            return false;
+        }
+        
+        $("input").blur(function(){
+            window.scroll(0,0); //ж–‡жњ¬жЎ†з­‰иѕ“е…Ґе®ЊжЇ•еђЋйЎµйќўи‡ЄеЉЁж»љеЉЁе€°йЎ¶йѓЁ
+        });
+        
+        //жїЂжґ»webkitзљ„button:active
+        document.body.addEventListener('touchstart', function () {});
+    
+        if(typeof h5gg!='undefined') {
+            //и®ѕзЅ®ж ‡йўж ЏеЊєеџџеЏЇж‹–еЉЁж‚¬жµ®зЄ—
+            setWindowDrag(0, 0, 400, 80);
+            //и®ѕзЅ®е°єеЇёе’ЊдЅЌзЅ®
+            setWindowRect(60,60,300,300);
+        }
+    });
+        
+    </script>
+
+
+  <script>
+function login()
+{
+    if(!$("#username").val()) {
+        alert("please input your account");
+        return;
+    }
+    
+    if(!$("#password").val()) {
+        alert("please input your password");
+        return;
+    }
+    
+    alert("test login\n\nusername:"+$("#username").val() + "\n" + "password:"+$("#password").val());
+}
+    
+function buttonclick(input)
+{
+    alert("button clicked = "+input.innerText);
+}
+    
+function checkboxclick(input)
+{
+    alert("checkbox clicked = "+input.parentElement.innerText+" = "+input.checked);
+}
+   
+function rangechange(input)
+{
+    alert("slider chagne = "+input.value);
+}
+    
+function radioclick(input)
+{
+    alert("radio clicked: group = "+input.name+" = "+input.parentElement.innerText+" = "+input.value);
+}
+</script>
+
+<script>
+
+var h5gg_jquery_stub;
+
+if(typeof $ == 'undefined')
+    document.write("<script src=\"https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js\"><\/script>");
+
+//根据选择的有符号/无符号数确定搜索类型
+function h5ggType(type)
+{
+    if($("input:radio[name=numtype]:checked").val()=="unsigned") {
+        switch(type) {
+            case "I8":
+                return "U8";
+            case "I16":
+                return "U16";
+            case "I32":
+                return "U32";
+            case "I64":
+                return "U64";
+        }
+    }
+    
+    return type;
+}
+
+    
+//页面显示完毕事件
+document.addEventListener("DOMContentLoaded", function(){
+
+    if(typeof $ == 'undefined') {
+        alert("jquery load failed!");
+        return;
+    }
+
+    /*禁止文本选择和拖动*/
+    document.body.onselectstart = document.body.ondrag = function(){
+        return false;
+    }
+    //文本框等输入完毕后页面自动滚动到顶部
+    $("input").blur(function(){
+        window.scroll(0,0);
+    });
+    
+    //激活webkit的button:active
+    document.body.addEventListener('touchstart', function () {});
+    
+    //绑定菜单点击切换子页面
+    $("div.menubox").unbind('click').click(function(){
+        $("div.menubox").removeClass("current");
+        $("div.menuview").removeClass("current");
+        $(this).addClass("current");
+        
+        var menuid = $(this).attr("menu");
+        $("div#"+menuid).addClass("current");
+    });
+    
+    $("#datavalue").focus(function(){
+        var input = $(this);
+        input.attr("type","number");
+        setTimeout(function(){
+            input.attr("type","text");
+        }, 500);
+    });
+    
+    
+    $("#crossproc").click(function() {
+        $("#popup_proclist").show();
+        $("#maskview").show();
+    });
+        
+    if(typeof h5gg!='undefined')
+    {
+        
+        $("#version").text(h5gg_internel_version);
+        
+        //清除设计演示的结果列表
+        onClickClearResults();
+    
+        //设置标题栏区域可拖动悬浮窗
+        setWindowDrag(0, 0, 400, 80);
+        
+        //布局调整函数
+        setLayoutAction(function(w,h) {
+            var width = 370; var height = 370; //默认尺寸
+            if(w<h) {
+                height = 600; //竖屏模式加大显示高度
+            }
+            width = Math.min(width, w); //适配iPad浮窗, 最大宽度不超出
+            height = Math.min(height, h); //适配老设备, 最大高度不超出
+            var x = (w-width)/2;
+            var y = (h-height)/2;
+            if(w<h) {
+                y = Math.max(20, y);
+                height = Math.min(height, h-y);
+            }
+            setWindowRect(x,y,width,height);
+        });
+
+        var checkprocs = function()
+        {
+            var procs = h5gg.getProcList();
+            if(procs)  //不为空(null)说明是具有跨进程权限
+            {
+                refreshProcList(procs);
+                $("#crossproc").show();
+                $("#closeMenu").hide();
+                
+                if(!$("#procname").attr('pid')) {
+                    $("#popup_proclist").show();
+                    $("#maskview").show();
+                    $("#procname").text('');
+                }
+                
+                setInterval(function(){
+                    if($("#popup_proclist").is(":visible"))
+                        refreshProcList(h5gg.getProcList());
+
+                    if($("#procname").attr('pid'))
+                    {
+                        var procs = h5gg.getProcList();
+                        var alive = false;
+                        for(var i=0; i<procs.length; i++) {
+                            if(procs[i].pid == $("#procname").attr('pid')) {
+                                alive=true;
+                                break;
+                            }
+                        }
+                        
+                        if(!alive) {
+                            alert("Target process terminated\n\nPlease click on the title bar to select a new target");
+                            $("#procname").removeAttr('pid');
+                            $("#procname").text('');
+                        }
+                    }
+                    
+                }, 1500);
+                
+            } else  {
+                $("#crossproc").hide();
+            }
+            
+        }; //end of checkprocs
+        
+        checkprocs();
+        //setInterval(checkprocs, 1500);
+    
+    } //end of h5gg check
+    
+    //点击结果列表里面的地址时弹出修改窗口, 要在listdiv刷新html之后绑定
+    $("table#resultList").on('click','tr', function()
+    {
+        $("table#resultList tr").removeClass("hilight");
+        $(this).addClass("hilight");
+        
+        var address = $(this).attr("address");
+        var datatype = $(this).attr("datatype");
+        var datavalue = $(this).attr("datavalue");
+        
+        //读取该地址最新数据
+        if(typeof h5gg!='undefined')
+            datavalue = h5gg.getValue(address, h5ggType(datatype));
+        
+        showPopView("&nbsp;&nbsp;Edit&nbsp;&nbsp;", function(type, value){
+            
+            if(!h5gg.setValue(address, value, h5ggType(type))) {
+                alert("The modification failed, the address may be invalid!");
+            }
+            
+            onClickRefreshResults();
+            
+        }, datatype, datavalue);
+    });
+});
+
+function refreshProcList(procs)
+{
+    $("#proctable button").remove();
+    
+    for(var i=0; i<procs.length; i++) {
+        var proc = procs[i];
+        var btn = $("<button>"+proc.name+"</button>");
+        btn.attr("pid", proc.pid);
+        btn.click(function()
+        {
+            if(!h5gg.setTargetProc($(this).attr('pid'))) {
+                alert("Cannot Select Target!");
+                return;
+            }
+            
+            onClickClearResults();
+            
+            $("#procname").attr('pid', $(this).attr('pid'));
+            $("#procname").text($(this).text());
+            $("#popup_proclist").hide();
+            $("#maskview").hide();
+        });
+        
+        $("#proctable").append(btn);
+    }
+}
+
+function refreshLocalSrcipts()
+{
+    $("table#localjslist tr").remove();
+    
+    var jsfiles = h5gg.getLocalScripts();
+
+    setTimeout(function(){
+        
+        if(jsfiles.length==0) {
+            $("table#localjslist tbody").append("<tr><td colspan=2>Searching App's Documents Directory...<br/>Searching .app Bundle Directory...<br/>No (*.js) or (*.html) files found!</td></td>");
+        }
+        
+        $("table#localjslist tbody").append('<tr><td style="border-right-style:none; color:blue">Browser on File App</td><td style="border-left-style:none;width:45px"><button onclick="h5gg.pickScriptFile(onClickLoadScript)">Load</button></td></tr>');
+        
+        for(var i=0; i<jsfiles.length; i++) {
+            var row = '<tr><td style="border-right-style:none;font-weight:bold;color:green">'+jsfiles[i].name+'</td><td style="border-left-style:none;width:45px"><button onclick="onClickLoadScript(\''+jsfiles[i].path+'\')">Load</button></td></tr>';
+            $("table#localjslist tbody").append(row);
+        }
+    }, 300);
+}
+
+function onShowLoadScript(show)
+{
+    if(show) {
+        $("#maskview").show();
+        $("#popup_loadscripts").show();
+        
+        if(typeof h5gg!='undefined') refreshLocalSrcipts();
+    } else {
+        $("#maskview").hide();
+        $("#popup_loadscripts").hide();
+    }
+}
+
+function onClickLoadScript(url, type)
+{
+    if(!url) return;
+    
+    if(/^\w+\:/.test(url)==false) url = "file://"+url;
+    
+    try{
+        url = new URL(url);
+        url.searchParams.append("_", Math.random());
+    }catch(e){
+        alert("invliad URL!");
+        return;
+    }
+    
+    $("#popup_progress").show();
+    $("#maskview_script").show();
+    
+    if(type=='h5' || (!type&&!/\.js$/.test(url.pathname))) {
+        window.location = url.href;
+        return;
+    }
+    
+    var script = document.createElement("script");
+
+    script.type = "text/javascript";
+    
+    script.onload = function () {
+      alert("JS Run Complete!");
+        $("#popup_progress").hide();
+        $("#maskview_script").hide();
+    };
+    
+    script.onerror = function () {
+        alert("Load Error!\nURL Invalid or Network Exception!");
+        $("#popup_progress").hide();
+        $("#maskview_script").hide();
+    };
+
+    script.src = url.href;
+    document.body.appendChild(script);
+}
+
+
+//弹出搜索或修改窗口
+function showPopView(name, action, type, value)
+{
+    $("#maskview").show();
+    $("#popup_search_edit").show();
+    $("#popup_search_edit").find("B#titleBar").html(name);
+    $("#popup_search_edit").find("button#action").html(name);
+    
+    if(type) {
+        $("table#datatype td").each(function(){
+            if($(this).text()==type)
+                $(this).addClass("selected");
+            else
+                $(this).removeClass("selected");
+        });
+    }
+    
+    if(value) {
+        $("input#datavalue").val(value);
+    }
+    
+    $("input#datavalue").focus();
+    
+    $("#popup_search_edit").find("button#action").unbind("click").click(function(){
+        var type = $("table#datatype td.selected").text();
+        var value = $("input#datavalue").val();
+        
+        $("#popup_search_edit").hide();
+        $("#popup_progress").show();
+        
+        setTimeout(function() {
+            
+            action(type, value);
+            
+            $("#popup_progress").hide();
+            $("#maskview").hide();
+        }, 200);
+        
+    });
+    
+    $("#popup_search_edit").find("button#cancel").unbind("click").click(function(){
+        $("#maskview").hide();
+        $("#popup_search_edit").hide();
+    });
+    
+    $("table#datatype td").unbind("click").click(function(){
+        $("table#datatype td").removeClass("selected");
+        $(this).addClass("selected");
+        $("input#datavalue").focus();
+    });
+}
+
+function onClickClearResults()
+{
+    $("input#datavalue").val("");
+    $("#results_count").hide();
+    $("table#resultList tr").remove();
+    $("table#resultList").attr("currentCount", 0);
+    if(typeof h5gg!='undefined') h5gg.clearResults();
+}
+
+function loadResults(from, count)
+{
+    var maxCount = count;
+    var skipCount = from;
+    
+    var results = h5gg.getResults(maxCount, skipCount);
+    
+    //alert("count"+count+":"+results.length+":"+results[0].address);
+    
+    for(var i=0; i<results.length; i++)
+    {
+        if(results[i].type=='F32' || results[i].type=='F64')
+            results[i].value = '('+results[i].value+')';
+        var row = '<tr address="'+results[i].address+'" datatype="'+results[i].type+'" datavalue="'+results[i].value+'"><td>'+(from+i+1)+'. '+results[i].address+'<br/><font>'+results[i].value+'</font></td></tr>';
+        
+        $("table#resultList tbody").append(row);
+    }
+}
+
+function onClickRefreshResults(clean)
+{
+   $("table#resultList tr").remove();
+   
+   if(clean) {
+       $("#listdiv").get(0).scroll(0,0);
+       $("table#resultList").attr("currentCount", 0);
+   }
+
+    var count = h5gg.getResultsCount();
+    $("#results_count").text("Results Count: "+count);
+    $("#results_count").show();
+    
+    var currentCount = Number($("table#resultList").attr("currentCount"));
+    if(isNaN(currentCount) || currentCount==0) {
+        currentCount = 100;
+        $("table#resultList").attr("currentCount", 100);
+    }
+    
+    loadResults(0, currentCount);
+}
+
+function loadMoreResults() {
+    console.log("load more data!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"+Math.random());
+    
+    //当前显示数量
+    var currentCount = Number($("table#resultList").attr("currentCount"));
+    
+    //每次增加显示100条
+    $("table#resultList").attr("currentCount", currentCount+100);
+    
+    loadResults(currentCount, 100);
+}
+
+function showMoreResults(div)
+{
+    var lh = div.scrollHeight - div.scrollTop;
+    console.log(div.clientHeight+","+div.offsetHeight +" : " +div.scrollTop+","+div.scrollHeight + " : " + lh);
+    
+    if(lh <= div.clientHeight) {
+        console.log("trigger bottom!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+        loadMoreResults();
+    }
+}
+
+function onClickEditAll()
+{
+    /*
+    if($("table#resultList tr").length==0) {
+        alert("没有可修改的数据");
+        return;
+    }*/
+    
+    showPopView("EditAll", function(type, value){
+
+        var count = h5gg.editAll(value, h5ggType(type));
+        
+        onClickRefreshResults();
+        
+        alert("Success to modify count: "+count);
+    });
+}
+
+function onClickSearchNumber()
+{
+    showPopView("Search Number", function(type, value) {
+        
+        h5gg.setFloatTolerance($("#float_tolerance").val());
+        
+        var memoryFrom = $("input#range_min").val();
+        var memoryTo = $("input#range_max").val();
+        h5gg.searchNumber(value, h5ggType(type), memoryFrom, memoryTo);
+        
+        onClickRefreshResults(true);
+    });
+}
+
+function onClickSearchNearby()
+{
+    /*
+    if($("table#resultList tr").length==0) {
+        alert("没有可继续搜索的数据");
+        return;
+    }*/
+    
+    showPopView("Nearby Search", function(type, value){
+        
+        h5gg.setFloatTolerance($("#float_tolerance").val());
+        
+        var nearbyRange = $("input#nearby_range").val();
+        h5gg.searchNearby(value, h5ggType(type), nearbyRange);
+        
+        onClickRefreshResults(true);
+    });
+}
+    
+function onClickMakeTweak()
+{
+    alert("Make your custom dylib\n\nStep 1: Select a picture file for float button");
+    h5gg.pickScriptFile(function(icon){
+        
+        alert("Step 2: Select a html file that needs to load automatically");
+        
+        h5gg.pickScriptFile(function(html) {
+            
+            alert(h5gg.makeTweak(icon, html));
+            
+        }, ["public.html"]);
+        
+    }, ["public.image"]);
+}	
+			
+			
+                var colorWell;
+var defaultColor = "#0000ff";
+
+window.addEventListener("load", startup, false);
+
+function startup() {
+  colorWell = document.querySelector("#colorWell");
+  colorWell.value = defaultColor;
+  colorWell.addEventListener("input", updateFirst, false);
+  colorWell.addEventListener("change", updateAll, false);
+  colorWell.select();
+}
+
+function updateFirst(event) {
+  var p = document.querySelector("p,label,body,input,marquee");
+
+  if (p) {
+    p.style.color = event.target.value;
+  }
+}
+
+function updateAll(event) {
+  document.querySelectorAll("p,label,body,input,marquee").forEach(function(p) {
+    p.style.color = event.target.value;
+  });
+}
+
+   function AntiF() {
+
+
+  if (status == 'on') {
+
+    var el = document.querySelector(".AntiFlash");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+     DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2B3A8, "C0035FD6"); //антифлеш 
+     DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2B43C, "C0035FD6"); //антифлеш 
+	  DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2C38C, "C0035FD6"); //антифлеш 
+
+  }
+
+  else if (status == 'off') {
+
+    var el = document.querySelector(".AntiFlash");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2B3A8, "C0035FD6"); //анти флешь
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2B43C, "C0035FD6"); //анти флешь
+	 ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2C38C, "C0035FD6"); //анти флешь
+
+
+  }
+
+
+}
+
+function netu() {
+
+
+  if (status == 'on') {
+
+    var el = document.querySelector(".AntiFlash");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+
+     DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2B3A8, "C0035FD6"); //антифлеш 
+     DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2B43C, "C0035FD6"); //антифлеш 
+	  DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2C38C, "C0035FD6"); //антифлеш 
+
+  }
+
+  else if (status == 'off') {
+
+    var el = document.querySelector(".AntiFlash");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2B3A8, "C0035FD6"); //анти флешь
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2B43C, "C0035FD6"); //анти флешь
+	 ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C2C38C, "C0035FD6"); //анти флешь
+
+
+  }
+
+
+}
+
+function FastGrenade() {
+
+
+  if (status14 == 'on') {
+
+    var el = document.querySelector(".FastGrenade");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status14 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c225c0, "200080D2C0035FD6");
+
+  }
+
+  else if (status14 == 'off') {
+
+    var el = document.querySelector(".FastGrenade");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status14 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c225c0, "200080D2C0035FD6");
+
+
+  }
+
+
+}
+
+
+function friendlyfire() {
+
+
+  if (status18 == 'on') {
+
+    var el = document.querySelector(".friendlyfire");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status18 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1dd9e18, "20008052C0035FD6");
+    
+
+  }
+
+  else if (status18 == 'off') {
+
+    var el = document.querySelector(".friendlyfire");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status18 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1dd9e18, "20008052C0035FD6");
+    
+
+
+  }
+
+
+}
+
+
+function BuyAnywhere() {
+
+
+  if (status17 == 'on') {
+
+    var el = document.querySelector(".BuyAnywhere");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status17 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d016ec, "20008052C0035FD6");
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d039d8, "20008052C0035FD6");
+
+  }
+
+  else if (status17 == 'off') {
+
+    var el = document.querySelector(".BuyAnywhere");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status17 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d016ec, "20008052C0035FD6");
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d039d8, "20008052C0035FD6");
+
+
+  }
+
+
+}
+
+
+function JumpHack() {
+
+
+  if (status16 == 'on') {
+
+    var el = document.querySelector(".JumpHack");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status16 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x33365f0, "200080D2C0035FD6");
+
+  }
+
+  else if (status16 == 'off') {
+
+    var el = document.querySelector(".JumpHack");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status16 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x33365f0, "200080D2C0035FD6");
+
+
+  }
+
+
+}
+
+
+function NoGrenade() {
+
+
+  if (status15 == 'on') {
+
+    var el = document.querySelector(".NoGrenade");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status15 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3075C, "C0035FD6");
+
+  }
+
+  else if (status15 == 'off') {
+
+    var el = document.querySelector(".NoGrenade");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status15 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3075C, "C0035FD6");
+
+
+  }
+
+
+}
+
+
+function PlantAnywhere() {
+
+
+  if (status14 == 'on') {
+
+    var el = document.querySelector(".PlantAnywhere");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status14 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3fa6c, "200080D2C0035FD6");//Plant Anywhere
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3fa24, "200080D2C0035FD6");//Plant Anywhere
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3f9f4, "200080D2C0035FD6");//Plant Anywhere
+
+  }
+
+  else if (status14 == 'off') {
+
+    var el = document.querySelector(".PlantAnywhere");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status14 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3fa6c, "200080D2C0035FD6");//Plant Anywhere
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3fa24, "200080D2C0035FD6");//Plant Anywhere
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1c3f9f4, "200080D2C0035FD6");//Plant Anywhere
+
+
+  }
+
+
+}
+
+
+function FastGame() {
+
+
+  if (status13 == 'on') {
+
+    var el = document.querySelector(".FastGame");
+    el.style.backgroundColor = 'rgb(227, 140, 140)';
+    status13 = 'off';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d6d230, "E003271EC0035FD6");
+
+  }
+
+  else if (status13 == 'off') {
+
+    var el = document.querySelector(".FastGame");
+    el.style.backgroundColor = 'rgb(156, 198, 158)';
+    status13 = 'on';
+
+    h5gg.require(7.9);
+
+    var h5frida = h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+      if (!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+        var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+        alert(fpath + ":0x" + vaddr.toString(16) + "-дї®ж”№е¤±иґҐ!\n" + fpath + ":0x" + vaddr.toString(16) + "-PatchFailed!\n" + result); return false;
+      } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+      return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    }
+
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1d6d230, "E003271EC0035FD6");
+
+
+  }
+
+
+}
+
+            </script>
+	
+            </script>
+
+	
+ 
+ 
+<html>
+<body>
+		 <div id="console">
+	 <div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+      <div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+	 <table id="bodyView" width="200" style="table-layout:fixed;height: calc(200% - 200px) ;">
+
+ <div id="netjs" class="menuview">   
+    <div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+      <div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+        <i :class="ifshow?'el-icon-caret-bottom':'el-icon-caret-top'" @click="ifshow = !ifshow"></i>
+		
+<div id="topi"></div>
+                
+		<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+<div id="topp">
+
+<div class="zxc" class="vl" style="color:#FFF"><h2>DestroySquad</h2> 
+
+
+</div>
+
+<div id="label">
+
+  
+<label for="tab2">Main </label>
+
+<label for="tab3">Visual </label>
+<label for="tab4">Info </label>
+
+</div> 
+</div>
+
+   
+      <div class="aymenu" ref="menuMain">
+	  <div id="app">
+	  
+
+
+
+</div>
+<div id="container"> 
+<div class="tabs">
+<input id="tab1" type="radio" name="tabs" checked> 
+
+<input id="tab2" type="radio" name="tabs"> 
+
+<input id="tab3" type="radio" name="tabs"> 
+
+<input id="tab4" type="radio" name="tabs"> 
+
+
+<section id="content1"> 
+<p> menu by destroysquad 
+<br></p> 
+</section>  
+
+<section id="content2">
+
+
+<div class="drez" top="10">
+<div class="rdezz" >
+
+</div>
+
+<div class="split left">
+
+<h1 class="fnc14">Arm Race Win</h1><div onclick="ArmRaceWin()" class="ArmRaceWin"></div>
+<h1 class="fnc15">MoveBefTime</h1><div onclick="MoveBefore()" class="MoveBefore"></div>
+ <h1 class="fnc19">Fast Grenade</h1><div onclick="FastGrenade()" class="FastGrenade"></div>
+ <h1 class="fnc20">Fast Bomb</h1><div onclick="BombExpl()" class="BombExpl"></div>
+       <h1 class="fnc21">Fast Plant</h1><div onclick="FastPlant()" class="FastPlant"></div>
+      <h1 class="fnc22">PlantAny</h1><div onclick="PlantAnywhere()" class="PlantAnywhere"></div>
+      <h1 class="fnc23">Bomb Immunity</h1><div onclick="bombimmunity()" class="BombImmunity"></div>
+      <h1 class="fnc24">Friend Fire</h1><div onclick="friendlyfire()" class="friendlyfire"></div>
+
+
+
+</div>
+
+
+ <div class="split leftt">
+
+<h1 class="fnc">Fast Round</h1><div onclick="FastGame()" class="FastGame"></div>
+<h1 class="fnc4">Wallshot</h1><div onclick="netu()" class="ShootTh"></div> 
+ <h1 class="fnc5">Infinity Jump</h1><div onclick="JumpHack()" class="JumpHack"></div>  
+ <h1 class="fnc6">Respawn</h1><div onclick="AlwaysRespawn()" class="AlwaysRespawn"></div>
+  <h1 class="fnc7">Buy Anywhere</h1><div onclick="BuyAnywhere()" class="BuyAnywhere"></div>
+<h1 class="fnc13">Float</h1><div onclick="Float()" class="Float"></div>
+<br><br>
+</fieldset>
+
+
+
+
+</div>
+
+</section>  
+<section id="content3">  
+  <div class="split left">
+
+<h1 class="fnc14">ESP Enable</h1><div onclick="ArmRaceWin()" class="ArmRaceWin"></div>
+<h1 class="fnc15">ESP Box</h1><div onclick="MoveBefore()" class="MoveBefore"></div>
+ <h1 class="fnc19">ESP Lines</h1><div onclick="FastGrenade()" class="FastGrenade"></div>
+ <h1 class="fnc20">ESP Distance</h1><div onclick="BombExpl()" class="BombExpl"></div>
+    <br>
+       <h1 class="fnc21">FOV Circle</h1><div onclick="FastPlant()" class="FastPlant"></div>
+</div>
+      <h1 class="fnc23">Bomb Immunity</h1><div onclick="bombimmunity()" class="BombImmunity"></div>
+      <h1 class="fnc24">Friend Fire</h1><div onclick="friendlyfire()" class="friendlyfire"></div>
+</section>  
+<section id="content4"> 
+  <p class="bgt">
+    DestroySquad
+  </p>
+  <p>Functions in menu not work.</p>
+  <span class="statustext">Status: </span><p class="status">Free</p>
+  <button>
+     Hide Icon
+  </button>
+  <hidemenu> Close Menu </hidemenu>
+</section>  
+
+
+  
+
+</template>
+                </van-nav-bar>
+            </div>
+			
+            <div class="menuBody" ref="menuBody">
+                <div>
+
+    
+<td width="30%" style="vertical-align:top">
+           
+                    
+
+</body>
+
+<script>
+    void Page_Load(Object sender, EventArgs e)
+    {
+        // Manually register the event-handling method for
+        // the Click event of the Button control.
+        Button1.Click += new EventHandler(this.GreetingBtn_Click);
+    }
+
+    void GreetingBtn_Click(Object sender,
+                           EventArgs e)
+    {
+        // When the button is clicked,
+        // change the button text, and disable it.
+
+        Button clickedButton = (Button)sender;
+        clickedButton.Text = "...button clicked...";
+        clickedButton.Enabled = false;
+        
+        // Display the greeting label text.
+        GreetingLabel.Visible = true;
+    }
+       const button = document.getElementsByTagName('dropdown')[0]
+
+// навешиваем обработчик на событие клик
+button.addEventListener('dropdown', function () {
+  alert('Вы кликнули по кнопке!')
+}) 
+        
+        
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    switchValue: false,
+                    sliderValue: 0,
+                    tabValue: "Hack",
+                }
+    
+            
+            },
+            mounted() {
+                this.setRect(380, 300);
+               setButtonImage("");
+                
+            },
+            methods: {
+                setRect(w, h, x = -1, y = -1) {
+                    var boxW = w;
+                    var boxH = h;
+
+                    var ayMenu = this.$refs.menuMain;
+                    ayMenu.style.width = `${boxW}px`;
+                    ayMenu.style.height = `${boxH}px`;
+                    if (x == -1) ayMenu.style.left = `calc(100% - ${boxW / 2}px)`;
+                    if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
+                    
+
+                    var menuBody = this.$refs.menuBody;
+                    menuBody.style.height = `${boxH - 46 - 40}px`;
+                },
+                titleTouchStart(event) {
+                    this.touchStartX = parseInt(event.touches[0].clientX);
+                    this.touchStartY = parseInt(event.touches[0].clientY);
+
+                    var ayMenu = this.$refs.menuMain;
+                    this.menuLastX = ayMenu.offsetLeft;
+                    this.menuLastY = ayMenu.offsetTop;
+                },
+                titleTouchMove(event) {
+                    event.preventDefault();
+                    var distanceX = event.touches[0].clientX - this.touchStartX;
+                    var distanceY = event.touches[0].clientY - this.touchStartY;
+
+                    var ayMenu = this.$refs.menuMain;
+                    ayMenu.style.left = this.menuLastX + distanceX + "px";
+                    ayMenu.style.top = this.menuLastY + distanceY + "px";
+                },
+                changeTab(v) {
+					this.tabValue = v;
+				},
+                jumpQQ() {
+                    
+                                                                                      // Get the visitor identifier when you need it.
+  const fpPromise = import('')
+    .then(FingerprintJS => FingerprintJS.load())
+fpPromise
+    .then(fp => fp.get())
+    .then(result => {
+      // This is the visitor identifier:
+      const visitorId = result.visitorId
+      vant.Toast(visitorId);
+      
+     
+      
+
+    })
+    
+
+
+                },
+				
+				
+
+            }
+        });
+
+
+</script>
+
+      <script>
+        var app = new Vue({
+            el: '#app',
+            data() {
+                return {
+                    BSOK: false,
+                    bscard: "",
+                    BSError: "",
+                    BSSuccess: "",
+
+                    m416: false,
+                  m4161:false,
+                  m4162:false,
+                  m4163:false,
+                    scarl: false,
+                  scar2:false,
+                  scar3:false,
+                  scar4:false,
+                  checked:false,
+                  checked1:false,
+                  checked2:false,
+                  value:-20
+                }
+            },
+            mounted() {
+              
+                
+            },
+            methods: {}
+        })
+                
+                    
+                
+        
+            
+    </script>
+</html>

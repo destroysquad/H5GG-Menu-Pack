@@ -1,0 +1,458 @@
+<html>
+<header>
+	<title>rezolver</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.7/lib/theme-chalk/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui@2.15.7/lib/index.js"></script>
+
+
+	<style>
+	
+	/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+		.ayixmgui {
+			position: fixed;
+			top: calc(50% - 180px);
+			left: calc(50% - 180px);
+			z-index: 1;
+			overflow: hidden;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-selectnone none;
+			user-select: unset;
+			
+		}
+		
+
+		 zxc{
+			position: stat;
+			top: calc(50% - 210px);
+			left: calc(50% - 140Spx);
+			width: 515px;
+			height: 20px;
+			border-radius: 5px;
+			}
+
+		    button {
+        height: 30px;
+          background: crimson;
+  box-shadow: 0 -150px 70px -120px teal inset,
+              0 -220px 70px -120px yellowgreen inset,
+              0 -280px 70px -120px gold inset;
+  border-radius: 30px;
+  border: 10px solid white;
+  animation: background 4s infinite alternate;
+  border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+    }
+    @keyframes background {
+  50% {
+    background: darkviolet;
+    box-shadow: 0 -140px 70px -120px mediumorchid inset,
+                0 -210px 70px -120px teal inset,
+                0 -280px 70px -120px plum inset;
+				
+  }
+}
+    button:active {
+         transform: translateY(2px);
+		 background: #000;
+    }
+		.aybody {
+		width: 495px;
+		height: 320px;
+		background: #fcba03;
+		border-radius: 10px;
+		z-index: 4;
+		}
+		
+		
+		.right {
+  right: 50;
+  background-color: red;
+}
+	.split {
+  height: 100%;
+  width: 50%;
+
+   overflow: auto;
+
+  
+    width: 50%;
+
+
+    margin: auto;
+
+float: left;
+  z-index: 1;
+  top: 0;
+
+
+}
+	
+
+.left {
+
+  left: 50;
+
+  background-color: #111;
+}		
+		 
+	
+			.aaybody {
+			background:linear-gradient(45deg, #fb0092, #0000ff, #00ff00, #ffff00, #ff0000, #fb0092, #0000ff, #b0ff0b, #ffffb8);
+			position: fixed;
+			z-index  3;
+			margin: 0%;
+			padding: 0.4%;
+			position: stat;
+			height: 320px;
+			width: 495px;
+		border-radius: 9px;
+		}
+		
+		
+.aaybody {
+
+ 
+
+
+  border-radius: 20px;
+  border: 10px solid white;
+  animation: background 2s infinite alternate;
+}
+
+@keyframes background {
+  100% {
+    background-position: 0 200px;
+  }
+}
+
+
+}
+		
+		
+			
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+
+</header>
+
+
+
+<body>
+
+	
+	<head>
+			<div v-show="tabValue==='Knife'">
+</div>
+
+			<div id="app">	
+			<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+
+				<div class="aaybody">	
+			<div class="aybody">
+	
+
+
+<div class="split right">
+<button onclick="onClickLoadScript($('#netjsurl').val(), 'h5');">Load HTML</button>
+      <p>Team Radar</p>
+      <label><input name="radio-group3" type="radio"  onclick="radioclick1()" />ON</label>
+      <p><label><input name="radio-group3" type="radio" checked="checked"  onclick="radioclick2()" />OFF</label>
+        <p>Jump Hack</p>
+      <label><input name="radio-group11" type="radio" onclick="radioclick19()" />ON</label>
+      <p><label><input name="radio-group11" type="radio" checked="checked"  onclick="radioclick20()" />OFF</label>
+        <p>Dont return spawn</p>
+      <label><input name="radio-group9" type="radio" onclick="radioclick17()" />ON</label>
+      <p><label><input name="radio-group9" type="radio" checked="checked"  onclick="radioclick18()" />OFF</label>
+        <p>Always respawn</p>
+      <label><input name="radio-group12" type="radio" onclick="radioclick21()" />ON</label>
+      <p><label><input name="radio-group12" type="radio" checked="checked"  onclick="radioclick22()" />OFF</label>
+        <p>Fast Round(CT only,need host)</p>
+      <label><input name="radio-group17" type="radio" onclick="radioclick31()" />ON</label>
+      <p><label><input name="radio-group17" type="radio" checked="checked"  onclick="radioclick32()" />OFF</label>
+        <p>Medal hack(High Ban risk)</p>
+      <label><input name="radio-group19" type="radio" onclick="radioclick37()" />ON</label>
+      <p><label><input name="radio-group19" type="radio" checked="checked"  onclick="radioclick38()" />OFF</label>
+        <p>Speed Hack</p>
+      <label><input name="radio-group20" type="radio" onclick="radioclick39()" />ON</label>
+      <p><label><input name="radio-group20" type="radio" checked="checked"  onclick="radioclick40()" />OFF</label>
+        <p>
+  <div class="centered">
+
+  </div>
+</div>
+		
+<div class="split left">
+ <button onclick="onClickLoadScript($('#netjsurl').val(), 'js')">Load JS</button>
+    	      <p>Esp Box</p>
+		  
+      <label><input name="radio-group3" type="radio"  onclick="radioclick1()" />ON</label>
+      <p><label><input name="radio-group3" type="radio" checked="checked"  onclick="radioclick2()" />OFF</label>
+      <p>Esp Color</p>
+	   <input type="range" min="0" max="100" style="width:100%" onchange="rangechange(this)" />
+      <label><input name="radio-group3" type="radio"  onclick="radioclick1()" />ON</label>
+  <div class="centered">
+  
+  </div>
+</div
+
+
+					<div class="menu">
+					<div class="aytext">
+					<div>
+					
+					
+		 <header>
+	
+   
+				</div>
+		
+
+<div class="Knife">				
+<div class="two">
+<div class="Skins">
+
+</header>
+</div
+</span>	
+</head>
+  </form>
+ 
+<div v-show="tabValue==='Skins'">
+  											<div class="aytext">
+											
+	
+			
+					
+					
+					
+</div>
+</script>
+
+
+
+
+					
+		
+					<div class="aycollapse" @click="showOption = !showOption" style="cursor:pointer">
+					
+						<i :class="showOption?'el-icon-caret-bottom':'el-icon-caret-right'"></i>
+						
+						
+						</div>
+						
+					<br>
+					
+
+					</div>
+					
+					
+						<div v-show="showOption">
+
+							
+								<html>
+
+
+   								
+</body>
+
+<script>
+	var app = new Vue({
+		el: "#app",
+		data() {
+			return {
+				ifshow: true,
+				checked: false,
+				radio: '1',
+				activeSelect: '',
+				selectOption: [{
+					value: 'йЂ‰йЎ№1',//е®ћй™…е†…е®№
+					label: 'й»„й‡‘зі•'//жѕз¤єж–‡жЎ€
+				}, {
+					value: 'йЂ‰йЎ№2',
+					label: 'еЏЊзљ®еҐ¶'
+				}],
+				input: "",
+				showOption: false,
+				tabValue: "Skinchanger",
+			}
+		},
+		mounted() {
+			this.setRect(360, 320);
+
+			//з«–е±Џ
+			var sWidth = window.screen.width; //е±Џе№•е®Ѕ
+			var sHeight = window.screen.height; //е±Џе№•й«
+
+			//е…Ёе±Џжѕз¤є
+			if (window.screen.availWidth > window.screen.availHeight) {
+				//жЁЄе±ЏпјЊе®Ѕй«зЅ®жЌў
+				sWidth = window.screen.height; //е±Џе№•е®Ѕ
+				sHeight = window.screen.width; //е±Џе№•й«
+			}
+			setWindowRect(0, 0, sWidth, sHeight);
+
+			setButtonAction(function () {
+				var menu = document.querySelector("#app");
+				if (menu.style.display == 'none') {
+					menu.style.display = 'block';
+					//жѕз¤єиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§дёЌеЏЇз©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(true);
+				} else {
+					menu.style.display = 'none';
+					//йљђи—ЏиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§з©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(false);
+				}
+			});
+		},
+		
+		methods: {
+			setRect(w, h, x = -1, y = -1) {
+				var boxW = w;
+				var boxH = h;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.width = `${boxW}px`;
+				ayMenu.style.height = `${boxH}px`;
+				if (x == -1) ayMenu.style.left = `calc(50% - ${boxW / 2}px)`;
+				if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
+			},
+			titleTouchStart(event) {
+				this.touchStartX = parseInt(event.touches[0].clientX);
+				this.touchStartY = parseInt(event.touches[0].clientY);
+
+				var ayMenu = this.$refs.menuMain;
+				this.menuLastX = ayMenu.offsetLeft;
+				this.menuLastY = ayMenu.offsetTop;
+			},
+			titleTouchMove(event) {
+				event.preventDefault();
+				var distanceX = event.touches[0].clientX - this.touchStartX;
+				var distanceY = event.touches[0].clientY - this.touchStartY;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.left = this.menuLastX + distanceX + "px";
+				ayMenu.style.top = this.menuLastY + distanceY + "px";
+			},
+			//е€‡жЌўеЇји€Єж Џ
+			changeTab(v) {
+				this.tabValue = v;
+			},
+			closeimgui() {
+				var menu = document.querySelector("#app");
+				menu.style.display = 'none';
+				setWindowTouch(false);
+			}
+		}
+	});
+public class Main extends JavaPlugin implements Listener {
+ 
+    public static void glowPlayer(Player glowingPlayer, Player sendPacketPlayer, boolean glow) {
+        try {
+            EntityPlayer entityPlayer = ((CraftPlayer) glowingPlayer).getHandle();
+
+            DataWatcher dataWatcher = entityPlayer.getDataWatcher();
+
+            entityPlayer.glowing = glow; // For the update method in EntityPlayer to prevent switching back.
+
+            // The map that stores the DataWatcherItems is private within the DataWatcher Object.
+            // We need to use Reflection to access it from Apache Commons and change it.
+            Map<Integer, DataWatcher.Item<?>> map = (Map<Integer, DataWatcher.Item<?>>) FieldUtils.readDeclaredField(dataWatcher, "d", true);
+
+            // Get the 0th index for the BitMask value. http://wiki.vg/Entities#Entity
+            @SuppressWarnings("rawtypes")
+            DataWatcher.Item item = map.get(0);
+            byte initialBitMask = (Byte) item.b(); // Gets the initial bitmask/byte value so we don't overwrite anything.
+            byte bitMaskIndex = (byte) 0x40; // The index as specified in wiki.vg/Entities
+            if (glow) {
+                item.a((byte) (initialBitMask | 1 << bitMaskIndex));
+            } else {
+                item.a((byte) (initialBitMask & ~(1 << bitMaskIndex))); // Inverts the specified bit from the index.
+            }
+
+            PacketPlayOutEntityMetadata metadataPacket = new PacketPlayOutEntityMetadata(glowingPlayer.getEntityId(), dataWatcher, true);
+
+            ((CraftPlayer) sendPacketPlayer).getHandle().playerConnection.sendPacket(metadataPacket);
+        } catch (IllegalAccessException e) { // Catch statement necessary for FieldUtils.readDeclaredField()
+            e.printStackTrace();
+        }
+    }
+ 
+    public Player tracePlayer(Player who, int distance) { //getting player, on who we looking
+         Location loc = who.getLocation();
+         Player whom = null;
+         List<Player> players = getNearbyPlayers(loc, distance);
+         Vector v = who.getLocation().getDirection();
+         for (Player p : players) {
+             if (p.getLocation().toVector().equals(v)) {
+                 whom = p;
+                 break;
+             }
+         }     
+         return whom;
+     }
+
+    public static List<Player> getNearbyPlayers(Location location, int distance) { //getting nearby players
+        List<Player> list = new ArrayList<Player>();                           
+        for (Player p : Bukkit.getServer().getOnlinePlayers())
+            if (p.getLocation().distance(location) <= distance)
+                list.add(p);
+        return list;
+    }
+ 
+ 
+    public void onPlayerJoin(PlayerJoinEvent e) {
+        for(Player p : Bukkit.getOnlinePlayers()) {
+            glowPlayer(e.getPlayer(), p, false);
+        }
+    }
+ 
+    @EventHandler
+    public void onPlayerQuit(PlayerQuitEvent e) {
+        for(Player p : Bukkit.getOnlinePlayers()) {
+            glowPlayer(e.getPlayer(), p, false);
+        }
+    } 
+ 
+}
+
+</script>
+
+</html>

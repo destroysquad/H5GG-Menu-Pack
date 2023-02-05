@@ -1,0 +1,2481 @@
+<html>
+<header>
+	<title>rezolver</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.7/lib/theme-chalk/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui@2.15.7/lib/index.js"></script>
+
+
+	<style>
+	
+	div{
+  animation-duration: 0.50s;
+  animation-name: slidein;
+}
+ 
+
+    .text{
+    text-align:  center;
+      margin-top: 5px;
+      font-family:  sans-serif;
+      color: white;
+   }
+
+ html {
+    zoom:0.8;
+}
+
+  .top_layout {
+ 
+    margin-left: 10px;
+    width: 398px;
+    height: 30px;
+    background: #34343c;
+    border-radius: 5px;
+    margin-top: 10px;
+    top: 45px;
+    }
+    .painhck_text {
+        position: absolute;
+        top: -10px;
+        left: 11px;
+        text-align: absolute;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFF;
+        text-transform: uppercase;
+        animation: neon-1 .1s ease-in-out infinite alternate;
+        text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+        mix-blend-mode: normal;
+
+       }
+    
+ 
+ 	.split {
+  z-index: 1;
+  top: -0;
+      overflow: scroll; /* Добавляем полосы прокрутки */
+left: -10;
+    padding: 5px; /* Поля вокруг текста */
+
+   display:block;
+   position:relative;
+   width:220px;
+   height:230px;
+ border-radius: 10px 10px 10px 10px;
+        color:white;
+        overflow:auto;
+background: #34343a;
+
+
+} 
+.left {
+
+   display:block;
+   position:relative;
+   height:240px;
+	top: 0;
+   display:block;
+   position:relative;
+  left: 0;
+   width:170px;
+ border-radius: 10px 10px 10px 10px;
+        color:white;
+        overflow:auto;
+
+}
+
+	.splitt {
+  z-index: 1;
+  top: 0;
+      overflow: scroll; /* Добавляем полосы прокрутки */
+    width: 300px; /* Ширина блока */
+    height: 150px; /* Высота блока */
+    padding: 5px; /* Поля вокруг текста */
+
+
+   display:block;
+   position:relative;
+   width:300px;
+   height:100px;
+   
+        
+        overflow:auto;
+
+
+  left: 5;
+
+} 
+
+.leftt {
+ border-radius: 10px 10px 10px 10px;
+
+   display:block;
+   position:relative;
+ width:170px;
+height:240px;
+	top: -250;
+   display:block;
+   position:relative;
+  left: 215;
+
+}
+ 
+.loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+    animation: animate 40s linear infinite;
+    background-size: 500%;
+}
+
+        body {width: 100%; height: 100%;}
+.colorPicker {width: 100px; height: 52px; background-color: blue; margin: 10px;
+text-align: center}
+.colorPicker input {width: 80%; height: 80%; transform: translateY(8%);}
+.loader::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+    animation: animate 40s linear infinite;
+    background-size: 500%;
+    filter: blur(10px);
+}
+
+checkboxposition{
+visibility: none
+
+
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    0%{
+        background-position: 500% 0;
+    }
+}
+    input[type=radio]  {
+        width:20px;
+        height:20px;
+        margin-right:10px;
+      
+		width: 14px; height: 14px;
+     border: 1px solid #EEEEEE;
+     border-radius: 3px;
+     background-color: rgba(0,0,0,0);
+    
+    
+    
+     
+        -webkit-appearance:none;
+        vertical-align:middle;
+        border:1px solid #DDDDDDF0;
+        
+    }
+	
+	   .lan3 {
+        font-size: 12.5px;
+     
+        color: #aeaeae;
+    
+      }
+
+    input[type=radio]:checked {
+        border:0px solid #2F7DCDF0;
+
+        background:#FFFFFF;
+    }
+
+
+	
+	#topp {
+
+    position: absolute;	/* Абсолютное позиционирование */
+    width: 402px; /* Ширина слоя в пикселах */
+    height: 30px; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -211px; /* Отступ слева, включает padding и border */
+    margin-top: -230px;	/* Отступ сверху */
+    background: #34343c; /* Цвет фона */
+ border-radius: 0px 0px 25px 25px;
+    padding: 10px; /* Поля вокруг текста */
+    overflow: hidden; /* Добавление полосы прокрутки */ 
+	
+	}
+	
+
+	    van-button{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 10px 10px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+
+  transition: .4s;
+}
+.gradient-button:hover {
+  background-position: right center;
+}
+
+
+
+label.current {
+    background-color: #1E90FF;
+}
+	
+
+		#topi {
+        border: 1px solid #0f9bff;
+        box-shadow:0 0 50px #0f9bff;
+    position: absolute;	/* Абсолютное позиционирование */
+    width: 400px; /* Ширина слоя в пикселах */
+    height: 1px; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -211px; /* Отступ слева, включает padding и border */
+    margin-top: -250px;	/* Отступ сверху */
+    background: #0f9bff; /* Цвет фона */
+	border-radius: 0px ;
+    padding: 10px; /* Поля вокруг текста */
+    overflow: auto; /* Добавление полосы прокрутки */ 
+	
+	}
+	
+	
+	 .fun-block__title {
+
+        border: 1px solid #0f9bff;
+        box-shadow:0 0 50px #0f9bff;
+    position: absolute;	/* Абсолютное позиционирование */
+    width: 0px; /* Ширина слоя в пикселах */
+    height: 1px; /* Высота слоя в пикселах */
+    left: 0%; /* Положение слоя от левого края */
+    top: 0%; /* Положение слоя от верхнего края */
+    margin-left: 0px; /* Отступ слева, включает padding и border */
+    margin-top: 0px;	/* Отступ сверху */
+    background: #34343c; /* Цвет фона */
+	border-radius: 0px ;
+    padding: 10px; /* Поля вокруг текста */
+    overflow: auto; /* Добавление полосы прокрутки */ 
+    
+	}
+	
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+}
+        
+        
+		.content {
+        width: 75%; /* Ширина слоя */
+        text-align: center;
+      }
+	  
+
+
+        
+        .aymenu {
+      position: absolute;	/* Абсолютное позиционирование */
+    width: 400px; /* Ширина слоя в пикселах */
+    height: 260px; /* Высота слоя в пикселах */
+    left: 50%; /* Положение слоя от левого края */
+    top: 50%; /* Положение слоя от верхнего края */
+    margin-left: -211px; /* Отступ слева, включает padding и border */
+    margin-top: -150px;	/* Отступ сверху */
+    background: #34343c; /* Цвет фона */
+
+ 
+  border-radius: 25px;
+    padding: 10px; /* Поля вокруг текста */
+
+	
+        }
+#d {
+  width: 80%;
+  height: 50%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  .l {
+    position: absolute;
+    width: 46%;
+    height: 100%;
+    border-top: solid 1px;
+    border-top-left-radius: 30px;
+    z-index: -3;
+  }
+  .r {
+    z-index: -3;
+    border-top-right-radius: 30px;
+    position: absolute;
+    width: 46.3%;
+    height: 100%;
+    margin-left: 54%;
+    border-top: solid 1px;
+  }
+  .b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-radius: 30px;
+  }
+}
+
+section { 
+  display: none;  
+  padding: 15px; 
+  background: dark; 
+  position: absolute; 
+  top: 0; 
+  left: 0px; 
+  color: white;
+} 
+
+input { 
+  display: none; 
+} 
+label { 
+position: relative;
+top: -30px;
+left: 180px;
+  width: 50px; 
+  padding: 5px; 
+ size: 10px;
+color: #ffffff;
+  float: left;
+
+
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 3px;
+    
+ 
+} 
+
+    @keyframes background {
+  50% {
+    background: darkviolet;
+    box-shadow: 0 -140px 70px -120px mediumorchid inset,
+                0 -210px 70px -120px teal inset,
+                0 -280px 70px -120px plum inset;
+				
+  }
+}
+    labelb:active {
+         transform: translateY(2px);
+		 background: #ffffff;
+    }
+input:checked + label { 
+  color: #555; 
+ 
+} 
+
+
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 { 
+  display: block; 
+} 
+section { 
+  animation: scale 0.7s ease-in-out; 
+} 
+@keyframes scale { 
+  0% { 
+  transform: scale(0.9); 
+  opacity: 0; 
+  } 
+  50% { 
+  transform: scale(1.005); 
+  opacity: 0.5; 
+  } 
+  100% { 
+  transform: scale(1); 
+  opacity: 1; 
+  } 
+}
+.verticalLine {
+  border-left: thick solid white;
+  position: absolute ;
+  top: 42px ;
+  left: 190px ;
+  width: 1px ;
+  height: 318px;
+ 
+  
+  
+}
+
+		.gg {
+        width: 75%; /* Ширина слоя */
+        text-align: center;
+      }
+	  
+
+
+.zxca{
+ background: dark; 
+}
+       .fun-block__title {
+            margin: 0;
+            padding: 32px 16px 16px;
+            color: rgba(69, 90, 100, 0.6);
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .van-cell {
+            line-height: unset;
+        }
+
+        .ss {
+            overflow-y: auto;
+            padding-bottom: 40px;
+        }
+        
+        .el-button {
+			font-size: 14px;
+			padding: 5px 5px;
+			line-height: 14px;
+			color: #000;
+			background-color: #b8d1f2;
+		}
+
+		.el-button:hover {
+			opacity: .7;
+			color: #000;
+			background-color: #B8D1F2;
+		}
+
+		.el-button:focus,
+		.el-button:hover {
+			color: #000;
+			background-color: #B8D1F2;
+		}
+		
+
+	 				.main {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  font-size: 18pt;
+  font-family: "Arial Rounded MT Bold";
+  color: white;
+}
+
+.fnc3 {
+  position: absolute;
+top: 24%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.NoRecoil {
+  background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 53.5%;
+left: 5%;
+}
+
+.fnc {
+  position: absolute;
+top: 24%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc50 {
+  position: absolute;
+top: 5%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc51 {
+  position: absolute;
+top: 8.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc52 {
+  position: absolute;
+top: 11.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc53 {
+  position: absolute;
+top: 14.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc54 {
+  position: absolute;
+top: 17.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc55 {
+  position: absolute;
+top: 20.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+
+.AntiFlash {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 114.5%;
+left: 5%;
+
+}
+
+.fd {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 700px;
+    overflow-y: scroll;
+}
+
+
+
+.fnc2 {
+  position: absolute;
+top: 10%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.FireRate {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 10.5%;
+left: 5%;
+}
+
+.fnc4 {
+  position: absolute;
+top: 39%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.InfinityAmmo {
+ background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 69.5%;
+left: 5%;
+}
+
+.time {
+  position: absolute;
+  top: 14%;
+  left: 30%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: rgb(42, 255, 0);
+}
+
+.next {
+  position: absolute;
+  top: 83%;
+  left: 77%;
+}
+
+.fnc5 {
+  position: absolute;
+top: 69%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.TeamRadar {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 24.5%;
+left: 5%;
+}
+
+.ShootTh {
+    background-color: none;
+  border: 0.1px solid #ffffff;
+  border-radius: 1%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 39.5%;
+left: 5%;
+}
+
+.fnc88 {
+  position: absolute;
+top: 81%;
+  left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.tm {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 80.4%;
+  left: 50%;
+}
+
+.fnc6 {
+  position: absolute;
+top: 84%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.AntiHE {
+  background-color: #df8a8a;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 129.5%;
+left: 5%;
+}
+
+.fnc7 {
+  position: absolute;
+top: 54%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.MoneyHack {
+    background-color: #df8a8a;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 38.5%;
+left: 5%;
+
+}
+
+.fnc8 {
+  position: absolute;
+top: 39%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.AlwaysRespawn {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 84.5%;
+left: 5%;
+}
+
+.fnc9 {
+  position: absolute;
+top: 54%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.BombExpl {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 159.5%;
+left: 5%;
+}
+
+.fnc10 {
+  position: absolute;
+top: 69%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.FastPlant {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 174.5%;
+left: 5%;
+
+}
+
+.fnc11 {
+  position: absolute;
+top: 84%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.WallShot {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 84.5%;
+left: 5%;
+
+}
+
+.MedalHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 99.5%;
+left: 5%;
+
+}
+
+.Float {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 99.5%;
+left: 5%;
+
+}
+
+.ArmRaceWin {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 114.5%;
+left: 5%;
+}
+	
+.fnc12 {
+
+  position: absolute;
+top: 99%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.MoveBefore {
+    background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 129.5%;
+left: 5%;
+
+}	
+
+.fnc13 {
+  position: absolute;
+top: 99%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+
+.fnc14 {
+  position: absolute;
+top: 114%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.PlantAnywhere {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 189.5%;
+left: 5%;
+}
+
+.BombImmunity {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 204.5%;
+left: 5%;
+
+}
+
+
+.fnc15 {
+  position: absolute;
+top: 129%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.FastGrenade {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 144.5%;
+left: 5%;
+
+
+}
+
+.FastGame {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 24.5%;
+left: 5%;
+
+}
+
+.Rounds {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 4.7%;
+  left: 89%;
+}
+
+.Kills {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 7.9%;
+  left: 60%;
+}
+
+.Death {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 11.0%;
+  left: 60%;
+}
+
+.Exp {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 13.9%;
+  left: 60%;
+}
+
+.Ping {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 17.0%;
+  left: 60%;
+}
+
+.fnc16 {
+  position: absolute;
+top: 114%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+}
+
+.friendlyfire {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 219.5%;
+left: 5%;
+}
+
+.FPSHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 19.5%;
+  left: 39%;
+}
+
+.fnc17 {
+  position: absolute;
+top: 129%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.BuyAnywhere {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 54.5%;
+left: 5%;
+
+}
+
+.fnc18 {
+  position: absolute;
+top: 144%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.JumpHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 69.5%;
+left: 5%;
+}
+
+.fnc19 {
+  position: absolute;
+top: 144%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc20 {
+  position: absolute;
+top: 159%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc21 {
+  position: absolute;
+top: 174%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.fnc22 {
+  position: absolute;
+top: 189%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc23 {
+  position: absolute;
+top: 204%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc24 {
+
+  position: absolute;
+top: 219%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.fnc25 {
+  position: absolute;
+top: 99%;
+left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc26 {
+  position: absolute;
+top: 103%;
+left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.NoGrenade {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 144.5%;
+left: 5%;
+
+}
+
+
+a:hover {
+    background-color: #777;
+}
+	 
+	div{
+  animation-duration: 0.50s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 50%;
+    
+  }
+
+
+}
+
+
+
+Copy to Clipboard
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+ .top_layout {
+    position: absolute;
+    margin-left: 10px;
+    width: 398px;
+    height: 30px;
+    background: #28292b;
+    border-radius: 5px;
+    margin-top: 10px;
+    top: 45px;
+    }
+    .painhck_text {
+        position: absolute;
+        top: -10px;
+        left: 11px;
+        text-align: absolute;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFF;
+        text-transform: uppercase;
+        animation: neon-1 .1s ease-in-out infinite alternate;
+        text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+        mix-blend-mode: normal;
+
+       }
+
+
+	</style>
+
+</header>
+
+
+
+<body>
+
+	<script>
+
+		function karambitgold() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitclaw() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitdragongalss() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitscratch() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karmbituniverse() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72007', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitcoldflame() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97200', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitfrozen() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97201', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitsnowcamo() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97203', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambityearoftiger() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157200', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function m1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71001', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157100', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97100', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71005', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('73002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('73003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('73004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('73006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97300', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157300', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('47503', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('47502', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('57501', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('47504', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('47505', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97500', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157500', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67701', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function f2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67702', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67703', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67704', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67705', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function f6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97700', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157700', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77813', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77814', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77815', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77816', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77817', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97800', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97801', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157800', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('87919', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('87920', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('87921', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('87922', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97900', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157900', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138000', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138001', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('128005', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('148000', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('158000', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function d1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('170021', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function d2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('170022', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function d3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('170023', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function d4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('170024', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3007', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3008', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3009', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3000', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3001', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g9() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g10() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3005', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function i1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180022', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180023', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180024', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180025', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180026', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180027', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}		
+
+		function custom() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			var newskinid = prompt("Enter newskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll(newskinid, 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('54401', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1044002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1084402', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('44007', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1084403', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+				function p6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('124400', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function p7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180027', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}	
+
+		function y1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('54401', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function y2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1125100', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function y3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('51006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function y5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('51008', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+				function y6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1051007', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1046006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('84600', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('84600', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+				function yy6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('124600', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('134600', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+				function yy8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1046002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+	}
+
+		function yyyz1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('124500', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yyyz2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('84500', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yyyz3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1084400', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yyyz5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('45002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+				function yyyz6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('45004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yyyz7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1045001', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+				function yyyz8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1045002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+	}
+
+
+
+
+	</script>
+	<head>
+			<div v-show="tabValue==='Knife'">
+</div>
+    <div class="top_layout">
+      
+      <div id="clock"></div>
+      <p class="version" style="color: white">
+      <marquee>REZTOP</marquee>
+      </p>
+    </div>
+			<div id="app">	
+			<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+	
+
+
+			</span>
+				
+			</div>
+			
+		  <div class="top_layout">
+      <img class="speexx" src="https://i.ibb.co/9gfDrNT/icon.png" width=”28px” height="28px">
+      <div id="clock"></div>
+      <p class="version" style="color: white">
+        0.21.2
+      </p>
+    </div>
+<body>
+<head>
+		 <div id="console">
+	 <div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+      <div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+	 <table id="bodyView" width="200" style="table-layout:fixed;height: calc(200% - 200px) ;">
+
+ <div id="netjs" class="menuview">   
+
+      <div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+
+		
+<div id="topi"></div>
+                
+
+<div id="topp">
+
+<div class="zxc" class="vl" style="color:#FFF"><h2>rezolver   |</h2>
+
+</head>
+</div>
+
+<div id="label">
+
+  
+<label for="tab2">aimbot </label>
+
+<label for="tab3">visual </label>
+<label for="tab4">misc </label>
+
+</div> 
+</div>
+
+   
+      <div class="aymenu" ref="menuMain">
+	  <div id="app">
+	  
+
+
+
+</div>
+<div id="container"> 
+<div class="tabs">
+<input id="tab1" type="radio" name="tabs" checked> 
+
+<input id="tab2" type="radio" name="tabs"> 
+
+<input id="tab3" type="radio" name="tabs"> 
+
+<input id="tab4" type="radio" name="tabs"> 
+
+
+<section id="content1"> 
+<p> привет животное 
+<br></p> 
+</section>  
+
+<section id="content2">
+
+
+<div class="rez" top="10">
+<div class="rezz" >
+
+</div>
+
+<div class="split left">
+
+<h1 class="fnc14">Arm Race Win</h1><div onclick="ArmRaceWin()" class="ArmRaceWin"></div>
+<h1 class="fnc15">MoveBefTime</h1><div onclick="MoveBefore()" class="MoveBefore"></div>
+ <h1 class="fnc19">Fast Grenade</h1><div onclick="FastGrenade()" class="FastGrenade"></div>
+ <h1 class="fnc20">Bomb Explodes</h1><div onclick="BombExpl()" class="BombExpl"></div>
+       <h1 class="fnc21">Fast Plant</h1><div onclick="FastPlant()" class="FastPlant"></div>
+      <h1 class="fnc22">PlantAny</h1><div onclick="PlantAnywhere()" class="PlantAnywhere"></div>
+      <h1 class="fnc23">Bomb Immunity</h1><div onclick="bombimmunity()" class="BombImmunity"></div>
+      <h1 class="fnc24">Friend Fire</h1><div onclick="friendlyfire()" class="friendlyfire"></div>
+
+
+
+</div>
+
+
+ <div class="split leftt">
+
+<h1 class="fnc">Fast Round</h1><div onclick="FastGame()" class="FastGame"></div>
+<h1 class="fnc4">Shoot Through Walls</h1><div onclick="netu()" class="ShootTh"></div> 
+ <h1 class="fnc5">Infinity Jump</h1><div onclick="JumpHack()" class="JumpHack"></div>  
+ <h1 class="fnc6">Always Respawn</h1><div onclick="AlwaysRespawn()" class="AlwaysRespawn"></div>
+  <h1 class="fnc7">Buy Anywhere</h1><div onclick="BuyAnywhere()" class="BuyAnywhere"></div>
+<h1 class="fnc13">Float</h1><div onclick="Float()" class="Float"></div>
+<br><br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><br><br>
+</fieldset>
+
+
+
+
+</div>
+
+</section>  
+<section id="content3"> 
+<
+</p> 
+</section>  
+<section id="content4"> 
+<p>soon
+</section>  
+
+
+  
+
+</template>
+                </van-nav-bar>
+            </div>
+			
+            <div class="menuBody" ref="menuBody">
+                <div>
+
+    
+<td width="30%" style="vertical-align:top">
+           
+                    
+
+</body>
+
+</header>
+</div
+</span>	
+</head>
+  </form>
+ 
+
+			
+					
+					
+					
+</div>
+</script>
+
+
+
+
+					
+					<div v-show="tabValue==='Id_Skins'">
+					<div class="aycollapse" @click="showOption = !showOption" style="cursor:pointer">
+					
+						<i :class="showOption?'el-icon-caret-bottom':'el-icon-caret-right'"></i>
+						
+						
+						</div>
+						
+					<br>
+					
+
+					</div>
+					
+		
+					</el-collapse-transition>
+	
+						</el-collapse-transition>
+						
+						
+					
+
+						
+						
+			
+
+
+							
+								<html>
+  <head>
+    <title>
+	</title>
+    <style>
+      .button {
+      background-color: #FF4500;
+      border: none;
+      color: white;
+      padding: 20px 34px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+   
+  </body>
+								
+</body>
+
+<script>
+
+
+	var app = new Vue({
+		el: "#app",
+		data() {
+			return {
+				ifshow: true,
+				checked: false,
+				radio: '1',
+				activeSelect: '',
+				selectOption: [{
+					value: 'йЂ‰йЎ№1',//е®ћй™…е†…е®№
+					label: 'й»„й‡‘зі•'//жѕз¤єж–‡жЎ€
+				}, {
+					value: 'йЂ‰йЎ№2',
+					label: 'еЏЊзљ®еҐ¶'
+				}],
+				input: "",
+				showOption: false,
+				tabValue: "Skinchanger",
+			}
+		},
+		mounted() {
+			this.setRect(360, 320);
+
+			//з«–е±Џ
+			var sWidth = window.screen.width; //е±Џе№•е®Ѕ
+			var sHeight = window.screen.height; //е±Џе№•й«
+
+			//е…Ёе±Џжѕз¤є
+			if (window.screen.availWidth > window.screen.availHeight) {
+				//жЁЄе±ЏпјЊе®Ѕй«зЅ®жЌў
+				sWidth = window.screen.height; //е±Џе№•е®Ѕ
+				sHeight = window.screen.width; //е±Џе№•й«
+			}
+			setWindowRect(0, 0, sWidth, sHeight);
+
+			setButtonAction(function () {
+				var menu = document.querySelector("#app");
+				if (menu.style.display == 'none') {
+					menu.style.display = 'block';
+					//жѕз¤єиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§дёЌеЏЇз©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(true);
+				} else {
+					menu.style.display = 'none';
+					//йљђи—ЏиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§з©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(false);
+				}
+			});
+		},
+		
+		methods: {
+			setRect(w, h, x = -1, y = -1) {
+				var boxW = w;
+				var boxH = h;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.width = `${boxW}px`;
+				ayMenu.style.height = `${boxH}px`;
+				if (x == -1) ayMenu.style.left = `calc(50% - ${boxW / 2}px)`;
+				if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
+			},
+			titleTouchStart(event) {
+				this.touchStartX = parseInt(event.touches[0].clientX);
+				this.touchStartY = parseInt(event.touches[0].clientY);
+
+				var ayMenu = this.$refs.menuMain;
+				this.menuLastX = ayMenu.offsetLeft;
+				this.menuLastY = ayMenu.offsetTop;
+			},
+			titleTouchMove(event) {
+				event.preventDefault();
+				var distanceX = event.touches[0].clientX - this.touchStartX;
+				var distanceY = event.touches[0].clientY - this.touchStartY;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.left = this.menuLastX + distanceX + "px";
+				ayMenu.style.top = this.menuLastY + distanceY + "px";
+			},
+			//е€‡жЌўеЇји€Єж Џ
+			changeTab(v) {
+				this.tabValue = v;
+			},
+			closeimgui() {
+				var menu = document.querySelector("#app");
+				menu.style.display = 'none';
+				setWindowTouch(false);
+			}
+		}
+	});
+
+
+</script>
+
+</html>

@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<title>хопелесспремемум</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.7/lib/theme-chalk/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui@2.15.7/lib/index.js"></script>
+
+	<style>
+      
+            	.sione {
+  position: absolute;
+
+  margin-left: 330px;
+  font-weight: bold;
+  font-size: 15px;
+}
+      .top {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          transparent 50%,
+          rgba(255, 49, 49, 0.5),
+          rgb(255, 49, 49)
+        );
+      }
+      .watermark {
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 380% 380%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 19px;
+  line-height: 17px;
+      }
+      
+      .неЮзать {
+    float: left;
+    border-right: 1px solid white;
+    width: 31.1%;
+    height: 120px;
+}
+      
+@mixin center($extend: true) {
+    @if $extend {
+        @extend %center;
+    } @else {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+}
+
+%center {
+@include center($extend: false);
+}
+    van-button{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  padding: 10px 10px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+      linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+      linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+
+  transition: .4s;
+}
+.gradient-button:hover {
+  background-position: right center;
+}
+
+
+
+label.current {
+    background-color: #1E90FF;
+}
+
+
+    button:active {
+         transform: translateY(2px);
+		 background: #000;
+    }
+
+        el-button {
+            width: 142px;
+            height: 30px;
+            position: left;
+            bottom: 10%;
+            right: 50px;
+			font-size: 14px;
+			padding: 5px 5px;
+			line-height: 14px;
+			color: #000;
+			background-color: #b8d1f2;
+		}
+
+		.el-button:hover {
+			color: #000;
+			background-color: #B8D1F2;
+		}
+
+		.el-button:focus,
+		.el-button:hover {
+			color: #000;
+			background-color: #B8D1F2;
+		}
+            .vers {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+}
+      
+      .titl {
+    position: absolute;
+    top: 15%;
+    left: 30%;
+	font-size: 19px;
+	font-family: 'aileron', sans-serif;
+    color: white;
+}
+		
+      .p {
+    position: absolute;
+    top: 30%;
+    left: 33%;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+}
+            .ptext {
+    position: absolute;
+    top: 37%;
+    left: 33%;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+      }
+                  .ptext1 {
+    position: absolute;
+    top: 45%;
+    left: 33%;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: white;
+}
+
+      .h3 {
+    position: absolute;
+    top: 15%;
+    left: 33%;
+	font-size: 19px;
+	font-family: 'aileron', sans-serif;
+    color: white;
+}
+
+      .label {
+	font-size: 15px;
+	font-family: 'aileron', sans-serif;
+}
+      .h4 {
+    font-size: 11px;
+	font-family: 'aileron', sans-serif;
+    color: white;
+}
+		* {
+			padding: 0;
+			margin: 0;
+		}
+      
+        .ayimgui {
+            position: fixed;
+            z-index: 1;
+            width: 400px;
+            height: 700px;
+            top: calc(50% - 180px);
+            left: calc(50% - 180px);
+            z-index: 999;
+            opacity: .9;
+            background-color: #252226;
+            border: 2px solid white;
+            border-radius: 18px;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+		/* .ayimgui { 
+			position: fixed;
+			width: 1119px;
+			height: 514px;
+			top: calc(50% - 180px);
+			left: calc(50% - 180px);
+			z-index: 999;
+			background-image: url(https://ibb.co/0rsSxpD);
+			/* border-radius: 8px; */
+			/*overflow: hidden;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none; */
+		} 
+
+		.onlyTitle {
+			height: 21px !important;
+		}
+
+		.ayimgui .aytitle {
+			padding: 0 3px;
+			font-size: 16px;
+			height: 25px;
+			opacity: .0;
+			background-color: #d1d1d1;
+		}
+
+		.ayimgui .aytitle .titleClose {
+			position: absolute;
+			top: 3px;
+			right: 6px;
+			color: #000;
+		}
+
+		.ayimgui .aytitle .titleClose:hover {
+			color: #409EFF;
+		}
+
+		.ayimgui .aybody {
+			padding: 15px;
+			height: calc(100% - 21px - 15px - 15px);
+			/*减去标题高度，减去上线padding高度*/
+			overflow: auto;
+			font-size: 14px;
+		}
+      .watermark {
+      background: linear-gradient(to right,        red, orange, yellow, green, cyan, blue, violet);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: rainbow 5s ease    infinite;
+      animation: rainbow 5s ease infinite;
+      font-size: 25px;
+      line-height: 25px;
+      top: 25%;
+      position: absolute;
+}
+ 
+
+
+		.aytext {
+			width: 100%;
+			margin-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			color: #000;
+		}
+
+		.el-checkbox {
+			margin: 0px;
+		}
+
+		.el-checkbox__label {
+			color: #000;
+		}
+
+		.el-checkbox__input.is-checked+.el-checkbox__label {
+			color: #409EFF;
+		}
+
+		.el-checkbox__inner {
+			background-color: rgb(254, 254, 254);
+			border: none;
+		}
+
+
+		.el-radio {
+			margin: 8px 0;
+		}
+
+		.el-radio__label {
+			color: #000;
+		}
+
+		.el-radio__input.is-checked+.el-radio__label {
+			color: #409EFF;
+		}
+
+		.el-radio__inner {
+			background-color: rgb(254, 254, 254);
+			border: none;
+		}
+
+		.el-radio__input.is-checked .el-radio__inner {
+			background-color: rgb(254, 254, 254);
+		}
+
+		.el-radio__inner::after {
+			width: 10px;
+			height: 10px;
+			background-color: rgb(58, 138, 247);
+		}
+
+		.onlySelect {
+			background-color: rgb(254, 254, 254);
+			border: none;
+		}
+
+		.onlySelect .el-select-dropdown__item {
+			color: #000;
+
+		}
+
+		.onlySelect .el-select-dropdown__item.hover,
+		.el-select-dropdown__item:hover:hover {
+			background-color: transparent;
+		}
+
+		.onlySelect .popper__arrow {
+			border-bottom-color: rgb(254, 254, 254) !important;
+		}
+
+		.onlySelect.el-popper[x-placement^=bottom] .popper__arrow::after {
+			border-bottom-color: rgb(8254, 254, 254) !important;
+		}
+
+		.el-select {
+			width: 100%;
+		}
+
+		.el-select .el-input {
+			background-color: rgb(254, 254, 254);
+		}
+
+		.el-select .el-input__suffix {
+			background-color: rgb(160, 196, 243);
+			color: #000;
+			right: 0;
+		}
+
+		.el-select .el-select__caret {
+			color: #000;
+		}
+
+		.el-select .el-input__inner {
+			background-color: transparent;
+			border: none;
+			color: #000;
+		}
+
+		.el-select .el-input .el-select__caret {
+			color: #000;
+		}
+
+		/* 解决ios下拉需要点两次 */
+		.el-scrollbar .el-scrollbar__bar {
+			opacity: 1 !important;
+		}
+
+      .el-button {       
+	        font-family: 'aileron', sans-serif;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 5px 9px;
+            position: absolute;
+            bottom: 59%;
+            right: 45%;
+			font-size: 14px;
+            text-decoration-color: #FFFFFF;
+			line-height: 14px;
+			color: #FFF;
+			background-color: #8F8F8F;
+            border: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+      }
+		.el-button:hover {
+			color: white;
+			background-color: #8f8e8d;
+		}
+
+		.aycollapse {
+			width: 100%;
+			font-size: 14px;
+			background-color: rgb(177, 206, 240);
+			color: #000;
+		}
+
+
+
+
+		.el-input input {
+			background-color: rgb(254, 254, 254);
+			border: none;
+			border-radius: 0px;
+		}
+		
+		.main {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  font-size: 18pt;
+  font-family: "Arial Rounded MT Bold";
+  color: white;
+}
+
+		.visual {
+  position: absolute;
+  top: 49%;
+  left: 5%;
+  font-size: 18pt;
+  font-family: "Arial Rounded MT Bold";
+  color: rgb(164, 161, 161);
+}
+
+		.gloves {
+    position: absolute;
+    top: 62.4%;
+    left: 5.3%;
+    font-size: 18pt;
+    font-family: "Arial Rounded MT Bold";
+    color: rgb(164, 161, 161);
+}
+		.about {
+    position: absolute;
+    top: 83.7%;
+    left: 5.3%;
+    font-size: 18pt;
+    font-family: "Arial Rounded MT Bold";
+    color: rgb(164, 161, 161);
+}
+.name {
+position: absolute;
+bottom: 79.8%;
+left: 7.9%;
+font-size: 12pt;
+font-family: "Arial Rounded MT Bold";
+color: rgb(191, 191, 191);
+}
+      .ver {
+position: absolute;
+top: 91%;
+left: 90%;
+font-size: 12pt;
+font-family: "Arial Rounded MT Bold";
+color: rgb(191, 191, 191);
+}
+      
+      
+.prem {
+position: absolute;
+top: 14.3%;
+left: 10%;
+font-size: 12pt;
+font-family: "Arial Rounded MT Bold";
+color: rgb(191, 191, 191);
+}
+
+.fnc {
+  position: absolute;
+  top: 14%;
+  left: 36%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.AntiFlash {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 13%;
+  left: 56%;
+}
+
+.fnc2 {
+  position: absolute;
+  top: 28%;
+  left: 36%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.FireRate {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 26%;
+  left: 56%;
+}
+
+.fnc3 {
+  position: absolute;
+  top: 41%;
+  left: 36%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.NoRecoil {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 39%;
+  left: 56%;
+}
+
+.fnc4 {
+  position: absolute;
+  top: 54%;
+  left: 36%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.InfinityAmmo {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 52%;
+  left: 56%;
+}
+
+.time {
+  position: absolute;
+  top: 14%;
+  left: 30%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: rgb(42, 255, 0);
+}
+
+.next {
+  position: absolute;
+  top: 86%;
+  left: 77%;
+}
+
+      .cbgui {
+ position: absolute;
+ top: 8%;
+ left: 30%;
+} 
+
+.ui {
+ position: absolute;
+ top: 24px;
+ left: 4.7px;
+}
+
+.fnc5 {
+  position: absolute;
+  top: 67%;
+  left: 36%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.TeamRadar {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 65%;
+  left: 56%;
+}
+
+.fnc6 {
+  position: absolute;
+  top: 80%;
+  left: 36%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.AntiHE {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 78%;
+  left: 56%;
+}
+      .fnc7 {
+  position: absolute;
+  top: 14%;
+  left: 66%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.plantany {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 13%;
+  left: 85%;
+      }
+            .fnc8 {
+  position: absolute;
+  top: 27%;
+  left: 66%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.bombimunity {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 26%;
+  left: 89.3%;
+      }
+             .fnc9 {
+  position: absolute;
+  top: 41%;
+  left: 66%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.fastplant {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 39%;
+  left: 86.3%;
+      }
+             .fnc10 {
+  position: absolute;
+  top: 54%;
+  left: 66%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.instantexp {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 54%;
+  left: 87.3%;
+      }
+              .fnc11 {
+  position: absolute;
+  top: 67%;
+  left: 66%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.dontspawn {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 67%;
+  left: 87.3%;
+      }
+              .fnc12 {
+  position: absolute;
+  top: 80%;
+  left: 66%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: white;
+}
+
+.timebef {
+  background-color: #949494;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  top: 78%;
+  left: 81.3%;
+      }
+:top_layout {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.top_layout {
+	min-width: min(40rem, 100%);
+}
+
+.top_layout {
+	font-size: 3vw;
+	margin: max(1rem, 3vw);
+	border: 0.35rem solid;
+	padding: 3vw;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.top_layout:nth-child(2) {
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+ .top_layout {
+    position: absolute;
+	      .loader {
+    position: relative;
+    width: 398px;
+    height: 5px;
+    top: -1.9;
+color: red; /* Цвет символа */
+}
+	*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+    
+    background-size: 500%;
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+
+    background-size: 500%;
+    filter: blur(10px);
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    0%{
+        background-position: 500% 0;
+    }
+}
+	</style>
+</header>
+	<div id="app">
+		<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" style="margin-down:5px;" ref="menuMain">
+			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+				<span class="title-age" style="margin-left:5px;"></span>
+				<i class="titleClose el-icon el-icon-close" @click="closeimgui"></i>
+			</div>
+			<div class="tab">
+			    <h1 @click="changeTab('Main')":style="{background:tabValue==='Main'}" onclick="main()" class="main">Main</h1>
+			    <h1 @click="changeTab('Visual')":style="{background:tabValue==='Visual'}" onclick="visual()" class="visual">Knives</h1>
+              			    <h1 @click="changeTab('Gloves')":style="{background:tabValue==='Gloves'}" onclick="glovs()" class="gloves">Gloves</h1>
+			    <h1 @click="changeTab('About')":style="{background:tabValue==='About'}" onclick="about()" class="about">About</h1>
+			<label class="name" id="name" >Loading</label>
+			<div v-show="tabValue==='Main'">
+              <script>
+   loopy()
+                
+                /* https://media.discordapp.net/attachments/936070698844192802/1062243279606911016/IMG_2657.png */
+
+function loopy() {
+
+var sWord ="key"
+
+while (sWord != "developer")
+  /* XDX81xCd90lPeg */
+{ 
+
+sWord = prompt("Key: developer")
+
+}
+
+alert("Cheat by Destroy \n Welcome")
+
+}
+              </script>
+              
+              <img src="https://media.discordapp.net/attachments/936070698844192802/1062254972286291968/IMG_2665.png" class="cbgui" height="215px">
+              
+              <p class="ver">
+0.22.0
+              </p>
+            
+            <div>
+            <h1 class="fnc">Anti Flash</h1><div onclick="AntiF()" class="AntiFlash"></div>
+            <h1 class="fnc2">Fire Rate</h1><div onclick="FireR()" class="FireRate"></div>
+            <h1 class="fnc3">No Recoil</h1><div onclick="NoR()" class="NoRecoil"></div>
+            <h1 class="fnc4">WallShot</h1><div onclick="InfinityA()" class="InfinityAmmo"></div>
+            <h1 class="fnc5">Radar Hax</h1><div onclick="RadarTM()" class="TeamRadar"></div>
+            <h1 class="fnc6">Money Hax</h1><div onclick="AntiHE()" class="AntiHE"></div>
+            <h1 class="fnc7">Plant Any</h1><div onclick="plantany()" class="plantany"></div>
+            <h1 class="fnc8">Bomb Bypass</h1><div onclick="bombimn()" class="bombimunity"></div> 
+            <h1 class="fnc9">Fast Plant</h1><div onclick="fastplnt()" class="fastplant"></div>      
+            <h1 class="fnc10">Instant Exp</h1><div onclick="instantexp()" class="instantexp"></div>      
+            <h1 class="fnc11">Dont Spawn</h1><div onclick="drts()" class="dontspawn"></div>      
+            <h1 class="fnc12">Bef Time</h1><div onclick="beforetime()" class="timebef"></div>        
+
+            <input class ="ui" type="image" src="https://media.discordapp.net/attachments/936070698844192802/1062143226137559132/IMG_2643.jpg" height="36px">
+            </div>
+				</div>
+              			<div v-show="tabValue==='Visual'">
+                                        <img src="https://media.discordapp.net/attachments/936070698844192802/1062254972286291968/IMG_2665.png" class="cbgui" height="215px">
+                                        <p class="ver">
+0.22.0
+              </p>
+			    <h3 class="h3">- Soon Fix -</h3>
+                                       
+<button class="el-button" onclick="bay2()">M9 DigitalBurst</button>
+                                      <input class ="ui" type="image" src="https://media.discordapp.net/attachments/936070698844192802/1062143226137559132/IMG_2643.jpg" height="36px">
+                          </div>
+                        			<div v-show="tabValue==='Gloves'">
+                                                    <img src="https://media.discordapp.net/attachments/936070698844192802/1062254972286291968/IMG_2665.png" class="cbgui" height="215px">
+                                                   
+    <h3 class="h3">- Soon Fix -</h3>
+                                                    <p class="ver">
+0.22.0
+              </p>
+<button class="el-button" onclick="g15()">Glove Raider</button>
+                                                   
+                                      <input class ="ui" type="image"src="https://media.discordapp.net/attachments/936070698844192802/1062143226137559132/IMG_2643.jpg" height="36px">
+                          </div>
+				
+			<div v-show="tabValue==='About'">
+                            <img src="https://media.discordapp.net/attachments/936070698844192802/1062374439599214622/IMG_2688.png" class="cbgui" height="215px">
+                            <p class="ver">
+0.22.0
+              </p>
+			    <h3 class="h3">Cheat by Destroy</h3>
+              <p class="p">Credits to rezolver</p>
+              <p class="ptext">Cheat is available now in tg: https://t.me/hopelesssoft</p>
+                          <input class ="ui" type="image" src="https://media.discordapp.net/attachments/936070698844192802/1062143226137559132/IMG_2643.jpg" height="36px">
+                          <div>
+                            
+                            
+			    
+			</div>
+		</div>
+	</div>
+	<script>
+	
+	
+	function main() {
+	    
+            	    var el = document.querySelector(".gloves");
+        el.style.color = 'Gray';
+	    var el = document.querySelector(".main");
+        el.style.color = '#FFF';
+        var el = document.querySelector(".visual");
+        el.style.color = 'Gray';
+	    	    var el = document.querySelector(".about");
+        el.style.color = 'Gray';
+	}
+	
+	function visual() {
+	    
+      	    var el = document.querySelector(".gloves");
+        el.style.color = 'Gray';
+	    var el = 
+         document.querySelector(".visual");
+        el.style.color = 'White';
+        var el = document.querySelector(".main");
+        el.style.color = 'Gray';
+	    	    	    var el = document.querySelector(".about");
+        el.style.color = 'Gray';
+	}
+      
+	function glovs() {
+	    
+	    var el = document.querySelector(".gloves");
+        el.style.color = 'White';
+        var el = document.querySelector(".main");
+        el.style.color = 'Gray';
+      var el = document.querySelector(".visual");
+      el.style.color = 'Gray';
+	    	    	    var el = document.querySelector(".about");
+        el.style.color = 'Gray';
+	}
+	
+	function about() {
+	    
+            	    var el = document.querySelector(".gloves");
+        el.style.color = 'Gray';
+	    var el = document.querySelector(".about");
+        el.style.color = 'White';
+        var el = document.querySelector(".main");
+        el.style.color = 'Gray';
+        var el = document.querySelector(".visual");
+        el.style.color = 'Gray';
+	    
+	}
+	
+	
+	
+let status = 'off';
+let status2 = 'off';
+let status3 = 'off';
+let status4 = 'off';
+let status5 = 'off';
+let status6 = 'off';
+let status8 = 'off';
+      
+function bay1(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(71005,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+    
+function bay2(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(200012,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+ 
+function bay3(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(71001,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+
+function bay4(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(71002,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  
+function bay5(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(71003,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+
+function bay6(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(157100,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+ 
+function bay7(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(97100,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  
+  function k1(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(72003,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function k2(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(72002,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function k3(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(72004,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function k4(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(72006,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function k5(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(157200,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function k6(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(200011,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function k7(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(97203,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function k8(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(97200,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function k9(input) {
+    var oldskinid = prompt("Введи ID старого скина:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll(97201,'I64');
+    alert("Succesfull! Skin changed.");
+    h5gg.clearResults();   
+}
+  function j1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('73002','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function j2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('73003','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function j3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('73004','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function j4(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('73006','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function j5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('97300','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function j6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('157300','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+   function b1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('47503','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function b2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('47502','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function b3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('57501','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function b4(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('47504','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function b5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('47505','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function b6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('97500','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function b7(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('157500','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function f1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('67701','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    
+    function f2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('67702','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function f3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('67703','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function f4(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('67704','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function f5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('67705','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    
+    function f6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('97700','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function f7(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('157700','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+   function kun1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('77813','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kun2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('77814','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kun3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('77815','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kun4() {
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('77816','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kun5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('77817','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kun6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('97800','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kun7(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('97801','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kun8(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('157800','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+   function s1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('87919','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function s2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('87920','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function s3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('87921','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function s4(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('87922','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function s5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('97900','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function s6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('157900','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function t1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('138000','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function t2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('138001','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function t3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('138002','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function t4(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('138003','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function t5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('138004','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function t6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('128005','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function t7(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('148000','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function t8(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('158000','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function d1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('170021','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function d2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('170022','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function d3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('170023','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function d4(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('170024','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function d5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('180000','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function d6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('180028','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function kk1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('180022','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kk2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('180023','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kk3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('180024','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function kk4(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('180025','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function kk5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('180026','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function kk6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('180027','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function g1(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3006','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g2(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3007','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g3(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3008','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3009','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g5(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3000','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g6(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3001','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g7(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3002','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g8(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3003','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g9(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3004','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+    
+    function g10(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3005','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function g11(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3011','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function g12(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3012','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function g13(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3013','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function g14(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3014','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function g15(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3015','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+
+  function g16(){
+    var oldskinid = prompt("Enter oldskin ID:");
+    h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+    h5gg.editAll('3016','I64');
+    alert("Successfully!");
+    h5gg.clearResults();
+    }
+      
+      // tiktokgovno
+     
+function AntiF() {
+
+
+    if (status == 'on') {
+    
+        var el = document.querySelector(".AntiFlash");
+        el.style.backgroundColor = 'rgb(148, 148, 148)';
+        status = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x188ff4c, "C0035FD6");
+    
+    }
+    
+    else if (status == 'off') {
+        
+        var el = document.querySelector(".AntiFlash");
+        el.style.backgroundColor = 'rgb(255, 255, 255)';
+        status = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x188ff4c, "C0035FD6");
+
+        
+    }
+
+
+}
+
+function FireR() {
+
+
+    if (status2 == 'on') {
+    
+        var el = document.querySelector(".FireRate");
+        el.style.backgroundColor = 'rgb(148, 148, 148)';
+        status2 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x189d09c, "C0035FD6");
+    
+    }
+    
+    else if (status2 == 'off') {
+        
+        var el = document.querySelector(".FireRate");
+        el.style.backgroundColor = 'rgb(225, 225, 225)';
+        status2 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x189d09c, "C0035FD6");
+
+        
+    }
+
+
+}
+
+function NoR() {
+
+
+    if (status3 == 'on') {
+    
+        var el = document.querySelector(".NoRecoil");
+        el.style.backgroundColor = 'rgb(148, 148, 148)';
+        status3 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x189a848, "C0035FD6");
+    
+    }
+    
+    else if (status3 == 'off') {
+        
+        var el = document.querySelector(".NoRecoil");
+        el.style.backgroundColor = 'rgb(225, 225, 225)';
+        status3 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x189a848, "C0035FD6");
+
+        
+    }
+
+
+}
+
+function InfinityA() {
+
+
+    if (status4 == 'on') {
+    
+        var el = document.querySelector(".InfinityAmmo");
+        el.style.backgroundColor = 'rgb(148, 148, 148)';
+        status4 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1ae8fd0, "0x00F0271EC0035FD6");
+    
+    }
+    
+    else if (status4 == 'off') {
+        
+        var el = document.querySelector(".InfinityAmmo");
+        el.style.backgroundColor = 'rgb(225, 225, 225)';
+        status4 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1ae8fd0, "0x00F0271EC0035FD6");
+
+        
+    }
+
+
+}
+
+function RadarTM() {
+
+
+    if (status5 == 'on') {
+    
+        var el = document.querySelector(".TeamRadar");
+        el.style.backgroundColor = 'rgb(148, 148, 148)';
+        status5 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x19d9018, "C0035FD6");
+    
+    }
+    
+    else if (status5 == 'off') {
+        
+        var el = document.querySelector(".TeamRadar");
+        el.style.backgroundColor = 'rgb(225, 225, 225)';
+        status5 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x19d9018, "C0035FD6");
+
+        
+    }
+
+
+}
+
+
+function AntiHE() {
+
+
+    if (status6 == 'on') {
+    
+        var el = document.querySelector(".AntiHE");
+        el.style.backgroundColor = 'rgb(148, 148, 148)';
+        status6 = 'off';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1bc7518, "0x20008052C0035FD6");
+    
+    }
+    
+    else if (status6 == 'off') {
+        
+        var el = document.querySelector(".AntiHE");
+        el.style.backgroundColor = 'rgb(225, 225, 225)';
+        status6 = 'on';
+        
+        h5gg.require(7.9);
+
+        var h5frida=h5gg.loadPlugin("h5frida", "h5frida-15.1.24.dylib");
+
+        function ActiveCodePatch(fpath, vaddr, bytes) {
+            if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+                var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+                alert(fpath+":0x"+vaddr.toString(16)+"-дї®ж”№е¤±иґҐ!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+            } return true;
+        }
+        function DeactiveCodePatch(fpath, vaddr, bytes) {
+            return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+        }
+
+        ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1bc7518, "0x20008052C0035FD6");
+
+        
+    }
+
+
+}
+	
+	
+	
+	
+	
+		var app = new Vue({
+			el: "#app",
+			data() {
+				return {
+					ifshow: true,
+					checked: false,
+					radio: '1',
+					activeSelect: '',
+					selectOption: [{
+						value: 'Option1',//实际内容
+						label: 'golden'//显示文案
+					}, {
+						value: 'Option2',
+						label: 'eggs'
+					}],
+					input: "",
+					showOption: false,
+					tabValue: "Main",
+				}
+			}, 
+			mounted() {
+              
+				this.setRect(559, 256);
+				document.getElementById('name').innerHTML
+                = 'Hopeless Prem';
+
+				//设置不可拖动
+				setWindowDrag(0, 0, 0, 0);
+    
+				var layout = function()
+				{
+					//window.orientation是设备握持方向, 不是屏幕显示方向
+					if(window.lastorientation==window.orientation) return;
+					window.lastorientation=window.orientation;
+				
+					//window.screen中的宽高不会随着屏幕旋转更新(只会在初始化的时候固定)
+					if(Math.abs(window.orientation)==90) {
+						//横屏模式
+						setWindowRect(0,0,window.screen.height,window.screen.width);
+					} else {
+						//竖屏模式
+						setWindowRect(0,0,window.screen.width,window.screen.height);
+					}
+				}
+	
+				layout(); //设置旋转屏幕时自动调整布局和画布
+				window.addEventListener("orientationchange", layout, false);
+
+				setButtonAction(function () {
+					var menu = document.querySelector("#app");
+					if (menu.style.display == 'none') {
+						menu.style.display = 'block';
+						//显示菜单之后, 设置触控不可穿透悬浮窗口
+						setWindowTouch(true);
+					} else {
+						menu.style.display = 'none';
+						//隐藏菜单之后, 设置触控穿透悬浮窗口
+						setWindowTouch(false);
+					}
+				});
+			},
+			methods: {
+				setRect(w, h, x = -1, y = -1) {
+					var boxW = w;
+					var boxH = h;
+
+					var ayMenu = this.$refs.menuMain;
+					ayMenu.style.width = `${boxW}px`;
+					ayMenu.style.height = `${boxH}px`;
+					if (x == -1) ayMenu.style.left = `calc(50% - ${boxW / 2}px)`;
+					if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
+				},
+				titleTouchStart(event) {
+					this.touchStartX = parseInt(event.touches[0].clientX);
+					this.touchStartY = parseInt(event.touches[0].clientY);
+
+					var ayMenu = this.$refs.menuMain;
+					this.menuLastX = ayMenu.offsetLeft;
+					this.menuLastY = ayMenu.offsetTop;
+				},
+				titleTouchMove(event) {
+					event.preventDefault();
+					var distanceX = event.touches[0].clientX - this.touchStartX;
+					var distanceY = event.touches[0].clientY - this.touchStartY;
+
+					var ayMenu = this.$refs.menuMain;
+					ayMenu.style.left = this.menuLastX + distanceX + "px";
+					ayMenu.style.top = this.menuLastY + distanceY + "px";
+				},
+				//切换导航栏
+				changeTab(v) {
+					this.tabValue = v;
+				},
+				closeimgui() {
+					var menu = document.querySelector("#app");
+					menu.style.display = 'none';
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>

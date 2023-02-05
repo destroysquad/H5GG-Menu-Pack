@@ -1,0 +1,2308 @@
+<html>
+<header>
+	<title>rezolver</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.7/lib/theme-chalk/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui@2.15.7/lib/index.js"></script>
+
+
+	<style>
+	
+
+
+
+a:hover {
+    background-color: #777;
+}
+	 
+	div{
+  animation-duration: 0.50s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-top: 50%;
+    
+  }
+
+
+}
+ 
+    zxc{
+  
+       
+        
+        font-size: 50px;
+    
+        margin: 3 auto;
+		
+    }
+
+    .text-color{
+        background-color: #FF0000;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 10%;
+        background-image: linear-gradient(
+            45deg,
+            #FF0000 33%,
+            #FF4500 33%,
+            #FF4500 40%,
+            #FFFF00 40%,
+            #FFFF00 47%,
+            #008000 47%,
+            #008000 54%,
+            #00BFFF 54%,
+            #00BFFF 61%,
+            #0000FF 61%,
+            #0000FF 68%,
+            #800080 68%);
+        animation: text-animate-rev 0.15s ease forwards;
+
+    }
+
+    .text-color:hover{
+        animation: text-animate 0.1s ease-in forwards;
+    }
+
+    @keyframes text-animate-rev {
+        0% {
+            background-size: 650%;
+        }
+        40% {
+            background-size: 650%;
+        }
+        100% {
+            background-size: 100%;
+        }
+    }
+
+    /* Move the background and make it larger. */
+    /* Animation shown when hovering over the text. */
+    @keyframes text-animate {
+        0% {
+            background-size: 100%;
+        }
+        80% {
+            background-size: 650%;
+        }
+        100% {
+            background-size: 650%;
+        }
+    }
+	
+	
+	
+	
+	
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.ayimgui {
+			position: fixed;
+			width: 360px;
+			
+			height: 500px;
+			top: calc(50% - 180px);
+			left: calc(50% - 180px);
+			z-index: 999;
+			      
+			/* border-radius: 8px; */
+			overflow: hidden;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-selectnone none;
+			user-select: unset;
+			
+		}
+
+		.onlyTitle {
+			height: 21px !important;
+		}
+
+		.ayimgui .aytitle {
+			padding: 0 5px;
+			font-size: 16px;
+			background: linear-gradient(to right, #8A2BE2 15.0%, #FF0000 29.0%, #008000 63.0%, #8B008B 80.0%, #000080 100.0%);
+			background-size: 200%;
+			animation: fang 8s infinite;
+			animation-direction: alternateпј›
+			overflow: hidden;
+		}
+
+			.ayimgui .aytitle::before {
+				position: absolute;
+				top: -5px;
+				left: -5px;
+				bottom: -5px;
+				right: -5px;
+				 background: rgba( 0,0,0,.6);
+				background-size: 200%;
+				z-index: -1;
+				animation: fang 8s infinite;
+				animation-direction: alternateпј›
+				border: solid 10px;
+			}
+
+			.ayimgui .aytitle .titleClose {
+				position: absolute;
+				top: 3px;
+				right: 6px;
+
+			}
+			
+			.box {
+  width: 150px;
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+   
+
+
+		.ayimgui .aybody {
+			padding: 15px;
+			height: calc(100% - 21px - 15px - 15px);
+			overflow: auto;
+			font-size: 11px;
+
+border-radius: 5
+ height: 453px;
+  background: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .5)), url(https://psv4.userapi.com/c856328/u93034347/docs/d4/1f23496b3075/LL26.png?extra=xtXf-TJGM_BH_JoQj5vlxMCfivmuQZ-PJxI7wv_cPPJ3019-KIMVjXyN31_JCFnUPYffQqD_zVzK_LoL3d6M4y0DFPbDzYqoM8I6HVY3OF4Gjac-TKnjTI-z2s_MRbzqznTm1hv5oJljCpKxGWmW5g); 
+  background-size: cover;
+}
+  border-radius: 5
+		}
+
+Copy to Clipboard
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+		.aytext {
+			text-align: center;
+			width: 100%;
+			margin-bottom: 5px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+   background: rgba( 0,0,0,0.5);
+    color: #fff; /* Цвет текста */
+    padding: - 2 px; /* Поля вокруг текста */
+    border-radius: 3px;
+			
+		}
+
+
+		.el-checkbox {
+			margin: 0px;
+		}
+
+		.el-checkbox__label {
+			color: #000;
+		}
+
+		.el-checkbox__input.is-checked + .el-checkbox__label {
+			color:rgb( 0,0,0,0.5);
+		}
+
+		.el-checkbox__inner {
+			background: rgb( 0,0,0,0.5);
+			border: none;
+		}
+
+
+		.el-radio {
+			margin: 8px 0;
+			background: rgb( 0,0,0,0.5);
+		}
+
+		.el-radio__label {
+			color:linear-gradient(#8A2BE2 0.0%, #FF0000 20.0%, #008000 40.0%, #8B008B 80.0%, #000080 100.0%);
+		}
+
+		.el-radio__input.is-checked + .el-radio__label {
+			color:linear-gradient(#8A2BE2 0.0%, #FF0000 20.0%, #008000 40.0%, #8B008B 80.0%, #000080 100.0%);
+		}
+
+		.el-radio__inner {
+			background-color: rgb(254, 254, 254);
+			border: dashed red;
+		}
+
+		.el-radio__input.is-checked .el-radio__inner {
+			background-color: rgb( 0,0,0,0.5);
+		}
+
+		.el-radio__inner::after {
+			width: 10px;
+			height: 10px;
+			background-color: rgb( 0,0,0,0.5);
+		}
+
+		.onlySelect {
+			background-color: rgb( 0,0,0,0.5);
+			border: 4mm ridge rgba(211, 220, 50, .6);
+		}
+
+			.onlySelect .el-select-dropdown__item {
+				color: rgb( 0,0,0,0.5);;
+			}
+
+				.onlySelect .el-select-dropdown__item.hover,
+				.el-select-dropdown__item:hover:hover {
+					background-color: transparent;
+				}
+
+			.onlySelect .popper__arrow {
+				border-bottom-color: rgb(294, 154, 234) !important;
+			}
+
+			.onlySelect.el-popper[x-placement^=bottom] .popper__arrow::after {
+				border-bottom-color: rgb(224, 214, 000) !important;
+			}
+
+		.el-select {
+			width: 100%;
+		}
+
+			.el-select .el-input {
+				background: linear-gradient(to right, #8A2BE2 15.0%, #FF0000 29.0%, #008000 63.0%, #8B008B 80.0%, #000080 100.0%);
+			}
+
+			.el-select .el-input__suffix {
+				background-color: rgb(160, 196, 243);
+
+				right: 0;
+			}
+
+			.el-select .el-select__caret {
+				color: #000000;
+			}
+
+			.el-select .el-input__inner {
+				background-color: transparent;
+				border: 4mm ridge rgba(211, 220, 50, .6);
+				color: #000000;
+			}
+
+			.el-select .el-input .el-select__caret {
+				color: #000000;
+				border: 4mm ridge rgba(211, 220, 50, .6);
+			}
+
+		/* и§Је†іiosдё‹ж‹‰йњЂи¦Ѓз‚№дё¤ж¬Ў */
+		.el-scrollbar .el-scrollbar__bar {
+			opacity: 1 !important;
+		}
+
+		.el-button {
+			font-size: 14px;
+			padding: 5px 5px;
+			line-height: 14px;
+			color: #000;
+			background: linear-gradient(to right, #8A2BE2 15.0%, #FF0000 29.0%, #008000 63.0%, #8B008B 80.0%, #000080 100.0%);
+		}
+
+			.el-button:hover {
+				opacity: .7;
+				color: #000;
+				border: solid;
+				background: linear-gradient(to right, #8A2BE2 15.0%, #FF0000 29.0%, #008000 63.0%, #8B008B 80.0%, #000080 100.0%);
+			}
+
+			.el-button:focus,
+			.el-button:hover {
+			background: linear-gradient(to right, #8A2BE2 15.0%, #FF0000 29.0%, #008000 63.0%, #8B008B 80.0%, #000080 100.0%);
+				color: #000;
+				border: solid;
+			}
+
+		.aycollapse {
+			width: 100%;
+			font-size: 14px;
+			background-color: rgb(135,206,235);
+			
+		}
+
+
+		.aytab {
+			width: 100%;
+			height: 20px;
+			display: flex;
+			border-bottom: 2px solid rgb(200, 217, 233);
+		}
+
+			.aytab span {
+				padding: 0 5px;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+  border-radius: 5
+				color: #000;
+				font-size: 14px;
+				font-weight: 500;
+				margin-left: 10px;
+				border-radius: 6px 6px 0 0;
+				cursor: pointer;
+			}
+
+
+		.el-input input {
+			background: rgba( 0,0,0,.6);
+			border: none;
+			border-radius: 100px;
+		}
+		}
+	</style>
+
+</header>
+
+
+
+<body>
+
+	<script>
+
+		function karambitgold() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitclaw() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitdragongalss() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitscratch() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karmbituniverse() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('72007', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitcoldflame() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97200', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitfrozen() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97201', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambitsnowcamo() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97203', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+		function karambityearoftiger() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157200', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function m1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71001', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157100', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97100', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71005', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function m7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('71002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('73002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('73003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('73004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('73006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97300', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function j6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157300', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('47503', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('47502', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('57501', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('47504', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('47505', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97500', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function b7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157500', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67701', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function f2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67702', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67703', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67704', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('67705', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function f6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97700', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function f7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157700', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77813', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77814', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77815', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77816', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('77817', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97800', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97801', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function k8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157800', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('87919', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('87920', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('87921', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('87922', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('97900', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function s6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('157900', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138000', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138001', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('138004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('128005', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('148000', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function t8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('158000', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function d1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('170021', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function d2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('170022', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function d3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('170023', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function d4() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('170024', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3007', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3008', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3009', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3000', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3001', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3003', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g9() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function g10() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('3005', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function i1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180022', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180023', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180024', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180025', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180026', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function i6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180027', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}		
+
+		function custom() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			var newskinid = prompt("Enter newskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll(newskinid, 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('54401', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1044002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1084402', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('44007', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function p5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1084403', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+				function p6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('124400', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function p7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180027', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}	
+
+		function y1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('54401', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function y2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1125100', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function y3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('51006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+		function y5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('51008', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+				function y6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1051007', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('180004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1046006', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('84600', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('84600', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+
+				function yy6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('124600', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yy7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('134600', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+				function yy8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1046002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+	}
+
+		function yyyz1() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('124500', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yyyz2() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('84500', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yyyz3() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1084400', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yyyz5() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('45002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+				function yyyz6() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('45004', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+
+		function yyyz7() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1045001', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+		}
+				function yyyz8() {
+			var oldskinid = prompt("Enter oldskin ID:");
+			h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+			h5gg.editAll('1045002', 'I64');
+			alert("Successfully!");
+			h5gg.clearResults();
+	}
+
+
+
+
+	</script>
+	<head>
+			<div v-show="tabValue==='Knife'">
+</div>
+
+			<div id="app">	
+			<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+				<i :class="ifshow?'el-icon-caret-bottom':'el-icon-caret-top'" @click="ifshow = !ifshow"></i>
+				<span class="title-age" style="margin-left:5px;">
+				
+				<i class="titleClose el-icon el-icon-close" @click="closeimgui"></i>
+			</span>
+				
+			</div>
+			
+			<div class="aybody">
+
+				<div class="aytab">
+				
+					<span @click="changeTab('Knife')" :style="{background:tabValue==='Knife'?'#B1CEF0':'#BDC7D0'}">Knife</span>
+					<span @click="changeTab('Id_Skins')":style="{background:tabValue==='Id_Skins'?'#B1CEF0':'#BDC7D0'}">Id_Skins</span>
+					<span @click="changeTab('Skins')":style="{background:tabValue==='Skins'?'#B1CEF0':'#BDC7D0'}">Skins</span>
+				</div>
+				
+					<div class="menu">
+					<div class="aytext">
+					<div>
+					
+					
+		 <header>
+        <zxc class="text-color">REZOLVER</zxc>
+   
+				</div>
+		
+		<div class="list_menu">
+		<div class="footer_menu">
+		<marquee>продам гараж 89509737954 антон</marquee>
+			<p>©RREZ_TOP 2020-2021</p>	
+			
+<div class="Knife">				
+<div class="two">
+<div class="Skins">
+
+</header>
+</div
+</span>	
+</head>
+  </form>
+ 
+<div v-show="tabValue==='Skins'">
+  											<div class="aytext">
+											
+						<p>витя ак 47</p>
+					</div>
+					<div>
+						<el-button onclick="p1()">AKR_TagKing</el-button>
+						<el-button onclick="p2()">AKRTreasureHunterStatTrack</el-button>
+						</div>
+						<div>
+						<el-button onclick="p3()">AKR_Dragon_StatTrack</el-button>
+						<div>
+						<el-button onclick="p5()">AKR_Nano_StatTrack </el-button>
+						<el-button onclick="p6()">AKR_Scale</el-button>
+					</div>
+					</div>
+											<div class="aytext">
+						<p>AWвM</p>
+					</div>
+
+					<div>
+						<el-button onclick="y1()">AWM_Poseidon</el-button>
+						<el-button onclick="y2()">AWM_BOOM_StatTrack</el-button>
+					</div>
+					<div>
+						<el-button onclick="y3()">AWMSportV2 </el-button>
+					</div>
+					<div>
+						<el-button onclick="y5()">AWM_2YearsRed</el-button>
+						<el-button onclick="y6()">AWMGenesisStatTrack </el-button>
+						<el-button onclick="y7()">AWM_Poseidon</el-button>
+						<el-button onclick="y8()">AWM_BOOM_StatTrack</el-button>
+					</div>
+					
+																<div class="aytext">
+						<p> M4</p>
+					</div>
+
+					<div>
+						<el-button onclick="yy1()"> M4_Minotaur </el-button>
+						<el-button onclick="yy2()"> M4ProStatTrack  </el-button>
+					</div>
+					<div>
+						<el-button onclick="yy3()">M4Predator   </el-button>
+	
+					</div>
+					<div>
+						<el-button onclick="yy5()">M4_Revival  </el-button>
+						<el-button onclick="yy6()">M4_Demon   </el-button>
+						<el-button onclick="yy7()">M4_RONINmk56  </el-button>
+						<el-button onclick="yy8()">M4NecromancerStatTrack  </el-button>
+					</div>
+
+																						<div class="aytext">
+						<p> AKR12</p>
+					</div>
+
+					<div>
+						<el-button onclick="yyyz1()"> AKR12_Roar </el-button>
+						<el-button onclick="yyyz2()"> AKR12_Carbon </el-button>
+					</div>
+					<div>
+						<el-button onclick="yyyz2()">AKR12_Geometric_StatTrac  </el-button>
+	
+					</div>
+					<div>
+						<el-button onclick="yyyz2()"> AKR12PixelCamouflage </el-button>
+						<el-button onclick="yyyz2()"> AKR12Aurora   </el-button>
+						<el-button onclick="yyyz2()">AKR12RailgunStatTrack </el-button>
+						<el-button onclick="yyyz2()"> AKR12PixelCamouflageStatTrack </el-button>
+					</div>
+					
+										<div class="aytext">
+						<p> M4A1</p>
+					</div>
+
+					<div>
+						<el-button onclick="y1()">  M4A1_Mermaid </el-button>
+						<el-button onclick="y2()">  M4A1_Mermaid </el-button>
+					</div>
+					<div>
+						<el-button onclick="y3()"> M4A1_Kitsune  </el-button>
+	
+					</div>
+					<div>
+						<el-button onclick="y5()">  M4A1_KINGv703 </el-button>
+						<el-button onclick="y6()">  M4A1_Bubblegum </el-button>
+						<el-button onclick="y7()"> M4A1_KINGv703_StatTrack  </el-button>
+						<el-button onclick="y8()">  M4A1_Bubblegum_StatTrack </el-button>
+					</div>
+					
+		<div class="aytext">
+						<p> M16</p>
+					</div>
+
+					<div>
+						<el-button onclick="y1()">  M16_Triumphant  </el-button>
+						<el-button onclick="y2()">  M16_Triumphant_StatTrack  </el-button>
+					</div>
+					<div>
+						<el-button onclick="y3()"> M16_4Years   </el-button>
+
+					</div>
+					<div>
+						<el-button onclick="y5()">  M16Facet   </el-button>
+						<el-button onclick="y6()">  M16WingedStatTrack   </el-button>
+						<el-button onclick="y1()"> M16_Muraena   </el-button>
+						<el-button onclick="y2()">   M16_Muraena StatTrack</el-button>
+					</div>
+					
+		<div class="aytext">
+						<p>  G22</p>
+					</div>
+
+					<div>
+						<el-button onclick="y1()">  G22PixelCamouflage   </el-button>
+						<el-button onclick="y2()">  G22NestStatTrack  </el-button>
+					</div>
+					<div>
+						<el-button onclick="y3()"> G22_YellowLine   </el-button>
+	
+					</div>
+					<div>
+						<el-button onclick="y5()">  G22_Frozen   </el-button>
+						<el-button onclick="y6()">  G22_Monster_StatTrack </el-button>
+						<el-button onclick="y1()"> G22_Frozen_StatTrack   </el-button>
+						<el-button onclick="y2()">   G22_Relik</el-button>
+					</div>
+					
+
+					
+					<div class="aytext">
+						<p>  USP</p>
+					</div>
+
+					<div>
+						<el-button onclick="y1()">  USP_2Years   </el-button>
+						<el-button onclick="y2()">  USP_2YearsRed  </el-button>
+					</div>
+					<div>
+						<el-button onclick="y3()"> USP_Geometric_StatTrack    </el-button>
+
+					</div>
+					<div>
+						<el-button onclick="y5()">  USP_StoneCold_StatTrack   </el-button>
+						<el-button onclick="y6()">  USP_Fiend </el-button>
+						<el-button onclick="y1()"> USP_Pisces   </el-button>
+						<el-button onclick="y2()">   USP_Pisces_StatTrack</el-button>
+					</div>
+					
+
+			
+										
+			
+					
+					
+					
+</div>
+</script>
+
+
+
+
+					
+					<div v-show="tabValue==='Id_Skins'">
+					<div class="aycollapse" @click="showOption = !showOption" style="cursor:pointer">
+					
+						<i :class="showOption?'el-icon-caret-bottom':'el-icon-caret-right'"></i>
+						<span>Skins id:</span>
+						
+						</div>
+						
+					<br>
+					
+
+					</div>
+					
+					
+						<div v-show="showOption">
+
+							#G22<br>
+							Weapon ID = 11; <br>
+							G22PixelCamouflage = 11001;<br>
+							G22Nest = 11002;<br>
+							G22Pattern = 11005;<br>
+							G22Inferno = 11006;<br>
+							G22FrostWyrm = 11008;<br>
+							G22NestStatTrack = 1011002;<br>
+							G22FrostWyrmStatTrack = 1011008;<br>
+							G22_Scale = 121100;<br>
+							G22_Carbon = 81107;<br>
+							G22_Carbon_StatTrack = 1081107;<br>
+							G22_YellowLine = 81108;<br>
+							G22_Monster = 71103;<br>
+							G22_Monster_StatTrack = 1071103;<br>
+							G22_WhiteCarbon = 71104;<br>
+							G22_WhiteCarbon_StatTrack = 1071104;<br>
+							G22_Frozen = 61101;<br>
+							G22_Frozen_StatTrack = 1061101;<br>
+							G22_Starfall = 41102;<br>
+							G22_Starfall_StatTrack = 1041102;<br>
+							G22_Relic = 41101;<br>
+							<br>
+							#USP<br>
+							Weapon ID = 12<br>
+							USP_2Years = 12002;<br>
+							USP_2YearsRed = 12003;<br>
+							USP_Chameleon = 121200;<br>
+							USP_Chameleon_StatTrack = 1121200;<br>
+							USP_Geometric = 81200;<br>
+							USP_Geometric_StatTrack = 1081200;<br>
+							USP_Line = 81214;<br>
+							USP_Yellow = 81215;<br>
+							USP_StoneCold = 61201;<br>
+							USP_StoneCold_StatTrack = 1061201;<br>
+							USP_Fiend = 41201;<br>
+							USP_Pisces = 41212;<br>
+							USP_Pisces_StatTrack = 1041212;<br>
+							USPGenesis = 12001;<br>
+							<br>
+							#P350<br>
+							Weapon ID = 13<br>
+							P350Cyber = 13001;<br>
+							P350Savannah = 13002;<br>
+							P350ForestSpirit = 13003;<br>
+							P350Rally = 13004;<br>
+							P350Skull = 13005;<br>
+							P350CyberStatTrack = 1013001;<br>
+							P350ForestSpiritStatTrack = 1013003;<br>
+							P350RallyStatTrack = 1013004;<br>
+							P350_Poison = 71306;<br>
+							P350_Poison_StatTrack = 1071306;<br>
+							P350_Nano = 81323;<br>
+							P350_Autumn = 81300;<br>
+							P350_Autumn_StatTrack = 1081300;<br>
+							P350_Blizzard = 91300;<br>
+							P350_Blizzard_StatTrack = 1091300;<br>
+							P350_4Years = 101300;<br>
+							P350_Oni = 121300;<br>
+							P350_Oni_StatTrack = 1121300;<br>
+							<br>
+
+							#Deagle<br>
+							Weapon ID = 15<br>
+							DeagleCaptainMorgan = 15001;<br>
+							DeagleBlood = 15002;<br>
+							DeaglePredator = 15003;<br>
+							DeagleRedDragon = 15004;<br>
+							DeagleWinner = 15005;<br>
+							DeagleDragonGlass = 15006;<br>
+							DeagleThunder = 15007;<br>
+							DeaglePredatorStatTrack = 1015003;<br>
+							DeagleRedDragonStatTrack = 1015004;<br>
+							DeagleDragonGlassStatTrack = 1015006;<br>
+							Deagle_Ace = 41502;<br>
+							Deagle_Ace_StatTrack = 1041502;<br>
+							Deagle_Pro = 81505;<br>
+							Deagle_Orochi = 121500;<br>
+							Deagle_Orochi_StatTrack = 1121500;<br>
+							Deagle_Mafia = 131500;<br>
+							Deagle_Mafia_StatTrack = 1131500;<br>
+							<br>
+							#Tec9<br>
+							Weapon ID = 16<br>
+							Tec9_Tropic = 121600;<br>
+							Tec9_Tropic_StatTrack = 1121600;<br>
+							Tec9_Spot = 81613;<br>
+							Tec9_Reactor = 71607;<br>
+							Tec9_Reactor_StatTrack = 1071607;<br>
+							Tec9_Necromancer = 61601;<br>
+							Tec9_Necromancer_StatTrack = 1061601;<br>
+							Tec9_Restless = 51601;<br>
+							Tec9_Aurora = 41601;<br>
+							Tec9_Fable = 41605;<br>
+							Tec9_Fable_StatTrack = 1041605;<br>
+							<br>
+							#FiveSeven<br>
+							Weapon ID = 17<br>
+							FiveSeven_Venom = 41701;<br>
+							FiveSeven_Venom_StatTrack = 1041701;<br>
+							FiveSeven_Tactical = 41703;<br>
+							FiveSeven_Tactical_StatTrack = 1041703;<br>
+							FiveSeven_New2 = 51701;<br>
+							FiveSeven_Poison = 71701;<br>
+							FiveSeven_Poison_StatTrack = 1071701;<br>
+							FiveSeven_Zone = 71702;<br>
+							FiveSeven_Zone_StatTrack = 1071702;<br>
+							FiveSeven_SightRed = 81725;<br>
+							FiveSeven_SightGrey = 81726;<br>
+							FiveSeven_SightGrey_StatTrack = 1081726;<br>
+							FiveSeven_Rush = 81700;<br>
+							FiveSeven_Rush_StatTrack = 1081700;<br>
+							FiveSeven_Enforcer = 131700;<br>
+							FiveSeven_Enforcer_StatTrack = 1131700;<br>
+							<br>
+							<br>
+							-РџРёСЃС‚РѕР»РµС‚С‹-РїСѓР»РµРјС‘С‚С‹-<br>
+							<br>
+							#UMP45<br>
+							Weapon ID = 32<br>
+							UMP45Cyberpunk = 32001;<br>
+							UMP45Pixel = 32002;<br>
+							UMP45Shark = 32003;<br>
+							UMP45Winged = 32004;<br>
+							UMP45Beast = 32005;<br>
+							UMP45Iron = 32006;<br>
+							UMP45CyberpunkStatTrack = 1032001;<br>
+							UMP45SharkStatTrack = 1032003;<br>
+							UMP45WingedStatTrack = 1032004;<br>
+							UMP45BeastStatTrack = 1032005;<br>
+							UMP45_PixelV2 = 43201;<br>
+							UMP45_Cerberus = 43202;<br>
+							UMP45_Cerberus_StatTrack = 1043202;<br>
+							UMP45_Gas = 73208;<br>
+							UMP45_Gas_StatTrack = 1073208;<br>
+							UMP45_WhiteCarbon = 73209;<br>
+							UMP45_WhiteCarbon_StatTrack = 1073209;<br>
+							UMP45_Geometric = 83200;<br>
+							UMP45_Geometric_StatTrack = 1083200;<br>
+							UMP45_Spirit = 83201;<br>
+							UMP45_Spirit_StatTrack = 1083201;<br>
+							UMP45_4Years = 103200;<br>
+							UMP45_PeacefulDream = 123200;<br>
+							<br>
+							#MP7<br>
+							Weapon ID = 34<br>
+							MP7Offroad = 34001;<br>
+							MP7Arcade = 34002;<br>
+							MP7_2Years = 34003;<br>
+							MP7_2YearsRed = 34004;<br>
+							MP7OffroadStatTrack = 1034001;<br>
+							MP7ArcadeStatTrack = 1034002;<br>
+							MP7_Thorn = 43401;<br>
+							MP7_Lich = 43402;<br>
+							MP7_Lich_StatTrack = 1043402;<br>
+							MP7_WinterSport = 63401;<br>
+							MP7_WinterSport_StatTrack = 1063401;<br>
+							MP7_Girl = 83409;<br>
+							MP7_Graffity = 83410;<br>
+							MP7_Graffity_StatTrack = 1083410;<br>
+							MP7_Monkey = 83411;<br>
+							MP7_Monkey_StatTrack = 1083411;<br>
+							MP7_Revival = 83400;<br>
+							MP7_Revival_StatTrack = 1083400;<br>
+							MP7_Blizzard = 93400;<br>
+							MP7_Blizzard_StatTrack = 1093400;<br>
+							MP7_Empire = 123400;<br>
+							MP7_Empire_StatTrack = 1123400;<br>
+							<br>
+							#P90<br>
+							Weapon ID = 35<br>
+							P90Radiation = 35001;<br>
+							P90Ghoul = 35002;<br>
+							P90Fury = 35003;<br>
+							P90Pilot = 35004;<br>
+							P90GhoulStatTrack = 1035002;<br>
+							P90_Jungle = 43502;<br>
+							P90_Samurai = 83512;<br>
+							P90_Samurai_StatTrack = 1083512;<br>
+							P90_IronWill = 93500;<br>
+							P90_IronWill_StatTrack = 1093500;<br>
+							P90_RONINmk9 = 133500;<br>
+							P90_RONINmk9_StatTrack = 1133500;<br>
+							P90_Z50FUJIN = 133501;<br>
+							P90_Z50FUJIN_StatTrack = 1133501;<br>
+							<br>
+							#MP5<br>
+							Weapon ID = 36<br>
+							MP5_4Years = 103500;<br>
+							MP5_NorthernFury = 93600;<br>
+							MP5_NorthernFury_StatTrack = 1093600;<br>
+							MP5_ProjectZ9 = 73610;<br>
+							MP5_ProjectZ9_StatTrack = 1073610;<br>
+							MP5_Reactor = 73611;<br>
+							MP5_Reactor_StatTrack = 1073611;<br>
+							MP5_Zone = 73612;<br>
+							MP5_Zone_StatTrack = 1073612;<br>
+							<br>
+							-РЁРўРЈР РњРћР’Р«Р• Р’РРќРўРћР’РљР-<br>
+							<br>
+							#AKR<br>
+							Weapon ID = 44<br>
+							AKRTreasureHunter = 44002;<br>
+							AKRTiger = 44003;<br>
+							AKRSport = 44004;<br>
+							AKRNecromancer = 44005;<br>
+							AKRCarbon = 44006;<br>
+							AKR_2Years = 44007;<br>
+							AKRTreasureHunterStatTrack = 1044002;<br>
+							AKRSportStatTrack = 1044004;<br>
+							AKRCarbonStatTrack = 1044006;<br>
+							AKRNecromancerStatTrack = 1044005;<br>
+							AKR_Worm = 44401;<br>
+							AKR_TagKing = 54401;<br>
+							AKR_Dragon = 84402;<br>
+							AKR_Dragon_StatTrack = 1084402;<br>
+							AKR_Nano = 84403;<br>
+							AKR_Nano_StatTrack = 1084403;<br>
+							AKR_Scale = 124400;<br>
+							<br>
+							#M4<br>
+							Weapon ID = 46<br>
+							M4Predator = 46001;<br>
+							M4Necromancer = 46002;<br>
+							M4Tiger = 46003;<br>
+							M4Pro = 46006;<br>
+							M4GrandPrix = 46007;<br>
+							M4NecromancerStatTrack = 1046002;<br>
+							M4ProStatTrack = 1046006;<br>
+							M4GrandPrixStatTrack = 1046007;<br>
+							M4_Lizard = 44601;<br>
+							M4_Lizard_StatTrack = 1044601;<br>
+							M4_Samurai = 44603;<br>
+							M4_Samurai_StatTrack = 1044603;<br>
+							M4_Wolf = 84624;<br>
+							M4_Wolf_StatTrack = 1084624;<br>
+							M4_Revival = 84600;<br>
+							M4_Revival_StatTrack = 108460<br>
+							M4_Demon = 124600;<br>
+							M4_Demon_StatTrack = 1124600;<br>
+							M4_RONINmk56 = 134600;<br>
+							M4_RONINmk56_StatTrack = 1134600;<br>
+							<br>
+
+							#M4A1<br>
+							Weapon ID = 43<br>
+							M4A1_Kitsune = 124301;<br>
+							M4A1_Kitsune_StatTrack = 1124301;<br>
+							M4A1_KINGv703 = 134300;<br>
+							M4A1_KINGv703_StatTrack = 1134300;<br>
+							M4A1_Bubblegum = 124300;<br>
+							M4A1_Bubblegum_StatTrack = 1124300;<br>
+							<br>
+							#FAMAS<br>
+							Weapon ID = 48<br>
+							FamasBeagle = 48001;<br>
+							FamasFury = 48002;<br>
+							FamasHull = 48003;<br>
+							FamasBeagleStatTrack = 1048001;<br>
+							FamasFuryStatTrack = 1048002;<br>
+							FamasHullStatTrack = 1048003;<br>
+							Famas_Autumn = 84800;<br>
+							Famas_Autumn_StatTrack = 1084800;<br>
+							Famas_Anger = 124800;<br>
+							Famas_Anger_StatTrack = 1124800;<br>
+							FAMAS_Monster = 74800;<br>
+							FAMAS_Monster_StatTrack = 1074800;<br>
+							<br>
+							#FNFAL<br>
+							Weapon ID = 48<br>
+							FnFal_Phoenix = 84900;<br>
+							FnFal_Phoenix_StatTrack = 1084900;<br>
+							FnFal_Green = 84906;<br>
+							FnFAL_AcidCarbon = 44902;<br>
+							FnFAL_Tactical = 44903;<br>
+							FnFAL_Tactical_StatTrack = 1044903;<br>
+							FnFAL_Leather = 44901;<br>
+							<br>
+							-РЁС‚СѓСЂРјРѕРІС‹Рµ Р’РёРЅС‚РѕРІРєРё СЃ РџСЂРёС†РµР»РѕРј-<br>
+							<br>
+							#M16<br>
+							Weapon ID = 47<br>
+							M16_Triumphant = 134700;<br>
+							M16_Triumphant_StatTrack = 1134700;<br>
+							M16_4Years = 104700;<br>
+							M16_IronWill = 94700;<br>
+							M16_IronWill_StatTrack = 1094700;<br>
+							M16Camouflage = 47001;<br>
+							M16Winged = 47002;<br>
+							M16Facet = 47003;<br>
+							M16WingedStatTrack = 1047002;<br>
+							<br>
+							#AKR12<br>
+							Weapon ID = 45<br>
+							AKR12_Armored = 134500;<br>
+							AKR12_Armored_StatTrack = 1134500;<br>
+							AKR12_Roar = 124500;<br>
+							AKR12_Transistor = 134501;<br>
+							AKR12_Transistor_StatTrack = 1134501;<br>
+							AKR12_4Years = 104400;<br>
+							AKR12_Geometric = 84400;<br>
+							AKR12_Geometric_StatTrack = 1084400;<br>
+							AKR12_Carbon = 84500;<br>
+							AKR12_Carbon_StatTrack = 1084500;<br>
+							AKR12_Spring = 84501;<br>
+							AKR12Railgun = 45001;<br>
+							AKR12PixelCamouflage = 45002;<br>
+							AKR12Mechanic = 45003;<br>
+							AKR12Aurora = 45004;<br>
+							AKR12RailgunStatTrack = 1045001;<br>
+							AKR12PixelCamouflageStatTrack = 1045002;<br>
+							AKR12_Flow = 94400;<br>
+							AKR12_Flow_StatTrack = 1094400;<br>
+							<br>
+							#M60<br>
+							Weapon ID = 64<br>
+							M60_Mecha = 136400;<br>
+							M60_Mecha_StatTrack = 1136400;<br>
+							M60_Y20RAIJIN = 136401;<br>
+							M60_Y20RAIJIN_StatTrack = 1136401;<br>
+							M60_Grunge = 126400;<br>
+							M60_Grunge_StatTrack = 1126400;<br>
+							M60_SteamBeast = 126401;<br>
+							M60_SteamBeast_StatTrack = 1126401;<br>
+							<br>
+							<br>
+							-Р”СЂРѕР±РѕРІРёРєРё-<br>
+							<br>
+							#SM1014<br>
+							Weapon ID = 62<br>
+							SM1014_Tropic = 126201;<br>
+							SM1014_Shark = 86216;<br>
+							SM1014_Shark_StatTrack = 1086216;<br>
+							SM1014_Arctic = 66201;<br>
+							SM1014_Arctic_StatTrack = 1066201;<br>
+							SM1014_Blaster = 45302;<br>
+							SM1014Facet = 62001;<br>
+							SM1014Pathfinder = 62002;<br>
+							SM1014Necromancer = 62003;<br>
+							SM1014NorthernCamouflage = 62004;<br>
+							SM1014Quake = 62005;<br>
+							SM1014Branches = 62006;<br>
+							SM1014PathfinderStatTrack = 1062002;<br>
+							SM1014NecromancerStatTrack = 1062003;<br>
+							<br>
+							#FABM<br>
+							Weapon ID = 63<br>
+							FabM_CursedFire = 126300;<br>
+							FabM_Flight = 86300;<br>
+							FabM_Flight_StatTrack = 1086300;<br>
+							FabM_Green = 86317;<br>
+							FabM_Parrot = 86318;<br>
+							FabM_Parrot_StatTrack = 1086318;<br>
+							FabM_Reactor = 76218;<br>
+							FabM_Reactor_StatTrack = 1076218;<br>
+							<br>
+							-РЎРЅР°Р№РїРµСЂСЃРєРёРµ Р’РёРЅС‚РѕРІРєРё-<br>
+							<br>
+							#AWM<br>
+							Weapon ID = 51<br>
+							AMW_WinetSport = 65101;<br>
+							AMW_WinetSport_StatTrack = 1065101;<br>
+							AWM_Elevation = 125101<br>
+							AWM_BOOM = 125100;<br>
+							AWM_BOOM_StatTrack = 1125100;<br>
+							AWM_PolarNight = 95100;<br>
+							AWM_PolarNight_StatTrack = 1095100;<br>
+							AWM_Dragon = 85127;<br>
+							AWM_Dragon_StatTrack = 1085127;<br>
+							AWM_TreasureHunter = 85104;<br>
+							AWMSportV2 = 51006;<br>
+							AWMSport = 51001;<br>
+							AWMPhoenix = 51002;<br>
+							AWMGear = 51003;<br>
+							AWMScratch = 51004;<br>
+							AWMGenesis = 51007;<br>
+							AWM_2YearsRed = 51008;<br>
+							AWMPhoenixStatTrack = 1051002;<br>
+							AWMGearStatTrack = 1051003;<br>
+							AWMScratchStatTrack = 1051004;<br>
+							AWMGenesisStatTrack = 1051007;<br>
+							<br>
+							#M40<br>
+							Weapon ID = 52<br>
+							M40_CursedFire = 125200;<br>
+							M40_Monster = 75205;<br>
+							M40_Monster_StatTrack = 1075205;<br>
+							M40_WinterTrack = 65201;<br>
+							M40_WinterTrack_StatTrack = 1065201;<br>
+							M40_ThiefOfTheChristmas = 65202;<br>
+							M40_ThiefOfTheChristmas_StatTrack = 1065202;<br>
+							M40Quake = 52001;<br>
+							M40Pro = 52002;<br>
+							M40Beagle = 52003;<br>
+							M40QuakeStatTrack = 1052001;<br>
+							M40BeagleStatTrack = 1052003;<br>
+							<br>
+							#M110<br>
+							Weapon ID = 53<br>
+							M110_Z07MARKSMAN = 135300;<br>
+							M110_Z07MARKSMAN_StatTrack = 1135300;<br>
+							M110_Flow = 95300;<br>
+							M110_Flow_StatTrack = 1095300;<br>
+							M110_Transition = 85300;<br>
+							M110_Transition_StatTrack = 1085300;<br>
+							M110_Cyber = 45301;<br>
+							M110_Cyber_StatTrack = 1045301;<br>
+							<br>
+							-РќРѕР¶Рё-<br>
+							<br>
+							#ButterFly<br>
+							Weapon ID = 75<br>
+							Butterfly_Kumo = 57501;<br>
+							KnifeButterfly_ColdFlam = 97500;<br>
+							Butterfly_Gold = 47502;<br>
+							Butterfly_DragonGlass = 47503;<br>
+							Butterfly_Red = 47504;<br>
+							Butterfly_Starfall = 47505;<br>
+							<br>
+							#Tanto<br>
+							Weapon ID = 80<br>
+							KnifeTanto_Dojo = 138000;<br>
+							KnifeTanto_Mafia = 138001;<br>
+							KnifeTanto_Malachite = 138002;<br>
+							KnifeTanto_PearlAbyss = 138003;<br>
+							KnifeTanto_Transistor = 138004;<br>
+							KnifeTanto_Flow = 138005;<br>
+							<br>
+							#jKommando<br>
+							Weapon ID = 73<br>
+							jKommando_Frozen = 97300;<br>
+							jKommandoAncient = 73002;<br>
+							jKommandoReaper = 73003;<br>
+							jKommandoFloral = 73004;<br>
+							jKommandoLuxury = 73006;<br>
+							<br>
+							#Karambit<br>
+							Weapon ID = 72<br>
+							KnifeKarambit_ColdFlame = 97200;<br>
+							KnifeKarambit_Frozen = 97201;<br>
+							KnifeKarambit_SnowCamo = 97203;<br>
+							KarambitClaw = 72002;<br>
+							KarambitIceDragon = 72004;<br>
+							KarambitScratch = 72006;<br>
+							KarambitUniverse = 72007;<br>
+							KarambitGold = 72003;<br>
+							<br>
+							#Kunai<br>
+							Weapon ID = 78<br>
+							KunaiKnife_ColdFlame = 97800;<br>
+							KunaiKnife_SnowCamo = 97801;<br>
+							Kunai_Bone = 77813;<br>
+							Kunai_Luxury = 77814;<br>
+							Kunai_Poison = 77815;<br>
+							Kunai_Radiation = 77816;<br>
+							Kunai_Reaper = 77817;<br>
+							<br>
+							#M9<br>
+							Weapon ID = 71<br>
+							M9BayonetBlueBlood = 71001;<br>
+							M9BayonetAncient = 71002;<br>
+							M9BayonetScratch = 71003;<br>
+							M9BayonetUniverse = 71004;<br>
+							M9ByonetDragonGlass = 71005;<br>
+							KnifeBayonet_Frozen = 97100;<br>
+							<br>
+							#Scorpion<br>
+							Weapon ID = 79<br>
+							ScorpionKnife_ColdFlame = 97900;<br>
+							Scorpion_Camouflage = 87919;<br>
+							Scorpion_Green = 87920;<br>
+							Scorpion_Scratch = 87921;<br>
+							Scorpion_Sky = 87922;<br>
+							<br>
+							#FlipKnife<br>
+							Weapon ID = 77<br>
+							FlipKnife_HolidayFrost = 67701;<br>
+							FlipKnife_Vortex = 67702;<br>
+							FlipKnife_StoneCold = 67703;<br>
+							FlipKnife_SnowCamo = 67704;<br>
+							FlipKnife_Frozen = 67705;<br>
+							FlipKnife_SnowCamo = 97700;<br>
+							<br>
+							#Kukri
+							Kukri_Ares = 180022;<br>
+							Kukri_Eagle = 180023;<br>
+							Kukri_Gold = 180024;<br>
+							Kukri_Silver = 180025;<br>
+							Kukri_Stars = 180026;<br>
+							Kukri_Stone = 180027;<br>
+							<br>
+							-РџРµСЂС‡Р°С‚РєРё-<br>
+							<br>
+							GlovesBurningFists = 3006;<br>
+							GlovesPun = 3007;<br>
+							GlovesChampion = 3008;<br>
+							GlovesSteamRider = 3009;<br>
+							GlovesPhoenix = 3000;<br>
+							GlovesAutumn = 3001;<br>
+							GlovesGeometric = 3002;<br>
+							GlovesRetroWave = 3003;<br>
+							GlovesLivingFlame = 3004;<br>
+							GlovesNeuro = 3005;<br>
+							<br>
+							</div>
+					</el-collapse-transition>
+					<div v-show="tabValue==='Knife'">
+
+					<br>
+					
+					<div class="aytext">
+						<p>Knife - Kerambit</p>
+					</div>
+					<div>
+						<el-button onclick="karambitgold()">Karambit Gold</el-button>
+						<el-button onclick="karambitclaw()">Karmbit Claw</el-button>
+					</div>
+					<div>
+						<el-button onclick="karambitdragongalss()">Karambit DragonGlass</el-button>
+						<el-button onclick="karmbituniverse()">Karambit Universe</el-button>
+					</div>
+					<div>
+						<el-button onclick="karambitcoldflame()">Karambit ColdFlame</el-button>
+						<el-button onclick="karambitfrozen()">Karambit Frozen</el-button>
+					</div>
+					<el-button onclick="karambitsnowcamo()">Karambit SnowCamo</el-button>
+					<el-button onclick="karambityearoftiger()">Karambit YearOfTiger</el-button>
+					<div>
+						<el-button onclick="karambitscratch()">Karambit Scratch</el-button>
+					</div>
+					<br>
+					<div class="aytext">
+						<p>Knife - M9</p>
+					</div>
+
+					<div>
+						<el-button onclick="m1()">M9 BlueBlood</el-button>
+						<el-button onclick="m2()">M9 Kumo</el-button>
+						<el-button onclick="m3()">M9 Universe</el-button>
+					</div>
+
+					<div>
+						<el-button onclick="m4()">M9 Frozen</el-button>
+						<el-button onclick="m5()">M9 DragonGlass</el-button>
+						<el-button onclick="m6()">M9 Scratch</el-button>
+					</div>
+					<div>
+						<el-button onclick="m7()">M9 Acient</el-button>
+					</div>
+					<br>
+
+					<div class="aytext">
+						<p>Knife - Jcomando</p>
+					</div>
+
+					<div>
+						<el-button onclick="j1()">Jkomando Ancient</el-button>
+						<el-button onclick="j2()">Jkomando Reaper</el-button>
+					</div>
+					<div>
+						<el-button onclick="j3()">Jkomando Floral</el-button>
+						<el-button onclick="j4()">Jkomando Luxary</el-button>
+					</div>
+					<div>
+						<el-button onclick="j5()">Jkomando Frozen</el-button>
+						<el-button onclick="j6()">Jkomando Augistin</el-button>
+					</div>
+					<br>
+
+					<div class="aytext">
+						<p>Knife - Butterfly</p>
+					</div>
+					<div>
+						<el-button onclick="b1()">Butterfly DragonGlass</el-button>
+						<el-button onclick="b2()">Butterfly Legacy</el-button>
+					</div>
+					<div>
+						<el-button onclick="b3()">Butterfly FireStorm</el-button>
+						<el-button onclick="b4()">Butterfly BlackWidow</el-button>
+					</div>
+					<div>
+					
+						<el-button onclick="b5()">Butterfly Starfall</el-button>
+						<el-button onclick="b6()">Butterfly ColdFlame</el-button>
+						<div>
+						</div>
+						<el-button onclick="b7()">Butterfly Kumo</el-button>
+					</div>
+					<br>
+
+					<div class="aytext">
+						<p>Knife - FlipKnife</p>
+					</div>
+					<dev>
+						<el-button onclick="f1()">Flipknife DragonGlass</el-button>
+						<el-button onclick="f2()">Flipknife Arctic</el-button>
+					</dev>
+					<dev>
+						<el-button onclick="f3()">Flipknife StoneCold</el-button>
+						<el-button onclick="f4()">Flipknife Vortex</el-button>
+					</dev>
+					<dev>
+						<el-button onclick="f5()">Flipknife Frozen</el-button>
+						<el-button onclick="f6()">Flipknife SnowCamo</el-button>
+					</dev>
+					<dev>
+						<el-button onclick="f7()">Flipknife Holiday</el-button>
+					</dev>
+					<br>
+					<br>
+
+					<div class="aytext">
+						<p>Knife - Kunai</p>
+					</div>
+					<dev>
+						<el-button onclick="k1()">Kunai Bone</el-button>
+						<el-button onclick="k2()">Kunai Luxery</el-button>
+						<el-button onclick="k3()">Kunai Poison</el-button>
+					</dev>
+					<dev>
+						<el-button onclick="k4()">Kunai Radiation</el-button>
+						<el-button onclick="k5()">Kunai Reaper</el-button>
+					</dev>
+					<dev>
+						<el-button onclick="k6()">Kunai ColdFlame</el-button>
+						<el-button onclick="k7()">Kunai SnowCamo</el-button>
+						<dev>
+							<el-button onclick="k8()">Kunai Augustite</el-button>
+						</dev>
+						<br>
+						<br>
+
+						<div class="aytext">
+							<p>Knife - Scorpion</p>
+						</div>
+						<dev>
+							<el-button onclick="s1()">Scorpion Veil</el-button>
+							<el-button onclick="s2()">Scorpion Sea Eye</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="s3()">Scorpion Scratch</el-button>
+							<el-button onclick="s4()">Scorpion Starfall</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="s5()">Scorpion ColdFlame</el-button>
+							<el-button onclick="s6()">Scorpion HolidayFrost</el-button>
+						</dev>
+						<br>
+						<br>
+
+						<div class="aytext">
+							<p>Knife - Tanto</p>
+						</div>
+						<dev>
+							<el-button onclick="t1()">Tanto Fojo</el-button>
+							<el-button onclick="t2()">Tanto Yakuza</el-button>
+							<el-button onclick="t3()">Tanto Malachite</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="t4()">Tanto PearlAbyss</el-button>
+							<el-button onclick="t5()">Tanto Transistor</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="t6()">Tanto Flow</el-button>
+						</dev>
+						<br>
+						<br>
+						<div class="aytext">
+							<p>Knife - Daggers</p>
+						</div>
+						<dev>
+							<el-button onclick="d1()">Daggers Acid</el-button>
+							<el-button onclick="d2()">Dagger Demonic</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="d3()">Daggers Grunge</el-button>
+							<el-button onclick="d4()">Daggers Molten</el-button>
+						</dev>
+
+						<br>
+						<div class="aytext">
+							<p>Gloves</p>
+						</div>
+						<dev>
+							<el-button onclick="g1()">Gloves BurningFists</el-button>
+							<el-button onclick="g2()">Gloves Pun</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="g3()">Gloves Champion</el-button>
+							<el-button onclick="g4()">Gloves SteamRider</el-button>
+							<dev>
+							</dev>
+							<el-button onclick="g5()">Gloves Pheinx</el-button>
+							<el-button onclick="g6()">Gloves Autumn</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="g7()">Gloves Geomentric</el-button>
+							<el-button onclick="g8()">Gloves RetroWave</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="g9()">Gloves LivingFlame</el-button>
+							<el-button onclick="g10()">Gloves Neuro</el-button>
+						</dev>
+							<br>
+						<div class="aytext">
+							<p>Kukri</p>
+						</div>
+							
+							<dev>
+							<el-button onclick="i1()">Kukri Ares </el-button>
+							<el-button onclick="i2()">Kukri Eagle</el-button>
+						</dev>
+						<dev>
+							<el-button onclick="i3()">Kukri Gold</el-button>
+							<el-button onclick="i4()">Kukri Silver</el-button>
+							<dev>
+							</dev>
+							<el-button onclick="i5()">Kukri Stars</el-button>
+							<el-button onclick="i6()">Kukri Stone</el-button>
+						</dev>
+						</el-collapse-transition>
+						
+						
+					
+
+						
+						
+			
+
+
+							
+								<html>
+  <head>
+    <title>
+	</title>
+    <style>
+      .button {
+      background-color: #FF4500;
+      border: none;
+      color: white;
+      padding: 20px 34px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      margin: 4px 2px;
+      cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+   
+  </body>
+								
+</body>
+
+<script>
+
+
+	var app = new Vue({
+		el: "#app",
+		data() {
+			return {
+				ifshow: true,
+				checked: false,
+				radio: '1',
+				activeSelect: '',
+				selectOption: [{
+					value: 'йЂ‰йЎ№1',//е®ћй™…е†…е®№
+					label: 'й»„й‡‘зі•'//жѕз¤єж–‡жЎ€
+				}, {
+					value: 'йЂ‰йЎ№2',
+					label: 'еЏЊзљ®еҐ¶'
+				}],
+				input: "",
+				showOption: false,
+				tabValue: "Skinchanger",
+			}
+		},
+		mounted() {
+			this.setRect(360, 320);
+
+			//з«–е±Џ
+			var sWidth = window.screen.width; //е±Џе№•е®Ѕ
+			var sHeight = window.screen.height; //е±Џе№•й«
+
+			//е…Ёе±Џжѕз¤є
+			if (window.screen.availWidth > window.screen.availHeight) {
+				//жЁЄе±ЏпјЊе®Ѕй«зЅ®жЌў
+				sWidth = window.screen.height; //е±Џе№•е®Ѕ
+				sHeight = window.screen.width; //е±Џе№•й«
+			}
+			setWindowRect(0, 0, sWidth, sHeight);
+
+			setButtonAction(function () {
+				var menu = document.querySelector("#app");
+				if (menu.style.display == 'none') {
+					menu.style.display = 'block';
+					//жѕз¤єиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§дёЌеЏЇз©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(true);
+				} else {
+					menu.style.display = 'none';
+					//йљђи—ЏиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§з©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(false);
+				}
+			});
+		},
+		
+		methods: {
+			setRect(w, h, x = -1, y = -1) {
+				var boxW = w;
+				var boxH = h;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.width = `${boxW}px`;
+				ayMenu.style.height = `${boxH}px`;
+				if (x == -1) ayMenu.style.left = `calc(50% - ${boxW / 2}px)`;
+				if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
+			},
+			titleTouchStart(event) {
+				this.touchStartX = parseInt(event.touches[0].clientX);
+				this.touchStartY = parseInt(event.touches[0].clientY);
+
+				var ayMenu = this.$refs.menuMain;
+				this.menuLastX = ayMenu.offsetLeft;
+				this.menuLastY = ayMenu.offsetTop;
+			},
+			titleTouchMove(event) {
+				event.preventDefault();
+				var distanceX = event.touches[0].clientX - this.touchStartX;
+				var distanceY = event.touches[0].clientY - this.touchStartY;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.left = this.menuLastX + distanceX + "px";
+				ayMenu.style.top = this.menuLastY + distanceY + "px";
+			},
+			//е€‡жЌўеЇји€Єж Џ
+			changeTab(v) {
+				this.tabValue = v;
+			},
+			closeimgui() {
+				var menu = document.querySelector("#app");
+				menu.style.display = 'none';
+				setWindowTouch(false);
+			}
+		}
+	});
+
+
+</script>
+
+</html>

@@ -1,0 +1,1673 @@
+<html>
+<header>
+	<title>rezolver</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/element-ui@2.15.7/lib/theme-chalk/index.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/element-ui@2.15.7/lib/index.js"></script>
+
+
+	<style>
+
+ 
+ 
+ 
+ 
+
+
+
+
+ 
+
+section { 
+  display: none;  
+  border: 1px solid white;
+  padding: 12px; 
+  border-radius: 19px;
+  background-color: #5d5d5d;
+  color: white;  
+  position: absolute; 
+  top: 0; 
+  left: 208px; 
+} 
+
+
+    @keyframes background {
+  50% {
+    background: darkviolet;
+    box-shadow: 0 -140px 70px -120px mediumorchid inset,
+                0 -210px 70px -120px teal inset,
+                0 -280px 70px -120px plum inset;
+				
+  }
+}
+
+
+
+
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4 { 
+
+} 
+section { 
+
+} 
+@keyframes scale { 
+  0% { 
+  transform: scale(0.9); 
+  opacity: 0; 
+  } 
+  50% { 
+  transform: scale(1.005); 
+  opacity: 0.5; 
+  } 
+  100% { 
+  transform: scale(1); 
+  opacity: 1; 
+  } 
+}
+
+
+	#clock{
+ color: red; /* Цвет символа */
+	 
+  margin-left: 260px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+	 				.main {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  font-size: 18pt;
+  font-family: "Arial Rounded MT Bold";
+  color: white;
+}
+
+.fnc3 {
+  position: absolute;
+top: 24%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.NoRecoil {
+  background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 53.5%;
+left: 5%;
+}
+
+.fnc {
+  position: absolute;
+top: 24%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc50 {
+  position: absolute;
+top: 5%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc51 {
+  position: absolute;
+top: 8.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc52 {
+  position: absolute;
+top: 11.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc53 {
+  position: absolute;
+top: 14.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc54 {
+  position: absolute;
+top: 17.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc55 {
+  position: absolute;
+top: 20.0%;
+left: 1%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+
+.AntiFlash {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 114.5%;
+left: 5%;
+
+}
+
+.jjcontent {
+    float: left;
+    padding: 0px 12px;
+    width: 70%;
+    border-left: none;
+    height: 700px;
+    overflow-y: scroll;
+}
+
+
+
+.fnc2 {
+  position: absolute;
+top: 10%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.FireRate {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 10.5%;
+left: 5%;
+}
+
+.fnc4 {
+  position: absolute;
+top: 39%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.InfinityAmmo {
+ background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 69.5%;
+left: 5%;
+}
+
+.time {
+  position: absolute;
+  top: 14%;
+  left: 30%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: rgb(42, 255, 0);
+}
+
+.next {
+  position: absolute;
+  top: 83%;
+  left: 77%;
+}
+
+.fnc5 {
+  position: absolute;
+top: 69%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.TeamRadar {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 24.5%;
+left: 5%;
+}
+
+.ShootTh {
+    background-color: none;
+  border: 0.1px solid #ffffff;
+  border-radius: 1%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 39.5%;
+left: 5%;
+}
+
+.fnc88 {
+  position: absolute;
+top: 81%;
+  left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.tm {
+    background-color: none;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 80.4%;
+  left: 50%;
+}
+
+.fnc6 {
+  position: absolute;
+top: 84%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.AntiHE {
+  background-color: #df8a8a;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 129.5%;
+left: 5%;
+}
+
+.fnc7 {
+  position: absolute;
+top: 54%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.MoneyHack {
+    background-color: #df8a8a;
+  border: 0.1875em solid #0F1C3F;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 38.5%;
+left: 5%;
+
+}
+
+.fnc8 {
+  position: absolute;
+top: 39%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.AlwaysRespawn {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 84.5%;
+left: 5%;
+}
+
+.fnc9 {
+  position: absolute;
+top: 54%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.BombExpl {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 159.5%;
+left: 5%;
+}
+
+.fnc10 {
+  position: absolute;
+top: 69%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.FastPlant {
+     background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 174.5%;
+left: 5%;
+
+}
+
+.fnc11 {
+  position: absolute;
+top: 84%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.WallShot {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 84.5%;
+left: 5%;
+
+}
+
+.MedalHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 99.5%;
+left: 5%;
+
+}
+
+.Float {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 99.5%;
+left: 5%;
+
+}
+
+.ArmRaceWin {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 114.5%;
+left: 5%;
+}
+	
+.fnc12 {
+
+  position: absolute;
+top: 99%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.MoveBefore {
+    background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 129.5%;
+left: 5%;
+
+}	
+
+.fnc13 {
+  position: absolute;
+top: 99%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+
+.fnc14 {
+  position: absolute;
+top: 114%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.PlantAnywhere {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 189.5%;
+left: 5%;
+}
+
+.BombImmunity {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 204.5%;
+left: 5%;
+
+}
+
+	
+	   .lan3 {
+        font-size: 12.5px;
+     
+        color: #aeaeae;
+    
+      }
+
+
+
+.fnc15 {
+  position: absolute;
+top: 129%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.FastGrenade {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 144.5%;
+left: 5%;
+
+
+}
+
+.FastGame {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 24.5%;
+left: 5%;
+
+}
+
+.Rounds {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 4.7%;
+  left: 89%;
+}
+
+.Kills {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 7.9%;
+  left: 60%;
+}
+
+.Death {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 11.0%;
+  left: 60%;
+}
+
+.Exp {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 13.9%;
+  left: 60%;
+}
+
+.Ping {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 17.0%;
+  left: 60%;
+}
+
+.fnc16 {
+  position: absolute;
+top: 114%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+}
+
+.friendlyfire {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 219.5%;
+left: 5%;
+}
+
+.FPSHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+top: 19.5%;
+  left: 39%;
+}
+
+.fnc17 {
+  position: absolute;
+top: 129%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.BuyAnywhere {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 54.5%;
+left: 5%;
+
+}
+
+.fnc18 {
+  position: absolute;
+top: 144%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.JumpHack {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 69.5%;
+left: 5%;
+}
+
+.fnc19 {
+  position: absolute;
+top: 144%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc20 {
+  position: absolute;
+top: 159%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+  
+}
+
+.fnc21 {
+  position: absolute;
+top: 174%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.fnc22 {
+  position: absolute;
+top: 189%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc23 {
+  position: absolute;
+top: 204%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc24 {
+
+  position: absolute;
+top: 219%;
+  left: 20%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+  
+}
+
+.fnc25 {
+  position: absolute;
+top: 99%;
+left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.fnc26 {
+  position: absolute;
+top: 103%;
+left: 5%;
+  font-size: 14pt;
+  font-family: Copperplate, "Copperplate Gothic Light";
+  color: ffffff;
+}
+
+.NoGrenade {
+   background-color: none;
+  border: 0.55px solid #ffffff;
+  border-radius: 0%;
+  box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);
+  height: 0.9em;
+  width: 0.9em;
+  position: absolute;
+top: 144.5%;
+left: 5%;
+
+}
+	
+	.version {
+  position: absolute;
+
+  margin-left: 330px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+
+
+
+	      .loader {
+    position: relative;
+    width: 398px;
+    height: 5px;
+    top: -1.9;
+color: red; /* Цвет символа */
+}
+	*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+.rainbow {
+	position: relative;
+	z-index: 0;
+	width: 400px;
+	height: 300px;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 2rem;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -2;
+		left: -50%;
+		top: -50%;
+		width: 200%;
+		height: 200%;
+		background-color: #399953;
+		background-repeat: no-repeat;
+		background-size: 50% 50%, 50% 50%;
+		background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+		background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+	
+	}
+	
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		left: 6px;
+		top: 6px;
+		width: calc(100% - 12px);
+		height: calc(100% - 12px);
+		background: white;
+		border-radius: 5px;
+	}
+}
+      
+	      .loader {
+    position: relative;
+    width: 398px;
+    height: 5px;
+    top: -1.9;
+color: red; /* Цвет символа */
+}
+	*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+.loader::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+    
+    background-size: 500%;
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #fb0094, #0000ff,
+            #00ff00, #ffff00, #fb0094, #0000ff, #00ff00, #ffff00,
+            #fb0094);
+
+    background-size: 500%;
+    filter: blur(10px);
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    0%{
+        background-position: 500% 0;
+    }
+}
+
+	.speexx {
+	top: 0px;
+  position: absolute;
+  margin-left: -40px;
+  margin-bottom: 41px;
+  max-width: 400px;
+}
+.watermark {
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 380% 380%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 19px;
+  line-height: 17px;
+      }
+ 
+@-webkit-keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+ 
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+      }
+	  
+	  
+	  
+	  .version {
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 25px;
+  line-height: 25px;
+}
+ 
+@-webkit-keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+ 
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+      }
+
+ .card {
+
+        color: #fff;
+        background: transparent;
+        overflow: hidden;
+        border-top: 1px solid rgba(255, 49, 49, 0.5);
+        border-right: 1px solid rgba(0, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+        border-left: 1px solid rgba(255, 255, 113, 0.5);
+
+      }
+
+      p {
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      span {
+        position: absolute;
+        border-radius: 100vmax;
+      }
+
+      	.version {
+  position: absolute;
+
+  margin-left: 330px;
+  font-weight: bold;
+  font-size: 15px;
+}
+      .top {
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          transparent 50%,
+          rgba(255, 49, 49, 0.5),
+          rgb(255, 49, 49)
+        );
+      }
+
+      .bottom {
+        right: 0;
+        bottom: 0;
+        height: 5px;
+        background: linear-gradient(
+          90deg,
+          rgb(57, 255, 20),
+          rgba(57, 255, 20, 0.5),
+          transparent 50%
+        );
+      }
+
+      .right {
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 0;
+        background: linear-gradient(
+          180deg,
+          transparent 30%,
+          rgba(0, 255, 255, 0.5),
+          rgb(0, 255, 255)
+        );
+      }
+
+      .left {
+        left: 0;
+        bottom: 0;
+        width: 5px;
+        height: 0;
+        background: linear-gradient(
+          180deg,
+          rgb(255, 255, 113),
+          rgba(255, 255, 113, 0.5),
+          transparent 70%
+        );
+      }
+
+
+      @keyframes animateTop {
+        25% {
+          width: 100%;
+          opacity: 1;
+        }
+
+        30%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes animateBottom {
+        0%,
+        50% {
+          opacity: 0;
+          width: 0;
+        }
+
+        75% {
+          opacity: 1;
+          width: 100%;
+        }
+
+        76%,
+        100% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes animateRight {
+        0%,
+        25% {
+          opacity: 0;
+          height: 0;
+        }
+
+        50% {
+          opacity: 1;
+          height: 100%;
+        }
+
+        55%,
+        100% {
+          height: 100%;
+          opacity: 0;
+        }
+      }
+
+      @keyframes animateLeft {
+        0%,
+        75% {
+          opacity: 0;
+          bottom: 0;
+          height: 0;
+        }
+
+        100% {
+          opacity: 1;
+          height: 100%;
+        }
+      }
+
+a:hover {
+    background-color: #777;
+}
+	 
+
+@keyframes slidein {
+  from {
+    margin-top: 50%;
+    
+  }
+
+
+}
+
+    zxc{
+  
+       
+        
+        font-size: 50px;
+    
+        margin: 3 auto;
+		
+    }
+
+    .text-color{
+        background-color: #FF0000;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 10%;
+        background-image: linear-gradient(
+            45deg,
+            #FF0000 33%,
+            #FF4500 33%,
+            #FF4500 40%,
+            #FFFF00 40%,
+            #FFFF00 47%,
+            #008000 47%,
+            #008000 54%,
+            #00BFFF 54%,
+            #00BFFF 61%,
+            #0000FF 61%,
+            #0000FF 68%,
+            #800080 68%);
+        animation: text-animate-rev 0.15s ease forwards;
+
+    }
+
+    .text-color:hover{
+        animation: text-animate 0.1s ease-in forwards;
+    }
+
+    @keyframes text-animate-rev {
+        0% {
+            background-size: 650%;
+        }
+        40% {
+            background-size: 650%;
+        }
+        100% {
+            background-size: 100%;
+        }
+    }
+
+    /* Move the background and make it larger. */
+    /* Animation shown when hovering over the text. */
+    @keyframes text-animate {
+        0% {
+            background-size: 100%;
+        }
+        80% {
+            background-size: 650%;
+        }
+        100% {
+            background-size: 650%;
+        }
+    }
+	
+	
+	
+	
+	
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		.ayimgui {
+		
+			position: fixed;
+			width: 20px;
+		
+			height: 120x;
+		
+			z-index: 999;
+			  background-color: rgba(0,0,0, 0.4); /* Черный с непрозрачностью / прозрачностью */
+			
+	
+			/* border-radius: 8px; */
+			overflow: hidden;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-selectnone none;
+			user-select: unset;
+			
+		}
+
+		.onlyTitle {
+		
+		
+			
+			height: 21px !important;
+		}
+
+
+
+
+			
+			.box {
+  width: 150px;
+}
+
+.horizontal {
+  writing-mode: horizontal-tb;
+}
+
+.vertical {
+  writing-mode: vertical-rl;
+}
+   
+
+
+	 #aybody {
+  z-index: 1;
+  top: 5;
+
+    width: 360; /* Ширина блока */
+    height: 200px; /* Высота блока */
+    padding: 5px; /* Поля вокруг текста */
+    
+ 
+   display:block;
+   position:relative;
+
+   
+        background-color: rgba(0,5,0, 0.4); /* Черный с непрозрачностью / прозрачностью */
+
+
+}
+
+
+ .top_layout {
+    position: absolute;
+
+  
+    height: 40px;
+background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+  background-color: rgba(0,0,0, 0.4); /* Черный с непрозрачностью / прозрачностью */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+    border-radius: 0px;
+    margin-top: 0px;
+	   section {
+    color: #fff; /* Цвет текста */
+    padding: 1rem; /* Поля вокруг текста */
+    position: relative; /* Относительное позиционирование */
+   }
+   section::before {
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; top: 0; bottom: 0;
+    z-index: -1;
+
+    
+   }
+ 
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+
+
+p {
+	margin: 0;
+}
+
+:top_layout {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgba(168, 239, 255, 1);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+.top_layout {
+	min-width: min(40rem, 100%);
+}
+
+.top_layout {
+	font-size: 3vw;
+	margin: max(1rem, 3vw);
+	border: 0.35rem solid;
+	padding: 3vw;
+	border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.top_layout:nth-child(2) {
+	border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 10%, var(--c2) 40%) 30;
+	animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+
+}
+ 
+@-webkit-keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+ 
+@keyframes rainbow {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+      }
+    }
+    .painhck_text {
+        position: absolute;
+        top: -10px;
+        left: 11px;
+        text-align: absolute;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 15px;
+        color: #FFF;
+        text-transform: uppercase;
+
+        text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+        mix-blend-mode: normal;
+
+       }
+
+
+		.aytext {
+			text-align: center;
+			width: 100%;
+			margin-bottom: 5px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+   background: rgba( 0,0,0,0.5);
+    color: #fff; /* Цвет текста */
+    padding: - 2 px; /* Поля вокруг текста */
+    border-radius: 3px;
+			
+		}
+
+
+
+checkboxposition{
+visibility: none
+
+
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    0%{
+        background-position: 500% 0;
+    }
+}
+  
+
+
+
+
+		.aytab {
+			width: 100%;
+			height: 20px;
+			display: flex;
+			border-bottom: 2px solid rgb(200, 217, 233);
+		}
+
+			.aytab span {
+				padding: 0 5px;
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+  border-radius: 5
+				color: #000;
+				font-size: 14px;
+				font-weight: 500;
+				margin-left: 10px;
+				border-radius: 6px 6px 0 0;
+				cursor: pointer;
+			}
+
+	#topp {
+
+    position: absolute;	/* Абсолютное позиционирование */
+    width:  360px; /* Ширина слоя в пикселах */
+    height: 30px; /* Высота слоя в пикселах */
+    left: 0; /* Положение слоя от левого края */
+    top: 100%; /* Положение слоя от верхнего края */
+  
+    background: #34343c; /* Цвет фона */
+ border-radius: 0px 0px 25px 25px;
+    padding: 10px; /* Поля вокруг текста */
+    overflow: hidden; /* Добавление полосы прокрутки */ 
+	
+	}
+
+	  
+	</style>
+
+		  <div class="top_layout">
+		  <div class='loader'>
+		  </div>
+		        <span class="top"></span>
+				      <p class="version" >
+        0.22.0 </p>
+<p class="watermark" face="Arial">
+HOPELESS PREM
+  </p>
+		 <div id="clock" ></div>
+      
+      <span class="right"></span>
+      <span class="bottom"></span>
+      <span class="left"></span>
+
+     
+     
+ 
+
+    
+    </div>
+	 </div>
+	<body>
+
+			<div id="app">	
+				
+			<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+			<i :class="ifshow?'el-icon-caret-bottom':'el-icon-caret-top'" @click="ifshow = !ifshow"></i>
+			<head>
+			вернхния поебовина 
+			
+          <div id="aybody">
+		  
+		  фыв
+<section id="content1"> 
+<h3 align="center">Menu by Hospice (Speex Organization)
+</section>  
+<section id="content2"> 
+<h3 align="center">ауф пейн крута
+</section>  
+<section id="content3"> 
+<h3 align="center">пэйн топ 1 
+</h3> 
+</section>  
+<section id="content4"> 
+<h3 align="center">бисплатни вкладки 
+</section>  
+ 
+
+  
+
+     
+        
+
+    
+
+	</head>
+	нижний бордер 
+
+</div>
+<script>
+
+
+	var app = new Vue({
+		el: "#app",
+		data() {
+			return {
+				ifshow: true,
+				checked: false,
+				radio: '1',
+				activeSelect: '',
+				selectOption: [{
+					value: 'йЂ‰йЎ№1',//е®ћй™…е†…е®№
+					label: 'й»„й‡‘зі•'//жѕз¤єж–‡жЎ€
+				}, {
+					value: 'йЂ‰йЎ№2',
+					label: 'еЏЊзљ®еҐ¶'
+				}],
+	
+			}
+		},
+		mounted() {
+			this.setRect(360, 320);
+
+			//з«–е±Џ
+			var sWidth = window.screen.width; //е±Џе№•е®Ѕ
+			var sHeight = window.screen.height; //е±Џе№•й«
+
+			//е…Ёе±Џжѕз¤є
+			if (window.screen.availWidth > window.screen.availHeight) {
+				//жЁЄе±ЏпјЊе®Ѕй«зЅ®жЌў
+				sWidth = window.screen.height; //е±Џе№•е®Ѕ
+				sHeight = window.screen.width; //е±Џе№•й«
+			}
+			setWindowRect(0, 0, sWidth, sHeight);
+
+			setButtonAction(function () {
+				var menu = document.querySelector("#app");
+				if (menu.style.display == 'none') {
+					menu.style.display = 'block';
+					//жѕз¤єиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§дёЌеЏЇз©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(true);
+				} else {
+					menu.style.display = 'none';
+					//йљђи—ЏиЏњеЌ•д№‹еђЋ, и®ѕзЅ®и§¦жЋ§з©їйЂЏж‚¬жµ®зЄ—еЏЈ
+					setWindowTouch(false);
+				}
+			});
+		},
+		
+		methods: {
+			setRect(w, h, x = -1, y = -1) {
+				var boxW = w;
+				var boxH = h;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.width = `${boxW}px`;
+				ayMenu.style.height = `${boxH}px`;
+				if (x == -1) ayMenu.style.left = `calc(50% - ${boxW / 2}px)`;
+				if (y == -1) ayMenu.style.top = `calc(50% - ${boxH / 2}px)`;
+			},
+			titleTouchStart(event) {
+				this.touchStartX = parseInt(event.touches[0].clientX);
+				this.touchStartY = parseInt(event.touches[0].clientY);
+
+				var ayMenu = this.$refs.menuMain;
+				this.menuLastX = ayMenu.offsetLeft;
+				this.menuLastY = ayMenu.offsetTop;
+			},
+			titleTouchMove(event) {
+				event.preventDefault();
+				var distanceX = event.touches[0].clientX - this.touchStartX;
+				var distanceY = event.touches[0].clientY - this.touchStartY;
+
+				var ayMenu = this.$refs.menuMain;
+				ayMenu.style.left = this.menuLastX + distanceX + "px";
+				ayMenu.style.top = this.menuLastY + distanceY + "px";
+			},
+			//е€‡жЌўеЇји€Єж Џ
+			changeTab(v) {
+				this.tabValue = v;
+			},
+			closeimgui() {
+				var menu = document.querySelector("#app");
+				menu.style.display = 'none';
+				setWindowTouch(false);
+			}
+		}
+	});
+
+
+</script>
+
+
+
+
+
+</html>

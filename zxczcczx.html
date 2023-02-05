@@ -1,0 +1,1978 @@
+<head>
+    <title>rezolver</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+
+
+html{
+		width: 690px;
+		height: 600px;
+		background: #000;
+		border: 5px solid rgb(128, 128, 128);
+		z-index: 4;
+
+	
+}
+
+
+
+
+
+
+
+    * {
+        color: #e0fc08;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+        
+        /* DebugMode:delete next line to show dashed border */
+        /*
+        border: 10px dashed gray;/**/
+        
+    }
+
+
+
+
+    button:active {
+         transform: translateY(2px);
+		 background: #000;
+		 
+    }
+    
+    input[type=radio]  {
+        width:20px;
+        height:20px;
+        margin-right:10px;
+        border:none;
+		width: 14px; height: 14px;
+     border: 1px solid #EEEEEE;
+     border-radius: 3px;
+     background-color: rgba(0,0,0,0);
+     display: inline-block;
+     visibility: visible;
+     text-align: center;
+        outline-style:none;
+        -webkit-appearance:none;
+        vertical-align:middle;
+        border:1px solid #DDDDDDF0;
+        
+    }
+    input[type=radio]:checked {
+        border:0px solid #2F7DCDF0;
+
+        background:#FFFFFF;
+    }
+        
+    input[type=checkbox]{
+     visibility: hidden;
+     vertical-align:middle; margin-bottom:2px;
+     cursor: pointer;
+     position: relative;
+     width: 24px;
+     height: 24px;
+    }
+    input[type=checkbox]::after{
+     position: absolute;
+     top: 0;
+     margin-top:2px;
+     width: 14px; height: 14px;
+     border: 1px solid #EEEEEE;
+     border-radius: 3px;
+     background-color: rgba(0,0,0,0);
+     display: inline-block;
+     visibility: visible;
+     text-align: center;
+     content: ' ';
+	 background: #000;
+    }
+
+    
+    input[type=range] {
+      -webkit-appearance: none;
+    }
+    input[type=range]:focus {
+      outline: none;
+	  background: #000;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+      height: 15px;
+      cursor: pointer;
+      animate: 0.2s;
+      background: #D1D1D130;
+      border-radius: 1.3px;
+      border: 0.2px solid #010101;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      border: 1px solid #000000;
+      height: 18px;
+      width: 16px;
+      border-radius: 3px;
+      background: #FFFFFFE0;
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -2px;
+    }
+    input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #367ebd;
+    }
+    
+        
+    /* ж»љеЉЁжќЎж•ґдЅ“йѓЁе€† */
+    .scrollbar {
+        overflow-x: hidden;
+        overflow-y: auto;
+		background: #000;
+        -webkit-overflow-scrolling: touch;
+    }
+    .scrollbar::-webkit-scrollbar {
+        width: 5px; /* зєµеђ‘ж»љеЉЁжќЎе®Ѕеє¦ */
+		background: #000;
+        height: 5px;/* жЁЄеђ‘ж»љеЉЁжќЎй«еє¦ */
+        background-color: #F5F5F5; /* ж»љеЉЁжќЎж•ґдЅ“иѓЊж™ЇпјЊдёЂи€¬иў«и¦†з›–зќЂ */
+    }
+    /* ж»љеЉЁжќЎзљ„иЅЁйЃ“пј€й‡ЊйќўиЈ…жњ‰Thumbпј‰ */
+    .scrollbar::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); /* ж»љеЉЁжќЎиЅЁйЃ“йґеЅ± */
+        /*border-radius: 10px; /* ж»љеЉЁжќЎиЅЁйЃ“ењ†и§’ */
+        background-color: #F5F5F5; /* ж»љеЉЁжќЎиЅЁйЃ“иѓЊж™Ї */
+		background: #000;
+    }
+    /* ж»љеЉЁжќЎй‡Њйќўзљ„ж»‘еќ— */
+    .scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 15px; /* ж»љеЉЁжќЎж»‘еќ—ењ†и§’ */
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); /* ж»љеЉЁжќЎж»‘еќ—йґеЅ± */
+        background-color: #B8B8B8; /* ж»љеЉЁжќЎж»‘еќ—йўњи‰І */
+		background: #000;
+    }
+        
+
+
+
+.right {
+
+  background-color: #161617;
+}
+
+	.split {
+ 
+   overflow: auto;
+    width: 100%;
+    margin: auto;
+
+float: left;
+  z-index: 1;
+  top: 30;
+  color: #f0f2f5;
+   display:block;
+   position:relative;
+   width:300px;
+   height:530px;
+   border:1px solid rgba(211, 220, 50, .6);
+  left: 10;
+}
+	
+
+.left {
+	top: -500;
+   display:block;
+   position:relative;
+  left: 360;
+height: 530px;
+  background-color: #161617;
+}		
+		 
+	
+
+	   .text {
+    text-align:  center;
+   }	
+
+#rectangle{
+    width:660px;
+    height:5px;
+	background:linear-gradient(45deg, #fb0092, #0000ff, #00ff00, #ffff00, #ff0000, #fb0092, #0000ff, #b0ff0b, #ffffb8);
+
+}
+		
+
+	   .text {
+    text-align:  center;
+   }	
+
+
+    button {
+        height: 30px;
+
+
+
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border: #000;
+        border-radius: 5px;
+		  background: linear-gradient(105deg, rgba(255,255,255,.2) 39%, rgba(51,56,57,1) 96%) center center / 400px 200px no-repeat,
+  url(big-star.png) center no-repeat, rebeccapurple;
+    }
+
+
+
+</style>
+    
+    
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    
+      function refreshLocalSrcipts()
+    {
+        $("table#localjslist tr").remove();
+        
+        var jsfiles = h5gg.getLocalScripts();
+    
+        setTimeout(function(){
+            
+            if(jsfiles.length==0) {
+                $("table#localjslist tbody").append("<tr><td colspan=2>Searching App's Documents Directory...<br/>Searching .app Bundle Directory...<br/>No (*.js) or (*.html) files found!</td></td>");
+            }
+            
+            $("table#localjslist tbody").append('<tr><td style="border-right-style:none; color:blue">Browser on File App</td><td style="border-left-style:none;width:45px"><button onclick="h5gg.pickScriptFile(onClickLoadScript)">Load</button></td></tr>');
+            
+            for(var i=0; i<jsfiles.length; i++) {
+                var row = '<tr><td style="border-right-style:none;font-weight:bold;color:green">'+jsfiles[i].name+'</td><td style="border-left-style:none;width:45px"><button onclick="onClickLoadScript(\''+jsfiles[i].path+'\')">Load</button></td></tr>';
+                $("table#localjslist tbody").append(row);
+            }
+        }, 300);
+    }
+    
+    function onShowLoadScript(show)
+    {
+        if(show) {
+            $("#maskview").show();
+            $("#popup_loadscripts").show();
+            
+            if(typeof h5gg!='undefined') refreshLocalSrcipts();
+        } else {
+            $("#maskview").hide();
+            $("#popup_loadscripts").hide();
+        }
+    }
+    
+     function onClickLoadScript(url, type)
+    {
+        if(!url) return;
+        
+        if(/^\w+\:/.test(url)==false) url = "file://"+url;
+        
+        try{
+            url = new URL(url);
+            url.searchParams.append("_", Math.random());
+        }catch(e){
+            alert("invliad URL!");
+            return;
+        }
+        
+        $("#popup_progress").show();
+        $("#maskview_script").show();
+        
+        if(type=='h5' || (!type&&!/\.js$/.test(url.pathname))) {
+            window.location = url.href;
+            return;
+        }
+        
+        var script = document.createElement("script");
+    
+        script.type = "text/javascript";
+        
+        script.onload = function () {
+          alert("Твой Конфиг Загружен!");
+            $("#popup_progress").hide();
+            $("#maskview_script").hide();
+        };
+        
+        script.onerror = function () {
+            alert("Твой конфиг не загружен!/Посмотри, не допустил ли ты ошибку");
+            $("#popup_progress").hide();
+            $("#maskview_script").hide();
+        };
+    
+        script.src = url.href;
+        document.body.appendChild(script);
+    }
+    
+    
+      function custom(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        var newskinid = prompt("Enter newskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll(newskinid,'I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+    function Warning(){
+      alert("Внимание!\n\nС недавним обновлением игры Скинченджер может работать Неисправно!")
+    }
+      
+      function karambitgold(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitclaw(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitdragongalss(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitscratch(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72006','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karmbituniverse(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('72007','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitcoldflame(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97200','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitfrozen(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97201','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambitsnowcamo(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97203','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        function karambityearoftiger(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157200','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function m1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71001','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157100','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97100','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71005','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function m7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('71002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+       function j1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('73002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('73003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('73004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('73006','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97300','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function j6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157300','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+       function b1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('47503','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('47502','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('57501','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('47504','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('47505','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97500','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function b7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157500','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function f1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67701','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        
+        function f2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67702','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function f3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67703','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function f4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67704','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function f5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('67705','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        
+        function f6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97700','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function f7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157700','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+       function k1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77813','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77814','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77815','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77816','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('77817','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97800','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97801','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function k8(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157800','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+       function s1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('87919','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('87920','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('87921','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('87922','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('97900','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function s6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('157900','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function t1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138001','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('138004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('128005','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('148000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function t8(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('158000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function d1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('170021','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function d2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('170022','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function d3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('170023','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function d4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('170024','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function d5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function d6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180028','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function kk1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180022','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function kk2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180023','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function kk3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180024','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function kk4(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180025','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function kk5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180026','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function kk6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('180027','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g1(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3006','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g2(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3007','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g3(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3008','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3009','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g5(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3000','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g6(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3001','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g7(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3002','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g8(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3003','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g9(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3004','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+        
+        function g10(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3005','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g11(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3011','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g12(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3012','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g13(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3013','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g14(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3014','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g15(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3015','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+    
+      function g16(){
+        var oldskinid = prompt("Enter oldskin ID:");
+        h5gg.searchNumber(oldskinid, 'I64', '0x00000000', '0x1600000000');
+        h5gg.editAll('3016','I64');
+        alert("Successfully!");
+        h5gg.clearResults();
+        }
+      
+    
+      
+    
+      
+    
+      function radioclick1()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DBEC88, "C0035FD6");
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DBE8FC, "C0035FD6"); //team radar 0.21.0
+    
+    }
+    
+      function radioclick2()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DBEC88, "C0035FD6");
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DBE8FC, "C0035FD6"); //team radar 0.21.0
+    
+    }
+    
+        function radioclick3()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C21FCC, "C0035FD6"); //anti flash 0.21.0
+    
+    }
+    
+         function radioclick4()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C21FCC, "C0035FD6"); //anti flash 0.21.0
+    
+    }
+    
+         function radioclick5()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C27348, "C0035FD6"); //anti he 0.21.0
+    
+    }
+    
+           function radioclick6()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C27348, "C0035FD6"); //anti he
+    
+    }
+    
+           function radioclick7()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C5200C, "00008052C0035FD6"); //money hack 0.21.0
+    
+    }
+    
+      function radioclick8()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+     function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C5200C, "00008052C0035FD6"); //money hack 0.21.0
+    
+    }
+    
+         function radioclick9()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C15F88, "C0035FD6"); //fire rate 0.21.0
+    
+    }
+    
+         function radioclick10()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C15F88, "C0035FD6"); //fire rate 0.21.0
+    
+    }
+    
+       function radioclick11()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C15E70, "C0035FD6"); //no recoil 0.21.0
+    
+    }
+    
+      function radioclick12()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C15E70, "C0035FD6"); //no recoil 0.21.0
+    
+    }
+    
+      function radioclick13()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D68FB8, "C0035FD6"); //infinite ammo 0.21.0
+    
+    }
+    
+      function radioclick14()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D68FB8, "C0035FD6"); //infinite ammo 0.21.0
+    
+    }
+    
+       function radioclick15()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C10430, "000080D2C0035FD6"); //wallshot 0.21.0
+    
+    }
+    
+      function radioclick16()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C10430, "000080D2C0035FD6"); //wallshot 0.21.0
+    
+    }
+    
+        function radioclick17()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C4F764, "00008052C0035FD6"); //don't return spawn 0.21.0
+    
+    }
+    
+        function radioclick18()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C4F764, "00008052C0035FD6"); //don't return spawn 0.21.0
+    
+    }
+    
+        function radioclick19()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x32D61F8, "200080D2C0035FD6"); //jump hack 0.21.0
+    
+    }
+    
+        function radioclick20()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x32D61F8, "200080D2C0035FD6"); //jump hack 0.21.0
+    
+    }
+    
+       function radioclick21()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D00268, "200080D2C0035FD6"); //respawn 0.21.0
+    
+    }
+    
+        function radioclick22()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D00268, "200080D2C0035FD6"); //respawn 0.21.0
+    
+    }
+    
+        function radioclick23()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1CFC6BC, "20008052C0035FD6"); //Buy Anywhere
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1CFF0B4, "20008052C0035FD6"); //Buy Anywhere 0.21.0
+    
+    }
+    
+        function radioclick24()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1CFC6BC, "20008052C0035FD6"); //Buy Anywhere
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1CFF0B4, "20008052C0035FD6"); //Buy Anywhere 0.21.0
+    
+    }
+    
+        function radioclick25()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3C528, "E003271EC0035FD6"); //fast plant 0.21.0
+    
+    }
+    
+        function radioclick26()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3C528, "E003271EC0035FD6"); //fast plant 0.21.0
+    
+    }
+    
+        function radioclick27()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C370F0, "20008052C0035FD6"); //Fast Explode 0.21.0
+    
+    }
+    
+        function radioclick28()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C370F0, "20008052C0035FD6"); //Fast Explode 0.21.0
+    
+    }
+    
+        function radioclick29()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3BF54, "200080D2C0035FD6"); //Plant Anywhere
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3BF7C, "200080D2C0035FD6"); //Plant Anywhere
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3BFBC, "200080D2C0035FD6"); //Plant Anywhere 0.21.0
+    
+    }
+    
+        function radioclick30()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3BF54, "200080D2C0035FD6"); //Plant Anywhere
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3BF7C, "200080D2C0035FD6"); //Plant Anywhere
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3BFBC, "200080D2C0035FD6"); //Plant Anywhere 0.21.0
+    
+    }
+    
+       function radioclick31()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D68E00, "E003271EC0035FD6"); //Fast Round 0.21.0
+    
+    }
+    
+      function radioclick32()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1D68E00, "E003271EC0035FD6"); //Fast Round 0.21.0
+    
+    }
+    
+      function radioclick33()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C1F3B4, "200080D2C0035FD6"); //Fast grenade 0.21.0
+    
+    }
+    
+       function radioclick34()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C1F3B4, "200080D2C0035FD6"); //Fast grenade 0.21.0
+    
+    }
+    
+       function radioclick35()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3AFDC, "C0035FD6"); //Bomb Immunity 0.21.0
+    
+    }
+    
+       function radioclick36()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1C3AFDC, "C0035FD6"); //Bomb Immunity 0.21.0
+    
+    }
+    
+       function radioclick37()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1EBE9B4, "E07C80D2C0035FD6"); //Medal hack 0.21.0
+    
+    }
+    
+      function radioclick38()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1EBE9B4, "E07C80D2C0035FD6"); //Medal hack 0.21.0
+    
+    }
+    
+      function radioclick39()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    ActiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DC248C, "00D0221EC0035FD6"); //Speed hack 0.21.0
+    
+    }
+    
+       function radioclick40()
+    {h5gg.require(7.9);
+    
+    var h5frida=h5gg.loadPlugin("h5frida", "NegrTap-Assembly.dylib");
+    if(!h5frida) throw "Ошибка!\n\nТы даун!";
+    
+    function ActiveCodePatch(fpath, vaddr, bytes) {
+        if(!h5frida.ActiveCodePatch(fpath, vaddr, bytes)) {
+            var result = h5frida.ApplyCodePatch(fpath, vaddr, bytes);
+            alert(fpath+":0x"+vaddr.toString(16)+"-修改失败!\n" + fpath+":0x"+vaddr.toString(16)+"-PatchFailed!\n" + result);return false;
+        } return true;
+    }
+    function DeactiveCodePatch(fpath, vaddr, bytes) {
+        return h5frida.DeactiveCodePatch(fpath, vaddr, bytes);
+    } 
+    
+    DeactiveCodePatch("Frameworks/UnityFramework.framework/UnityFramework", 0x1DC248C, "00D0221EC0035FD6"); //Speed hack 0.21.0
+    
+    }
+    
+        
+    if(typeof $ == 'undefined') alert("网络连接失败, 请重新启动!");
+    
+    $(document).ready(function(){
+        //alert();
+        //绑定菜单点击切换子页面
+        $("div.menubox").click(function(){
+            $("div.menubox").removeClass("current");
+            $("div.menuview").removeClass("current");
+            $(this).addClass("current");
+            
+            var menuid = $(this).attr("menu");
+            $("div#"+menuid).addClass("current");
+        });
+        
+        /*禁止文本Option和拖动*/
+        document.body.onselectstart = document.body.ondrag =function(){
+            return false;
+        }
+        
+        $("input").blur(function(){
+            window.scroll(0,0); //文本框等输入完毕后页面自动滚动到顶部
+        });
+        
+        //激活webkit的button:active
+        document.body.addEventListener('touchstart', function () {});
+    
+        if(typeof h5gg!='undefined') {
+            //设置标题栏区域可拖动悬浮窗
+            setWindowDrag(0, 0, 400, 80);
+            //设置尺寸和位置
+            setWindowRect(60,60,300,300);
+        }
+    });
+        
+    </script>
+   <div id="netjs" class="menuview">   
+<div id="rectangle"></div>   
+			<div id="app">	
+			<td width="30%" style="vertical-align:top">
+			<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
+			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
+    <table id="bodyView" width="100" style="table-layout:fixed;height: calc(100% - 100px) ;">
+	
+
+
+<div>
+<td width="30%" style="vertical-align:top">
+
+
+<div class="font">
+
+ <body>
+
+
+ </body>
+<div class="split right">
+
+		
+	   <div class="text">
+	   <p>Weopan</p>
+	   </div>
+      <p>Team Radar</p>
+      <label><input name="radio-group3" type="radio"  onclick="radioclick1()" />ON</label>
+     <label><input name="radio-group3" type="radio" checked="checked"  onclick="radioclick2()" />OFF</label>
+        <p>Jump Hack</p>
+      <label><input name="radio-group11" type="radio" onclick="radioclick19()" />ON</label>
+      <label><input name="radio-group11" type="radio" checked="checked"  onclick="radioclick20()" />OFF</label>
+        <p>Dont return spawn</p>
+      <label><input name="radio-group9" type="radio" onclick="radioclick17()" />ON</label>
+     <label><input name="radio-group9" type="radio" checked="checked"  onclick="radioclick18()" />OFF</label>
+        <p>Always respawn</p>
+      <label><input name="radio-group12" type="radio" onclick="radioclick21()" />ON</label>
+    <label><input name="radio-group12" type="radio" checked="checked"  onclick="radioclick22()" />OFF</label>
+        <p>Fast Round(CT only,need host)</p>
+      <label><input name="radio-group17" type="radio" onclick="radioclick31()" />ON</label>
+      <label><input name="radio-group17" type="radio" checked="checked"  onclick="radioclick32()" />OFF</label>
+        <p>Medal hack(High Ban risk)</p>
+      <label><input name="radio-group19" type="radio" onclick="radioclick37()" />ON</label>
+      <label><input name="radio-group19" type="radio" checked="checked"  onclick="radioclick38()" />OFF</label>
+        <p>Speed Hack</p>
+      <label><input name="radio-group20" type="radio" onclick="radioclick39()" />ON</label>
+     <label><input name="radio-group20" type="radio" checked="checked"  onclick="radioclick40()" />OFF</label>
+        <p>
+
+	
+  <div class="centered">
+
+  </div>
+</div>
+		
+<div class="split left" >
+<center>
+
+<div class="menubox" menu="netjs">Network</div>
+<div style="float:right; font-size:16px; font-family: Arial, sans-serif;" onclick="onShowLoadScript(false)">&nbsp;X&nbsp;</div>
+
+
+<div id="netjs" class="menuview">
+
+
+
+<button onclick="onClickLoadScript($('#netjsurl').val(), 'js')">Load JS</button>
+<button onclick="onClickLoadScript($('#netjsurl').val(), 'h5');">Load HTML</button>
+
+    
+  
+
+<div class="popup_container">
+    
+<div id="popup_search_edit">
+
+<center>
+<table id="datatype" class="datatype">
+<tr>
+
+</tr>
+</table>
+</center>
+<br/>
+
+<hr/>
+
+</div>
+
+</div
+			<div class="text">
+    	      <p>zxc</p>
+		  </div>
+    <div id="menu3" class="menuview">
+    <p>Anti HE</p>
+      <label><input name="radio-group1" type="radio" onclick="radioclick5()" />ON</label>
+      <p><label><input name="radio-group1" type="radio" checked="checked"  onclick="radioclick6()" />OFF</label>
+      <p>Anti Flash</p>
+      <label><input name="radio-group2" type="radio"  onclick="radioclick3()" />ON</label>
+      <p><label><input name="radio-group2" type="radio" checked="checked"  onclick="radioclick4()" />OFF</label>
+        <p>Fast grenade</p>
+      <label><input name="radio-group10" type="radio" onclick="radioclick33()" />ON</label>
+      <p><label><input name="radio-group10" type="radio" checked="checked"  onclick="radioclick34()" />OFF</label>
+        </div>
+    
+    <div id="menu4" class="menuview">
+      <p>Fast Plant</p>
+      <label><input name="radio-group14" type="radio" onclick="radioclick25()" />ON</label>
+      <p><label><input name="radio-group14" type="radio" checked="checked"  onclick="radioclick26()" />OFF</label>
+        <p>Fast Explode</p>
+      <label><input name="radio-group15" type="radio" onclick="radioclick27()" />ON</label>
+      <p><label><input name="radio-group15" type="radio" checked="checked"  onclick="radioclick28()" />OFF</label>
+        <p>Plant Anywhere</p>
+      <label><input name="radio-group16" type="radio" onclick="radioclick29()" />ON</label>
+      <p><label><input name="radio-group16" type="radio" checked="checked"  onclick="radioclick30()" />OFF</label>
+      </div>
+  <div class="centered">
+  
+  </div>
+</td>
+
+
+    </body>
+    </html>
+ 
+    </script>
+
+   
+    
